@@ -1,7 +1,12 @@
+:root {
+	--main-color-grey: #202124;
+	--main-color-purple: #6204b9;
+  }
+
 body 
 {
 	font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-	background-image: url(https://cdn.pixabay.com/photo/2020/07/06/01/33/forest-5375005_1280.jpg);
+	background-color: var(--main-color-grey);
 	background-repeat: no-repeat;
 	background-size: 75vw 100vh;
 	background-position: 25vw 0vh;
@@ -14,6 +19,7 @@ body
 	height: 100vh;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 
 a 
@@ -37,7 +43,7 @@ a
 {
 	width: 100%;
 	height: 100%;
-	background-color: black;
+	background-color: var(--main-color-grey);
 	text-align: center;
 }
 
@@ -76,7 +82,19 @@ a
 #login
 {
 	position: fixed;
-	background-color: #202124;
-	height: 100%;
+	background-color: var(--main-color-grey);
+	height: 90%;
 	width: 25%;
+	margin-left: 2%;
+	border: var(--main-color-purple) 5px solid;
+	border-radius: 10px 50px 10px 50px;
+	box-shadow: 12px 12px 5px black;
+}
+
+.image-login-animate
+{
+	width: 110vw;
+	height: 110vh;
+	margin-top: 3%;
+	margin-left: 15%;
 }

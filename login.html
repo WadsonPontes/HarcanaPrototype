@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<title>Harcana Login</title>
 </head>
-<body>
 
+<body>
+	<div id="login">
+		<h1 id="title-login"> LOGIN </h1>
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="email" type="email" class="validate">
+						<label for="email" data-error="wrong" data-success="right" class="active"> Email </label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+					  	<input id="password" type="password" class="validate">
+					  		<i class="fa fa-eye" id="text"></i>
+  							<i class="fa fa-eye-slash" id="pass"></i>
+					  	<label for="password" class="active"> Password </label>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="aligne center">
+			<a href="#" class="waves-effect waves-light btn-large green" type="submit" id="button"><i class="large material-icons center" class="fas fa-code fa-2x">fingerprint</i></a>
+		</div>
+	</div>
+
+	<img src="img/dragon-animate.svg" class="image-login-animate">
+
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
+
 </html>

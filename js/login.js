@@ -1,10 +1,18 @@
 function getEntrada() {
-    let entrada = {
-        email: 'wadson@email.com',
-        senha: '123'
-    };
+    let email = document.querySelector('#email').value;
+    let senha = document.querySelector('#password').value;
 
+    let entrada = {
+        email: email,
+        senha: senha
+    };
+    
     return entrada;
+}
+
+function mensagemDeErro(msg) {
+    console.log(msg);
+    document.querySelector('#mensagem-de-erro').textContent = msg;
 }
 
 function logar() {
@@ -18,7 +26,7 @@ function logar() {
     .then((res) => {
         console.log(res);
         if (res && res.status == 'success') window.location.href = 'map.html';
-        else console.log('Dados de login inválidos');
+        else mensagemDeErro('Dados de login inválidos');
     })
     .catch((erro) => {
         console.log(`error: ${erro.message}`);

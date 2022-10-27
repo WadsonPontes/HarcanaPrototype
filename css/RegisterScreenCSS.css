@@ -6,7 +6,6 @@
 body 
 {
 	font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-	background-image: url("../img/wallpaper.jpg");
 	background-color: var(--main-color-grey);
 	background-repeat: no-repeat;
 	background-size: cover;

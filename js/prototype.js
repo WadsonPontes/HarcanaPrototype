@@ -37,27 +37,27 @@ let t = {
 };
 
 let cartas = [
-    {ataque: 3, vida: 4},
-    {ataque: 3, vida: 5},
-    {ataque: 3, vida: 6},
-    {ataque: 3, vida: 7},
-    {ataque: 3, vida: 8},
-    {ataque: 3, vida: 9},
-    {ataque: 4, vida: 5},
-    {ataque: 4, vida: 6},
-    {ataque: 4, vida: 7},
-    {ataque: 4, vida: 8},
-    {ataque: 4, vida: 9},
-    {ataque: 5, vida: 6},
-    {ataque: 5, vida: 7},
-    {ataque: 5, vida: 8},
-    {ataque: 5, vida: 9},
-    {ataque: 6, vida: 7},
-    {ataque: 6, vida: 8},
-    {ataque: 6, vida: 9},
-    {ataque: 7, vida: 8},
-    {ataque: 7, vida: 9},
-    {ataque: 8, vida: 9},
+    {ataque: 3, vida: 4, img: 'img/card/1.jpg'},
+    {ataque: 3, vida: 5, img: 'img/card/2.jpg'},
+    {ataque: 3, vida: 6, img: 'img/card/3.jpg'},
+    {ataque: 3, vida: 7, img: 'img/card/4.jpg'},
+    {ataque: 3, vida: 8, img: 'img/card/5.jpg'},
+    {ataque: 3, vida: 9, img: 'img/card/6.jpg'},
+    {ataque: 4, vida: 5, img: 'img/card/7.jpg'},
+    {ataque: 4, vida: 6, img: 'img/card/8.jpg'},
+    {ataque: 4, vida: 7, img: 'img/card/9.jpg'},
+    {ataque: 4, vida: 8, img: 'img/card/10.jpg'},
+    {ataque: 4, vida: 9, img: 'img/card/11.jpg'},
+    {ataque: 5, vida: 6, img: 'img/card/12.jpg'},
+    {ataque: 5, vida: 7, img: 'img/card/13.jpg'},
+    {ataque: 5, vida: 8, img: 'img/card/14.jpg'},
+    {ataque: 5, vida: 9, img: 'img/card/15.jpg'},
+    {ataque: 6, vida: 7, img: 'img/card/16.jpg'},
+    {ataque: 6, vida: 8, img: 'img/card/17.jpg'},
+    {ataque: 6, vida: 9, img: 'img/card/18.jpg'},
+    {ataque: 7, vida: 8, img: 'img/card/19.jpg'},
+    {ataque: 7, vida: 9, img: 'img/card/20.jpg'},
+    {ataque: 8, vida: 9, img: 'img/card/21.jpg'},
 ];
 
 let jogo = {
@@ -84,7 +84,8 @@ let jogador2 = {
 function copia(carta) {
     let nova = {
         ataque: carta.ataque,
-        vida: carta.vida
+        vida: carta.vida,
+        img: carta.img
     }
 
     return nova;
@@ -113,6 +114,7 @@ function puxar(jogador) {
         t['mao' + jogador.id][i].vi.textContent = carta.vida;
         t['mao' + jogador.id][i].at.style.display = 'block';
         t['mao' + jogador.id][i].vi.style.display = 'block';
+        t['mao' + jogador.id][i].el.style.backgroundImage = 'url("'+ carta.img +'")';
     }
 
     
@@ -221,6 +223,7 @@ function concluirAtaque(jogador, oponente, i) {
     t['campo' + oponente.id][i].vi.textContent = '';
     t['campo' + oponente.id][i].at.style.display = 'none';
     t['campo' + oponente.id][i].vi.style.display = 'none';
+    t['campo' + oponente.id][i].el.style.backgroundImage = '';
 
     atacar(jogador, oponente, ++i);
 }
@@ -257,12 +260,15 @@ async function clicou(id, pos) {
     t['mao' + id][pos-1].vi.textContent = '';
     t['mao' + id][pos-1].at.style.display = 'none';
     t['mao' + id][pos-1].vi.style.display = 'none';
+    t['mao' + id][pos-1].el.style.backgroundImage = '';
+
 
     t['campo' + id][i].card = carta;
     t['campo' + id][i].at.textContent = carta.ataque;
     t['campo' + id][i].vi.textContent = carta.vida;
     t['campo' + id][i].at.style.display = 'block';
     t['campo' + id][i].vi.style.display = 'block';
+    t['campo' + id][i].el.style.backgroundImage = 'url("'+ carta.img +'")';
 
     if (id == 1) {
         jogador = jogador1;

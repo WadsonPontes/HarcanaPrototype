@@ -84,6 +84,12 @@
     background-color: aqua;
 }
 
+.card {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #card-campo-red-1 {
     position: fixed;
     top: 148px;

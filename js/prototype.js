@@ -153,7 +153,6 @@ async function animAndarParaTras(jogador, oponente, i) {
     }
 
     await dormir(500);
-    animBater(jogador, oponente, i);
 }
 
 async function animBater(jogador, oponente, i) {
@@ -165,8 +164,6 @@ async function animBater(jogador, oponente, i) {
     }
 
    await dormir(500);
-
-   animVoltar(jogador, oponente, i);
 }
 
 async function animVoltar(jogador, oponente, i) {
@@ -181,21 +178,19 @@ async function animVoltar(jogador, oponente, i) {
     }
 
     await dormir(500);
-
-    concluirAtaque(jogador, oponente, i)
 }
 
-function atacar(jogador, oponente, i) {
-    if (i == t['campo' + jogador.id].length) {
-        return;
-    }
+async function atacar(jogador, oponente) {
+    for (let i = 0; i < t['campo' + jogador.id].length; ++i) {
+        if (t['campo' + jogador.id][i].card == null) {
+            continue;
+        }
 
-    if (t['campo' + jogador.id][i].card == null) {
-        atacar(jogador, oponente, ++i);
-        return;
+        await animAndarParaTras(jogador, oponente, i);
+        await animBater(jogador, oponente, i);
+        await animVoltar(jogador, oponente, i);
+        await concluirAtaque(jogador, oponente, i);
     }
-
-    animAndarParaTras(jogador, oponente, i);
 }
 
 function concluirAtaque(jogador, oponente, i) {
@@ -203,14 +198,12 @@ function concluirAtaque(jogador, oponente, i) {
         oponente.vida -= t['campo' + jogador.id][i].card.ataque;
         oponente.vida = Math.max(0, oponente.vida);
         oponente.vi.textContent = oponente.vida;
-        atacar(jogador, oponente, ++i);
         return;
     }
 
     if (t['campo' + jogador.id][i].card.ataque < t['campo' + oponente.id][i].card.vida) {
         t['campo' + oponente.id][i].card.vida -= t['campo' + jogador.id][i].card.ataque;
         t['campo' + oponente.id][i].vi.textContent = t['campo' + oponente.id][i].card.vida;
-        atacar(jogador, oponente, ++i);
         return;
     }
 
@@ -224,8 +217,6 @@ function concluirAtaque(jogador, oponente, i) {
     t['campo' + oponente.id][i].at.style.display = 'none';
     t['campo' + oponente.id][i].vi.style.display = 'none';
     t['campo' + oponente.id][i].el.style.backgroundImage = '';
-
-    atacar(jogador, oponente, ++i);
 }
 
 async function clicou(id, pos) {
@@ -280,7 +271,7 @@ async function clicou(id, pos) {
     }
 
     jogo.estado = 'animacao';
-    await atacar(jogador, oponente, 0);
+    await atacar(jogador, oponente);
 
     if (oponente.vida == 0) {
         fimDeJogo();

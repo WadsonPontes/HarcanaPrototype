@@ -325,12 +325,14 @@ function run() {
     setTimeout(run, 60);
 }
 
-function main() {
+async function main() {
     jogador1.vi.textContent = jogador1.vida;
     jogador2.vi.textContent = jogador2.vida;
 
     embaralhar(jogador1);
     embaralhar(jogador2);
+
+    await dormir(1000);
 
     puxar(jogador1);
     puxar(jogador2);

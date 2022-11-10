@@ -1,11 +1,20 @@
 function getEntrada() {
+    let nome_usuario = document.querySelector('#username').value;
+    let email = document.querySelector('#email').value;
+    let senha = document.querySelector('#password').value;
+
     let entrada = {
-        nome_usuario: 'Wadson',
-        email: 'wadson@email.com',
-        senha: '123'
+        nome_usuario: nome_usuario,
+        email: email,
+        senha: senha
     };
 
     return entrada;
+}
+
+function mensagemDeErro(msg) {
+    console.log(msg);
+    document.querySelector('#mensagem-de-erro').textContent = msg;
 }
 
 function registrar() {
@@ -20,7 +29,7 @@ function registrar() {
     .then((res) => {
         console.log(res);
         if (res && res.status == 'success') window.location.href = 'index.html';
-        else console.log('Dados de cadastro inválidos');
+        else mensagemDeErro('Dados de login inválidos');
     })
     .catch((erro) => {
         console.log(`error: ${erro.message}`);

@@ -64,6 +64,26 @@
     background-color: red;
 }
 
+#deck-red {
+    position: fixed;
+    top: 10px;
+    left: 180px;
+    width: 150px;
+    height: 200px;
+    border: 1px solid #000;
+    background-color: aquamarine;
+}
+
+#deck-blue {
+    position: fixed;
+    top: 530px;
+    left: 180px;
+    width: 150px;
+    height: 200px;
+    border: 1px solid #000;
+    background-color: aquamarine;
+}
+
 #personagem-red { 
     position: fixed;
     top: 0;

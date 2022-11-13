@@ -66,6 +66,9 @@ let jogo = {
 }
 
 let jogador1 = {
+    el_deck: get('#deck-blue'),
+    at_deck: get('#deck-blue .atk'),
+    vi_deck: get('#deck-blue .vi'),
     el: get('#personagem-blue'),
     vi: get('#personagem-blue .vida'),
     id: 1,
@@ -74,6 +77,7 @@ let jogador1 = {
 };
 
 let jogador2 = {
+    el_deck: get('#deck-red'),
     el: get('#personagem-red'),
     vi: get('#personagem-red .vida'),
     id: 2,
@@ -101,13 +105,46 @@ function embaralhar(jogador) {
     }
 }
 
-function puxar(jogador) {
+async function animPuxar(jogador, carta, i) {
+    jogador.el_deck.style.transition = 'all 1.0s linear';
+    jogador.at_deck.textContent = carta.ataque;
+    jogador.vi_deck.textContent = carta.vida;
+    jogador.at_deck.style.display = 'block';
+    jogador.vi_deck.style.display = 'block';
+    jogador.el_deck.style.backgroundImage = 'url("'+ carta.img +'")';
+    jogador.el_deck.style.zIndex = '5';
+
+    if (jogador.id == 1) {
+        jogador.el_deck.style.transform ="translate(" + (420 + 200 * i) + "px, -20px)";
+    }
+    else {
+        jogador.el_deck.style.transform = "translate(" + (420 + 200 * i) + "px, 20px)";
+    }
+
+    await dormir(1000);
+
+    jogador.el_deck.style.transition = '';
+    jogador.at_deck.textContent = '';
+    jogador.vi_deck.textContent = '';
+    jogador.at_deck.style.display = 'none';
+    jogador.vi_deck.style.display = 'none';
+    jogador.el_deck.style.backgroundImage = '';
+    jogador.el_deck.style.zIndex = '-1';
+
+    jogador.el_deck.style.transform ="translate(0, 0)";
+
+    await dormir(500);
+}
+
+async function puxar(jogador) {
     for (let i = 0; i < 4 && jogador.baralho.length; ++i) {
         if (t['mao' + jogador.id][i].card) {
             continue;
         }
 
         let carta = jogador.baralho.pop();
+
+        await animPuxar(jogador, carta, i);
 
         t['mao' + jogador.id][i].card = carta;
         t['mao' + jogador.id][i].at.textContent = carta.ataque;
@@ -116,8 +153,6 @@ function puxar(jogador) {
         t['mao' + jogador.id][i].vi.style.display = 'block';
         t['mao' + jogador.id][i].el.style.backgroundImage = 'url("'+ carta.img +'")';
     }
-
-    
 }
 
 function fimDeJogo() {
@@ -153,7 +188,6 @@ async function animAndarParaTras(jogador, oponente, i) {
     }
 
     await dormir(500);
-    animBater(jogador, oponente, i);
 }
 
 async function animBater(jogador, oponente, i) {
@@ -165,8 +199,6 @@ async function animBater(jogador, oponente, i) {
     }
 
    await dormir(500);
-
-   animVoltar(jogador, oponente, i);
 }
 
 async function animVoltar(jogador, oponente, i) {
@@ -181,21 +213,19 @@ async function animVoltar(jogador, oponente, i) {
     }
 
     await dormir(500);
-
-    concluirAtaque(jogador, oponente, i)
 }
 
-function atacar(jogador, oponente, i) {
-    if (i == t['campo' + jogador.id].length) {
-        return;
-    }
+async function atacar(jogador, oponente) {
+    for (let i = 0; i < t['campo' + jogador.id].length; ++i) {
+        if (t['campo' + jogador.id][i].card == null) {
+            continue;
+        }
 
-    if (t['campo' + jogador.id][i].card == null) {
-        atacar(jogador, oponente, ++i);
-        return;
+        await animAndarParaTras(jogador, oponente, i);
+        await animBater(jogador, oponente, i);
+        await animVoltar(jogador, oponente, i);
+        await concluirAtaque(jogador, oponente, i);
     }
-
-    animAndarParaTras(jogador, oponente, i);
 }
 
 function concluirAtaque(jogador, oponente, i) {
@@ -203,14 +233,12 @@ function concluirAtaque(jogador, oponente, i) {
         oponente.vida -= t['campo' + jogador.id][i].card.ataque;
         oponente.vida = Math.max(0, oponente.vida);
         oponente.vi.textContent = oponente.vida;
-        atacar(jogador, oponente, ++i);
         return;
     }
 
     if (t['campo' + jogador.id][i].card.ataque < t['campo' + oponente.id][i].card.vida) {
         t['campo' + oponente.id][i].card.vida -= t['campo' + jogador.id][i].card.ataque;
         t['campo' + oponente.id][i].vi.textContent = t['campo' + oponente.id][i].card.vida;
-        atacar(jogador, oponente, ++i);
         return;
     }
 
@@ -224,8 +252,6 @@ function concluirAtaque(jogador, oponente, i) {
     t['campo' + oponente.id][i].at.style.display = 'none';
     t['campo' + oponente.id][i].vi.style.display = 'none';
     t['campo' + oponente.id][i].el.style.backgroundImage = '';
-
-    atacar(jogador, oponente, ++i);
 }
 
 async function clicou(id, pos) {
@@ -280,7 +306,7 @@ async function clicou(id, pos) {
     }
 
     jogo.estado = 'animacao';
-    await atacar(jogador, oponente, 0);
+    await atacar(jogador, oponente);
 
     if (oponente.vida == 0) {
         fimDeJogo();
@@ -299,12 +325,14 @@ function run() {
     setTimeout(run, 60);
 }
 
-function main() {
+async function main() {
     jogador1.vi.textContent = jogador1.vida;
     jogador2.vi.textContent = jogador2.vida;
 
     embaralhar(jogador1);
     embaralhar(jogador2);
+
+    await dormir(1000);
 
     puxar(jogador1);
     puxar(jogador2);

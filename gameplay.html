@@ -10,38 +10,454 @@
 </head>
 
 <body>
-	<header>
-		<div id="personagem-red" class="personagem"></div>
-		<div id="personagem-blue" class="personagem"></div>
-	</header>
 	<main>
-		<section id="mao-red" class="mao">
-			<div id="card-mao-red-1" class="card card-mao card-mao-red"></div>
-			<div id="card-mao-red-2" class="card card-mao card-mao-red"></div>
-			<div id="card-mao-red-3" class="card card-mao card-mao-red"></div>
-			<div id="card-mao-red-4" class="card card-mao card-mao-red"></div>
+		<header>
+			<figure id="draw-1" class="card">
+				<img id="draw-1-img" class="card-img" src="">
+				<h3 id="draw-1-name" class="card-name"></h3>
+				<figure id="draw-1-type" class="card-type">
+					<img id="draw-1-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="draw-1-level" class="card-level">
+					<img id="draw-1-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="draw-1-attack" class="card-attack"></h4>
+				<h4 id="draw-1-health" class="card-health"></h4>
+				<h4 id="draw-1-skills" class="card-skills">
+					<figure id="draw-1-skill-1" class="card-skill">
+						<img id="draw-1-skill-1-img" class="card-skill-img" src="">
+						<h5 id="draw-1-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="draw-2" class="card">
+				<img id="draw-2-img" class="card-img" src="">
+				<h3 id="draw-2-name" class="card-name"></h3>
+				<figure id="draw-2-type" class="card-type">
+					<img id="draw-2-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="draw-2-level" class="card-level">
+					<img id="draw-2-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="draw-2-attack" class="card-attack"></h4>
+				<h4 id="draw-2-health" class="card-health"></h4>
+				<h4 id="draw-2-skills" class="card-skills">
+					<figure id="draw-2-skill-1" class="card-skill">
+						<img id="draw-2-skill-1-img" class="card-skill-img" src="">
+						<h5 id="draw-2-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="deck-1" class="deck">
+				<img id="deck-1-img" class="deck-img" src="">
+				<h3 id="deck-1-number" class="deck-number"></h3>
+			</figure>
+
+			<figure id="deck-2" class="deck">
+				<img id="deck-2-img" class="deck-img" src="">
+				<h3 id="deck-2-number" class="deck-number"></h3>
+			</figure>
+
+			<figure id="char-1" class="char">
+				<img id="char-1-img" class="char-img" src="">
+				<h2 id="char-1-name" class="char-name"></h2>
+				<h3 id="char-1-health" class="char-health"></h3>
+				<h3 id="char-1-skills" class="char-skills">
+					<figure id="char-1-skill-1" class="card-skill">
+						<img id="char-1-skill-1-img" class="card-skill-img" src="">
+						<h4 id="char-1-skill-1-number" class="card-skill-number"></h4>
+					</figure>
+				</h3>
+			</figure>
+
+			<figure id="char-2" class="char">
+				<img id="char-2-img" class="char-img" src="">
+				<h2 id="char-2-name" class="char-name"></h2>
+				<h3 id="char-2-health" class="char-health"></h3>
+				<h3 id="char-2-skills" class="char-skills">
+					<figure id="char-2-skill-1" class="card-skill">
+						<img id="char-2-skill-1-img" class="card-skill-img" src="">
+						<h4 id="char-2-skill-1-number" class="card-skill-number"></h4>
+					</figure>
+				</h3>
+			</figure>
+		</header>
+
+		<section id="field-1" class="field">
+			<figure id="field-1-card-1" class="field-card card">
+				<img id="field-1-card-1-img" class="card-img" src="">
+				<h3 id="field-1-card-1-name" class="card-name"></h3>
+				<figure id="field-1-card-1-type" class="card-type">
+					<img id="field-1-card-1-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="field-1-card-1-level" class="card-level">
+					<img id="field-1-card-1-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="field-1-card-1-attack" class="card-attack"></h4>
+				<h4 id="field-1-card-1-health" class="card-health"></h4>
+				<h4 id="field-1-card-1-skills" class="card-skills">
+					<figure id="field-1-card-1-skill-1" class="card-skill">
+						<img id="field-1-card-1-skill-1-img" class="card-skill-img" src="">
+						<h5 id="field-1-card-1-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="field-1-card-2" class="field-card card">
+				<img id="field-1-card-2-img" class="card-img" src="">
+				<h3 id="field-1-card-2-name" class="card-name"></h3>
+				<figure id="field-1-card-2-type" class="card-type">
+					<img id="field-1-card-2-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="field-1-card-2-level" class="card-level">
+					<img id="field-1-card-2-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="field-1-card-2-attack" class="card-attack"></h4>
+				<h4 id="field-1-card-2-health" class="card-health"></h4>
+				<h4 id="field-1-card-2-skills" class="card-skills">
+					<figure id="field-1-card-2-skill-1" class="card-skill">
+						<img id="field-1-card-2-skill-1-img" class="card-skill-img" src="">
+						<h5 id="field-1-card-2-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="field-1-card-3" class="field-card card">
+				<img id="field-1-card-3-img" class="card-img" src="">
+				<h3 id="field-1-card-3-name" class="card-name"></h3>
+				<figure id="field-1-card-3-type" class="card-type">
+					<img id="field-1-card-3-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="field-1-card-3-level" class="card-level">
+					<img id="field-1-card-3-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="field-1-card-3-attack" class="card-attack"></h4>
+				<h4 id="field-1-card-3-health" class="card-health"></h4>
+				<h4 id="field-1-card-3-skills" class="card-skills">
+					<figure id="field-1-card-3-skill-1" class="card-skill">
+						<img id="field-1-card-3-skill-1-img" class="card-skill-img" src="">
+						<h5 id="field-1-card-3-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="field-1-card-4" class="field-card card">
+				<img id="field-1-card-4-img" class="card-img" src="">
+				<h3 id="field-1-card-4-name" class="card-name"></h3>
+				<figure id="field-1-card-4-type" class="card-type">
+					<img id="field-1-card-4-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="field-1-card-4-level" class="card-level">
+					<img id="field-1-card-4-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="field-1-card-4-attack" class="card-attack"></h4>
+				<h4 id="field-1-card-4-health" class="card-health"></h4>
+				<h4 id="field-1-card-4-skills" class="card-skills">
+					<figure id="field-1-card-4-skill-1" class="card-skill">
+						<img id="field-1-card-4-skill-1-img" class="card-skill-img" src="">
+						<h5 id="field-1-card-4-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="field-1-card-5" class="field-card card">
+				<img id="field-1-card-5-img" class="card-img" src="">
+				<h3 id="field-1-card-5-name" class="card-name"></h3>
+				<figure id="field-1-card-5-type" class="card-type">
+					<img id="field-1-card-5-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="field-1-card-5-level" class="card-level">
+					<img id="field-1-card-5-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="field-1-card-5-attack" class="card-attack"></h4>
+				<h4 id="field-1-card-5-health" class="card-health"></h4>
+				<h4 id="field-1-card-5-skills" class="card-skills">
+					<figure id="field-1-card-5-skill-1" class="card-skill">
+						<img id="field-1-card-5-skill-1-img" class="card-skill-img" src="">
+						<h5 id="field-1-card-5-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
 		</section>
 
-		<section id="campo-red" class="campo">
-			<div id="card-campo-red-1" class="card card-campo card-campo-red"></div>
-			<div id="card-campo-red-2" class="card card-campo card-campo-red"></div>
-			<div id="card-campo-red-3" class="card card-campo card-campo-red"></div>
-			<div id="card-campo-red-4" class="card card-campo card-campo-red"></div>
+		<section id="field-2" class="field">
+			<figure id="field-2-card-1" class="field-card card">
+				<img id="field-2-card-1-img" class="card-img" src="">
+				<h3 id="field-2-card-1-name" class="card-name"></h3>
+				<figure id="field-2-card-1-type" class="card-type">
+					<img id="field-2-card-1-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="field-2-card-1-level" class="card-level">
+					<img id="field-2-card-1-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="field-2-card-1-attack" class="card-attack"></h4>
+				<h4 id="field-2-card-1-health" class="card-health"></h4>
+				<h4 id="field-2-card-1-skills" class="card-skills">
+					<figure id="field-2-card-1-skill-1" class="card-skill">
+						<img id="field-2-card-1-skill-1-img" class="card-skill-img" src="">
+						<h5 id="field-2-card-1-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="field-2-card-2" class="field-card card">
+				<img id="field-2-card-2-img" class="card-img" src="">
+				<h3 id="field-2-card-2-name" class="card-name"></h3>
+				<figure id="field-2-card-2-type" class="card-type">
+					<img id="field-2-card-2-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="field-2-card-2-level" class="card-level">
+					<img id="field-2-card-2-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="field-2-card-2-attack" class="card-attack"></h4>
+				<h4 id="field-2-card-2-health" class="card-health"></h4>
+				<h4 id="field-2-card-2-skills" class="card-skills">
+					<figure id="field-2-card-2-skill-1" class="card-skill">
+						<img id="field-2-card-2-skill-1-img" class="card-skill-img" src="">
+						<h5 id="field-2-card-2-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="field-2-card-3" class="field-card card">
+				<img id="field-2-card-3-img" class="card-img" src="">
+				<h3 id="field-2-card-3-name" class="card-name"></h3>
+				<figure id="field-2-card-3-type" class="card-type">
+					<img id="field-2-card-3-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="field-2-card-3-level" class="card-level">
+					<img id="field-2-card-3-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="field-2-card-3-attack" class="card-attack"></h4>
+				<h4 id="field-2-card-3-health" class="card-health"></h4>
+				<h4 id="field-2-card-3-skills" class="card-skills">
+					<figure id="field-2-card-3-skill-1" class="card-skill">
+						<img id="field-2-card-3-skill-1-img" class="card-skill-img" src="">
+						<h5 id="field-2-card-3-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="field-2-card-4" class="field-card card">
+				<img id="field-2-card-4-img" class="card-img" src="">
+				<h3 id="field-2-card-4-name" class="card-name"></h3>
+				<figure id="field-2-card-4-type" class="card-type">
+					<img id="field-2-card-4-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="field-2-card-4-level" class="card-level">
+					<img id="field-2-card-4-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="field-2-card-4-attack" class="card-attack"></h4>
+				<h4 id="field-2-card-4-health" class="card-health"></h4>
+				<h4 id="field-2-card-4-skills" class="card-skills">
+					<figure id="field-2-card-4-skill-1" class="card-skill">
+						<img id="field-2-card-4-skill-1-img" class="card-skill-img" src="">
+						<h5 id="field-2-card-4-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="field-2-card-5" class="field-card card">
+				<img id="field-2-card-5-img" class="card-img" src="">
+				<h3 id="field-2-card-5-name" class="card-name"></h3>
+				<figure id="field-2-card-5-type" class="card-type">
+					<img id="field-2-card-5-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="field-2-card-5-level" class="card-level">
+					<img id="field-2-card-5-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="field-2-card-5-attack" class="card-attack"></h4>
+				<h4 id="field-2-card-5-health" class="card-health"></h4>
+				<h4 id="field-2-card-5-skills" class="card-skills">
+					<figure id="field-2-card-5-skill-1" class="card-skill">
+						<img id="field-2-card-5-skill-1-img" class="card-skill-img" src="">
+						<h5 id="field-2-card-5-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
 		</section>
 
-		<section id="campo-blue" class="campo">
-			<div id="card-campo-blue-1" class="card card-campo card-campo-blue"></div>
-			<div id="card-campo-blue-2" class="card card-campo card-campo-blue"></div>
-			<div id="card-campo-blue-3" class="card card-campo card-campo-blue"></div>
-			<div id="card-campo-blue-4" class="card card-campo card-campo-blue"></div>
+		<section id="hand-1" class="hand">
+			<figure id="hand-1-card-1" class="hand-card card">
+				<img id="hand-1-card-1-img" class="card-img" src="">
+				<h3 id="hand-1-card-1-name" class="card-name"></h3>
+				<figure id="hand-1-card-1-type" class="card-type">
+					<img id="hand-1-card-1-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="hand-1-card-1-level" class="card-level">
+					<img id="hand-1-card-1-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="hand-1-card-1-attack" class="card-attack"></h4>
+				<h4 id="hand-1-card-1-health" class="card-health"></h4>
+				<h4 id="hand-1-card-1-skills" class="card-skills">
+					<figure id="hand-1-card-1-skill-1" class="card-skill">
+						<img id="hand-1-card-1-skill-1-img" class="card-skill-img" src="">
+						<h5 id="hand-1-card-1-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="hand-1-card-2" class="hand-card card">
+				<img id="hand-1-card-2-img" class="card-img" src="">
+				<h3 id="hand-1-card-2-name" class="card-name"></h3>
+				<figure id="hand-1-card-2-type" class="card-type">
+					<img id="hand-1-card-2-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="hand-1-card-2-level" class="card-level">
+					<img id="hand-1-card-2-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="hand-1-card-2-attack" class="card-attack"></h4>
+				<h4 id="hand-1-card-2-health" class="card-health"></h4>
+				<h4 id="hand-1-card-2-skills" class="card-skills">
+					<figure id="hand-1-card-2-skill-1" class="card-skill">
+						<img id="hand-1-card-2-skill-1-img" class="card-skill-img" src="">
+						<h5 id="hand-1-card-2-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="hand-1-card-3" class="hand-card card">
+				<img id="hand-1-card-3-img" class="card-img" src="">
+				<h3 id="hand-1-card-3-name" class="card-name"></h3>
+				<figure id="hand-1-card-3-type" class="card-type">
+					<img id="hand-1-card-3-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="hand-1-card-3-level" class="card-level">
+					<img id="hand-1-card-3-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="hand-1-card-3-attack" class="card-attack"></h4>
+				<h4 id="hand-1-card-3-health" class="card-health"></h4>
+				<h4 id="hand-1-card-3-skills" class="card-skills">
+					<figure id="hand-1-card-3-skill-1" class="card-skill">
+						<img id="hand-1-card-3-skill-1-img" class="card-skill-img" src="">
+						<h5 id="hand-1-card-3-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="hand-1-card-4" class="hand-card card">
+				<img id="hand-1-card-4-img" class="card-img" src="">
+				<h3 id="hand-1-card-4-name" class="card-name"></h3>
+				<figure id="hand-1-card-4-type" class="card-type">
+					<img id="hand-1-card-4-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="hand-1-card-4-level" class="card-level">
+					<img id="hand-1-card-4-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="hand-1-card-4-attack" class="card-attack"></h4>
+				<h4 id="hand-1-card-4-health" class="card-health"></h4>
+				<h4 id="hand-1-card-4-skills" class="card-skills">
+					<figure id="hand-1-card-4-skill-1" class="card-skill">
+						<img id="hand-1-card-4-skill-1-img" class="card-skill-img" src="">
+						<h5 id="hand-1-card-4-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
 		</section>
 
-		<section id="mao-blue" class="mao">
-			<div id="card-mao-blue-1" class="card card-mao card-mao-blue"></div>
-			<div id="card-mao-blue-2" class="card card-mao card-mao-blue"></div>
-			<div id="card-mao-blue-3" class="card card-mao card-mao-blue"></div>
-			<div id="card-mao-blue-4" class="card card-mao card-mao-blue"></div>
+		<section id="hand-2" class="hand">
+			<figure id="hand-2-card-1" class="hand-card card">
+				<img id="hand-2-card-1-img" class="card-img" src="img/card-1.jpg">
+				<img id="hand-2-card-1-layout" class="card-layout" src="img/layout.png">
+				<h3 id="hand-2-card-1-name" class="card-name">CHAOS MAGICIAN APPRENTICE</h3>
+				<h4 class="card-type">☿</h4>
+				<h4 class="card-level">⭐⭐⭐</h4>
+				<figure id="hand-2-card-1-attack" class="card-attack">
+					<img id="hand-2-card-1-attack-img" class="card-attack-img" src="img/attack.png">
+					<h4 id="hand-2-card-1-attack-number" class="card-attack-number">13</h4>
+				</figure>
+				<figure id="hand-2-card-1-health" class="card-health">
+					<img id="hand-2-card-1-health-img" class="card-health-img" src="img/coracao.png">
+					<h4 id="hand-2-card-1-health-number" class="card-health-number">16</h4>
+				</figure>
+				<h4 id="hand-2-card-1-skills" class="card-skills">
+					<figure id="hand-2-card-1-skill-1" class="card-skill-1">
+						<img id="hand-2-card-1-skill-1-img" class="card-skill-img" src="img/parasita.png">
+						<h5 id="hand-2-card-1-skill-1-number" class="card-skill-number">2</h5>
+					</figure>
+
+					<figure id="hand-2-card-1-skill-2" class="card-skill-2">
+						<img id="hand-2-card-1-skill-2-img" class="card-skill-img" src="img/hemorragia.png">
+						<h5 id="hand-2-card-1-skill-2-number" class="card-skill-number">7</h5>
+					</figure>
+
+					<figure id="hand-2-card-1-skill-3" class="card-skill-3">
+						<img id="hand-2-card-1-skill-3-img" class="card-skill-img" src="img/brutalidade.png">
+						<h5 id="hand-2-card-1-skill-3-number" class="card-skill-number">1</h5>
+					</figure>
+
+					<figure id="hand-2-card-1-skill-special" class="card-skill-special">
+						<img id="hand-2-card-1-skill-special-img" class="card-skill-special-img" src="img/distanciamento.png">
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="hand-2-card-2" class="hand-card card">
+				<img id="hand-2-card-2-img" class="card-img" src="">
+				<h3 id="hand-2-card-2-name" class="card-name"></h3>
+				<figure id="hand-2-card-2-type" class="card-type">
+					<img id="hand-2-card-2-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="hand-2-card-2-level" class="card-level">
+					<img id="hand-2-card-2-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="hand-2-card-2-attack" class="card-attack"></h4>
+				<h4 id="hand-2-card-2-health" class="card-health"></h4>
+				<h4 id="hand-2-card-2-skills" class="card-skills">
+					<figure id="hand-2-card-2-skill-1" class="card-skill">
+						<img id="hand-2-card-2-skill-1-img" class="card-skill-img" src="">
+						<h5 id="hand-2-card-2-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="hand-2-card-3" class="hand-card card">
+				<img id="hand-2-card-3-img" class="card-img" src="">
+				<h3 id="hand-2-card-3-name" class="card-name"></h3>
+				<figure id="hand-2-card-3-type" class="card-type">
+					<img id="hand-2-card-3-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="hand-2-card-3-level" class="card-level">
+					<img id="hand-2-card-3-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="hand-2-card-3-attack" class="card-attack"></h4>
+				<h4 id="hand-2-card-3-health" class="card-health"></h4>
+				<h4 id="hand-2-card-3-skills" class="card-skills">
+					<figure id="hand-2-card-3-skill-1" class="card-skill">
+						<img id="hand-2-card-3-skill-1-img" class="card-skill-img" src="">
+						<h5 id="hand-2-card-3-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
+
+			<figure id="hand-2-card-4" class="hand-card card">
+				<img id="hand-2-card-4-img" class="card-img" src="">
+				<h3 id="hand-2-card-4-name" class="card-name"></h3>
+				<figure id="hand-2-card-4-type" class="card-type">
+					<img id="hand-2-card-4-type-img" class="card-type-img" src="">
+				</figure>
+				<figure id="hand-2-card-4-level" class="card-level">
+					<img id="hand-2-card-4-level-img" class="card-level-img" src="">
+				</figure>
+				<h4 id="hand-2-card-4-attack" class="card-attack"></h4>
+				<h4 id="hand-2-card-4-health" class="card-health"></h4>
+				<h4 id="hand-2-card-4-skills" class="card-skills">
+					<figure id="hand-2-card-4-skill-1" class="card-skill">
+						<img id="hand-2-card-4-skill-1-img" class="card-skill-img" src="">
+						<h5 id="hand-2-card-4-skill-1-number" class="card-skill-number"></h5>
+					</figure>
+				</h4>
+			</figure>
 		</section>
+
+		<footer id="gui">
+			<button id="surrender" onclick="clicou()"><img id="surrender-img" src="img/surrender.png"></button>
+			<h2 id="game-time">99</h2>
+			<button id="sound" onclick="alternarSom()"><img id="sound-img" src="img/sound.png"></button>
+			<button id="fullscreen" onclick="alternarFullscreen()"><img id="fullscreen-img" src="img/fullscreen.png"></button>
+		</footer>
 	</main>
 
 	<script src="js/gameplay.js"></script>

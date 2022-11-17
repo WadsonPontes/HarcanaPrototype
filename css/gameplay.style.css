@@ -1,90 +1,404 @@
 * {
 	padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 1.78vh;
+}
+
+@media (max-aspect-ratio:16/9) {
+	html {
+		font-size: 1vw;
+	}
 }
 
 body {
-	display: flex;
 	position: fixed;
-	max-width: 178vh;
-	max-height: 100vh;
-    width: 100vw;
-    height: 56vw;
-	margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-header {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: center;
-	align-content: center;
-	position: relative;
-    width: 17%;
-    height: 100%;
-    background-color: violet;
-}
-
-.personagem {
-    display: inline-block;
-	position: relative;
-    height: 50%;
-    width: 100%;
-	border: 1px solid black;
+	top: 0;
+	left: 0;
+	width: 100vw;
+    height: 100vh;
+	color: white;
+	background-color: black;
+	z-index: 1;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    width: 83%;
-    height: 100%;
+	position: fixed;
+	max-width: 177.78vh;
+	max-height: 100vh;
+	width: 100vw;
+	height: 56.25vw;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	/* background-image: url("../img/modelo.png");
+	background-size: cover; */
+	z-index: 2;
 }
 
-.mao {
-	background: blue;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: center;
-	align-content: center;
-	position: relative;
-    width: 100%;
-    height: 36%;
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 17%;
+	height: 100%;
+	background-color: burlywood;
+	z-index: 6;
 }
 
-.campo {
-	background: green;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: center;
-	align-content: center;
-	position: relative;
-	width: 100%;
-    height: 28%;
-    padding: 0% 12.25%;
+#hand-1 {
+	position: absolute;
+	top: -38%;
+	left: 28.2%;
+	width: 61%;
+	height: 38%;
+	background-color: chartreuse;
+	z-index: 5;
 }
 
-.card {
-	background: gray;
+#hand-2 {
+	position: absolute;
+	bottom: 0;
+	left: 28.2%;
+	width: 61%;
+	height: 38%;
+	background-color: transparent;
+	z-index: 5;
+}
+
+#field-1 {
+	position: absolute;
+	top: 11%;
+	left: 18%;
+	width: 81%;
+	height: 37%;
+	background-color: transparent;
+	z-index: 4;
+}
+
+#field-2 {
+	position: absolute;
+	top: 51%;
+	left: 18%;
+	width: 81%;
+	height: 37%;
+	background-color: transparent;
+	z-index: 4;
+}
+
+.hand-card {
 	display: inline-block;
 	position: relative;
-	border: 1px solid black;
+	width: 23.6%;
+	height: 96%;
+	margin: 0 0.5% 0 0.5%;
+	z-index: 8;
 }
 
-.card-mao {
+.field-card {
+	display: inline-block;
+	position: relative;
+	width: 18%;
 	height: 100%;
-    width: 15%;
-    margin: 0 0.3%;
+	margin: 0 0.88%;
+	z-index: 7;
 }
 
-.card-campo {
-	height: 33%;
-	width: 33%;
-    margin: 0;
+.card-layout {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.card-img {
+	position: absolute;
+	top: 13.5%;
+	left: 3.5%;
+	width: 82%;
+	height: 84%;
+	z-index: 9;
+}
+
+.card-name {
+	position: absolute;
+	top: 2%;
+	left: 0;
+	width: 100%;
+	height: 4%;
+	font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+	font-weight: 900;
+	font-size: 0.8rem;
+	line-height: 0.8rem;
+	letter-spacing: -0.06rem;
+	word-spacing: 0.4rem;
+	text-align: center;
+	z-index: 14;
+}
+
+.card-type {
+	position: absolute;
+	top: 13.5%;
+	left: 1.8%;
+	width: 17%;
+	height: 12%;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	text-align: center;
+	z-index: 14;
+}
+
+.card-level {
+	position: absolute;
+	top: 7%;
+	left: 0;
+	width: 100%;
+	height: 6%;
+	font-size: 0.9rem;
+	line-height: 1.3rem;
+	text-align: center;
+	z-index: 14;
+}
+
+.card-attack {
+	position: absolute;
+	top: 14%;
+	right: 0;
+	width: 39%;
+	height: 16%;
+	z-index: 12;
+}
+
+.card-attack-img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 13;
+}
+
+.card-attack-number {
+	position: absolute;
+	top: 0;
+	left: 0%;
+	width: 60%;
+	height: 100%;
+	font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+	font-weight: 900;
+	font-size: 1.4rem;
+	line-height: 3.6rem;
+	letter-spacing: -0.1rem;
+	text-align: center;
+	z-index: 14;
+}
+
+.card-health {
+	position: absolute;
+	top: 30%;
+	right: 0;
+	width: 39%;
+	height: 16%;
+	z-index: 12;
+}
+
+.card-health-img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 13;
+}
+
+.card-health-number {
+	position: absolute;
+	top: 0;
+	left: 0%;
+	width: 60%;
+	height: 100%;
+	font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+	font-weight: 900;
+	font-size: 1.4rem;
+	line-height: 3.6rem;
+	letter-spacing: -0.1rem;
+	text-align: center;
+	z-index: 14;
+}
+
+.card-skills {
+	position: absolute;
+	top: 50%;
+	right: 1%;
+	width: 32%;
+	height: 47%;
+	z-index: 11;
+}
+
+.card-skill-1 {
+	position: absolute;
+	top: 0%;
+	right: 0;
+	width: 100%;
+	height: 19%;
+	z-index: 12;
+}
+
+.card-skill-2 {
+	position: absolute;
+	top: 25%;
+	right: 0;
+	width: 100%;
+	height: 19%;
+	z-index: 12;
+}
+
+.card-skill-3 {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 100%;
+	height: 19%;
+	z-index: 12;
+}
+
+.card-skill-special {
+	position: absolute;
+	top: 80%;
+	right: 2%;
+	width: 35%;
+	height: 18%;
+	z-index: 12;
+}
+
+.card-skill-special-img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 13;
+}
+
+.card-skill-img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 13;
+}
+
+.card-skill-number {
+	position: absolute;
+	top: 0;
+	left: 2%;
+	width: 60%;
+	height: 100%;
+	font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+	font-weight: 900;
+	font-size: 1.3rem;
+	line-height: 1.8rem;
+	letter-spacing: -0.1rem;
+	text-align: center;
+	z-index: 14;
+}
+
+footer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+}
+
+#surrender {
+	position: absolute;
+	top: 1%;
+	left: 17.5%;
+	width: 5.5%;
+	height: 9.5%;
+	border: 0.3rem solid #930017;
+	border-radius: 1rem;
+	background: linear-gradient(0deg, #A3090A 0%, #DE5566 100%);
+	cursor: pointer;
+	z-index: 15;
+}
+
+#surrender-img {
+	position: absolute;
+	top: 7%;
+	left: 13%;
+	width: 70%;
+	height: 92%;
+	z-index: 16;
+}
+
+#game-time {
+	position: absolute;
+	top: 1%;
+	left: 80.5%;
+	width: 5.5%;
+	height: 9.5%;
+	font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+	font-size: 3rem;
+	line-height: 4.2rem;
+	text-align: center;
+	border: 0.5rem ridge #29881F;
+	border-radius: 1rem;
+	background: linear-gradient(0deg, #0E9D02 0%, #40D736 100%);
+	z-index: 16;
+}
+
+#sound {
+	position: absolute;
+	top: 1%;
+	left: 87.1%;
+	width: 5.5%;
+	height: 9.5%;
+	border: 0.3rem solid #312F9A;
+	border-radius: 1rem;
+	background: linear-gradient(0deg, #036AA5 0%, #499AE5 100%);
+	cursor: pointer;
+	z-index: 15;
+}
+
+#sound-img {
+	position: absolute;
+	top: 14%;
+	left: 20%;
+	width: 70%;
+	height: 70%;
+	z-index: 16;
+}
+
+#fullscreen {
+	position: absolute;
+	top: 1%;
+	left: 94%;
+	width: 5.5%;
+	height: 9.5%;
+	border: 0.3rem solid #312F9A;
+	border-radius: 1rem;
+	background: linear-gradient(0deg, #036AA5 0%, #499AE5 100%);
+	cursor: pointer;
+	z-index: 15;
+}
+
+#fullscreen-img {
+	position: absolute;
+	top: 16%;
+	left: 17%;
+	width: 70%;
+	height: 70%;
+	z-index: 16;
 }

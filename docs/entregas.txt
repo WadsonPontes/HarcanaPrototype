@@ -1,0 +1,19 @@
+Grupo:
+	JASON WILLYAN CASTRO DO NASCIMENTO
+	ROBERT MATHEUS COSTA TARGINO
+	RODRIGO SAADS PINTO
+	WADSON PONTES DE SOUZA
+
+Entregas:
+	Gameplay com qualidade de produto final iniciado.
+	Design da carta criado.
+	Criado 30 habilidades com seus respectivos ícones.
+	Criado 4 tipos de cartas com seus respectivos ícones.
+	Refeito a tela de Registro para seguir o padrão de qualidade estabelecido.
+
+GitHub:
+	https://github.com/WadsonPontes/HarcanaPrototype/tree/prototipo-2
+GDD:
+	https://docs.google.com/document/d/1GLVbuOuVbrGnvjB6hblvbXoWwguouqtfFbSGR7tNVtk/edit?usp=sharing
+Site:
+	wjogo.com/prototipo-2

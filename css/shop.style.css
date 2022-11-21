@@ -17,10 +17,14 @@
     border-image-slice: 1;
     width:100%;
 }
- img{
+.img1{
 	height: 200px;
 	width: 150px;
  }
+.img2{
+	height: 50px;
+	width: 40px;
+}
 .menu:hover
 {
 	background-color: var(--main-color-blue);
@@ -33,16 +37,81 @@
 .box{
 	display:inline-block;
 	margin: 0 20;
-	margin-right: 40px;
+	margin-right: 100px;
 }
 body{
-	background-color: #845EC2;
+	background-color: #202124;
 }
- 
+.info-box{
+	display: flex;
+	margin-top: 70px;
+ }
+.jeweOfExalt-button{
+	display: flex;
+  	border: 5px solid #c3c3c3;
+  	height: 25%;
+  	width: 25%;
+  	margin-left: 200px;
+}
+.jeweOfGlorify-button{
+	display: flex;
+	border: 5px solid #c3c3c3;
+	height: 25%;
+	width: 25%;
+}
+.goldenCoin-button{
+	display: flex;
+	border: 5px solid #c3c3c3;
+	height: 25%;
+  	width: 25%;
+}
+.buy-button{
+  display: flex;
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipul;
+  margin-left: 25px ;
+}
+
+p{
+	font-family: "Audiowide", sans-serif;
+	text-shadow: 3px 3px 3px #000000;
+	color: #845EC2;
+	margin-left: 25px;
+	font-size: large;
+}
+
+.buy-button:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .buy-button {
+    padding: 10px 30px;
+  }
+}
+
 .container-fluid{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	margin-top: 100px;
+	margin-top: 10px;
 }

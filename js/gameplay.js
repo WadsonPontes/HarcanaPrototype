@@ -25,23 +25,23 @@ let FULLSCREEN = false;
 function alternarSom() {
     if (SOUND) {
         SOUND = false;
-        document.querySelector('#sound-img').src = 'img/sound-off.png';
+        document.querySelector('#sound-img').src = 'img/icon/gui/sound-off.png';
     }
     else {
         SOUND = true;
-        document.querySelector('#sound-img').src = 'img/sound.png';
+        document.querySelector('#sound-img').src = 'img/icon/gui/sound.png';
     }
 }
 
 function alternarFullscreen() {
     if (FULLSCREEN) {
         FULLSCREEN = false;
-        document.querySelector('#fullscreen-img').src = 'img/fullscreen.png';
+        document.querySelector('#fullscreen-img').src = 'img/icon/gui/fullscreen.png';
         closeFullscreen();
     }
     else {
         FULLSCREEN = true;
-        document.querySelector('#fullscreen-img').src = 'img/fullscreen-off.png';
+        document.querySelector('#fullscreen-img').src = 'img/icon/gui/fullscreen-off.png';
         openFullscreen();
     }
 }

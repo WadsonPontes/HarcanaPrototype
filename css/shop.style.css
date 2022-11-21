@@ -18,8 +18,8 @@
     width:100%;
 }
 .img1{
-	height: 200px;
-	width: 150px;
+	height: 300px;
+	width: 250px;
  }
 .img2{
 	height: 50px;
@@ -39,6 +39,11 @@
 	margin: 0 20;
 	margin-right: 100px;
 }
+.box1{
+	margin-top: 20px;
+	margin-right: 60px;
+	text-align: center;
+}
 body{
 	background-color: #202124;
 }
@@ -48,22 +53,23 @@ body{
  }
 .jeweOfExalt-button{
 	display: flex;
-  	border: 5px solid #c3c3c3;
   	height: 25%;
   	width: 25%;
-  	margin-left: 200px;
+  	margin-left: 370px;
+	text-align: right;
+
 }
 .jeweOfGlorify-button{
 	display: flex;
-	border: 5px solid #c3c3c3;
 	height: 25%;
 	width: 25%;
+	text-align: center;
 }
 .goldenCoin-button{
 	display: flex;
-	border: 5px solid #c3c3c3;
 	height: 25%;
   	width: 25%;
+	text-align: left;
 }
 .buy-button{
   display: flex;
@@ -86,15 +92,16 @@ body{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipul;
-  margin-left: 25px ;
+  margin-left: 80px ;
 }
 
 p{
 	font-family: "Audiowide", sans-serif;
 	text-shadow: 3px 3px 3px #000000;
 	color: #845EC2;
-	margin-left: 25px;
-	font-size: large;
+	margin-left: 10px;
+	font-size: x-large;
+	text-align: center;
 }
 
 .buy-button:hover {
@@ -114,4 +121,13 @@ p{
 	justify-content: center;
 	align-items: center;
 	margin-top: 10px;
+}
+
+#display {
+    text-align: left;
+    height: 60px;
+    width: 100%;
+    color: #845EC2;
+    background: #202124;
+    font-size: 40px;
 }

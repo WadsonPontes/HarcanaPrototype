@@ -19,9 +19,9 @@ body {
 	top: 0;
 	left: 0;
 	width: 100vw;
-    height: 100vh;
+	height: 100vh;
 	color: white;
-	background-color: black;
+	background-color: #fff;
 	z-index: 1;
 }
 
@@ -194,8 +194,8 @@ header {
 
 .skill {
 	position: absolute;
-	width: 25%;
-	height: 9%;
+	width: 28%;
+	height: 10%;
 }
 
 .card-attack {
@@ -230,11 +230,11 @@ header {
 	margin: auto;
 	padding-right: 10%;
 	width: 64%;
-	height: 60%;
+	height: 50%;
 	font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 	font-weight: 900;
 	font-size: 1.4rem;
-	line-height: 2rem;
+	line-height: 1.6rem;
 	letter-spacing: -0.1rem;
 	text-align: center;
 	border-top-left-radius: 0.3rem;
@@ -245,9 +245,8 @@ header {
 
 .card-skill-number {
 	height: 75%;
-	width: 44%;
-	padding-right: 1%;
-	line-height: 1.4rem;
+	width: 60%;
+	line-height: 1.5rem;
 }
 
 .card-attribute-icon {
@@ -257,6 +256,11 @@ header {
 	width: 50%;
 	height: 100%;
 	z-index: 15;
+}
+
+.card-skill-icon {
+	right: 2%;
+	width: 48%;
 }
 
 footer {

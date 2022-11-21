@@ -23,7 +23,8 @@
  }
 .img2{
 	height: 50px;
-	width: 40px;
+	/* width: 40px; */
+	margin-right: 10px;
 }
 .menu:hover
 {
@@ -53,23 +54,25 @@ body{
  }
 .jeweOfExalt-button{
 	display: flex;
-  	height: 25%;
-  	width: 25%;
-  	margin-left: 370px;
+	height: 25%;
+	width: 25%;
+	margin-left: 370px;
 	text-align: right;
-
+	align-items: center;
 }
 .jeweOfGlorify-button{
 	display: flex;
 	height: 25%;
 	width: 25%;
 	text-align: center;
+	align-items: center;
 }
 .goldenCoin-button{
 	display: flex;
 	height: 25%;
-  	width: 25%;
+	width: 25%;
 	text-align: left;
+	align-items: center;
 }
 .buy-button{
   display: flex;

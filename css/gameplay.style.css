@@ -50,51 +50,44 @@ header {
 	z-index: 6;
 }
 
-#hand-1 {
+.hand {
 	position: absolute;
-	top: -38%;
-	left: 28.2%;
-	width: 61%;
+	left: 28%;
+	width: 64%;
 	height: 38%;
-	background-color: chartreuse;
 	z-index: 5;
+}
+
+#hand-1 {
+	top: 1%;
 }
 
 #hand-2 {
-	position: absolute;
 	bottom: 0;
-	left: 28.2%;
-	width: 61%;
-	height: 38%;
+}
+
+.field {
+	position: absolute;
+	left: 17%;
+	width: 83%;
+	height: 37%;
 	background-color: transparent;
-	z-index: 5;
+	z-index: 4;
 }
 
 #field-1 {
-	position: absolute;
 	top: 11%;
-	left: 18%;
-	width: 81%;
-	height: 37%;
-	background-color: transparent;
-	z-index: 4;
 }
 
 #field-2 {
-	position: absolute;
-	top: 51%;
-	left: 18%;
-	width: 81%;
-	height: 37%;
-	background-color: transparent;
-	z-index: 4;
+	top: 52%;
 }
 
 .hand-card {
 	display: inline-block;
 	position: relative;
-	width: 23.6%;
-	height: 96%;
+	width: 23.5%;
+	height: 97.5%;
 	margin: 0 0.5% 0 0.5%;
 	z-index: 8;
 }
@@ -102,9 +95,9 @@ header {
 .field-card {
 	display: inline-block;
 	position: relative;
-	width: 18%;
+	width: 18.2%;
 	height: 100%;
-	margin: 0 0.88%;
+	margin: 0 0.7%;
 	z-index: 7;
 }
 
@@ -274,7 +267,7 @@ footer {
 
 #surrender {
 	position: absolute;
-	top: 1%;
+	bottom: 1%;
 	left: 17.5%;
 	width: 5.5%;
 	height: 9.5%;
@@ -297,14 +290,14 @@ footer {
 #game-time {
 	position: absolute;
 	top: 1%;
-	left: 80.5%;
+	left: 17.5%;
 	width: 5.5%;
 	height: 9.5%;
 	font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 	font-size: 3rem;
 	line-height: 4.2rem;
 	text-align: center;
-	border: 0.5rem ridge #29881F;
+	border: 0.5rem ridge #70D668;
 	border-radius: 1rem;
 	background: linear-gradient(0deg, #0E9D02 0%, #40D736 100%);
 	z-index: 17;
@@ -312,8 +305,8 @@ footer {
 
 #sound {
 	position: absolute;
-	top: 1%;
-	left: 87.1%;
+	bottom: 1%;
+	left: 94%;
 	width: 5.5%;
 	height: 9.5%;
 	border: 0.3rem solid #312F9A;

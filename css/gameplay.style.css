@@ -350,18 +350,18 @@ main {
 
 .char-health {
   position: absolute;
-  left: 82%;
-  width: 16%;
-  height: 12%;
+  left: 74%;
+  width: 23%;
+  height: 14%;
   z-index: 86;
 }
 
 #char-1-health {
-  top: 1%;
+  top: 0%;
 }
 
 #char-2-health {
-  bottom: 1%;
+  bottom: 0%;
 }
 
 .char-health-icon {
@@ -380,34 +380,56 @@ main {
   right: 0%;
   bottom: 0%;
   margin: auto;
-  padding-right: 1%;
-  width: 75%;
-  height: 55%;
-  font-size: 1.4rem;
-  line-height: 1.9rem;
+  padding-right: 2%;
+  width: 93%;
+  height: 75%;
+  color: #000;
+  font-size: 2.5rem;
+  line-height: 2.9rem;
   border-radius: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0.2rem 0 #fff, -0.2rem 0 #fff, 0 0.2rem #fff, 0 -0.2rem #fff,
+             0.15rem 0.15rem #fff, -0.15rem -0.15rem #fff, 0.15rem -0.15rem #fff, -0.15rem 0.15rem #fff;
   z-index: 88;
 }
 
-.char-name {
+.char-title {
   position: absolute;
   left: 6%;
   width: 73%;
-  height: 12%;
+  height: 7%;
   color: #000;
   text-align: left;
   font-size: 1.2rem;
-  line-height: 3.3rem;
+  line-height: 2rem;
   z-index: 88;
 }
 
-#char-1-name {
-  top: 1%;
+#char-1-title {
+  top: 2%;
 }
 
-#char-2-name {
-  bottom: 0.6%;
+#char-2-title {
+  bottom: 5%;
+}
+
+.char-subtitle {
+  position: absolute;
+  left: 6%;
+  width: 73%;
+  height: 7%;
+  color: #000;
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  z-index: 88;
+}
+
+#char-1-subtitle {
+  top: 7%;
+}
+
+#char-2-subtitle {
+  bottom: 0%;
 }
 
 /* ===================== CARD ========================================================== */

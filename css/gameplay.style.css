@@ -49,6 +49,9 @@ main {
   bottom: 0;
   right: 0;
   overflow: hidden;
+  background: url(../img/layout/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: 20;
 }
 

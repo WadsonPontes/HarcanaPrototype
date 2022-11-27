@@ -11,113 +11,43 @@
 
 <body>
 	<main>
-		<header>
-			<figure id="draw-1" class="card">
-				<img id="draw-1-img" class="card-img" src="">
-				<h3 id="draw-1-name" class="card-name"></h3>
-				<figure id="draw-1-type" class="card-type">
-					<img id="draw-1-type-img" class="card-type-img" src="">
-				</figure>
-				<figure id="draw-1-level" class="card-level">
-					<img id="draw-1-level-img" class="card-level-img" src="">
-				</figure>
-				<h4 id="draw-1-attack" class="card-attack"></h4>
-				<h4 id="draw-1-health" class="card-health"></h4>
-				<h4 id="draw-1-skills" class="card-skills">
-					<figure id="draw-1-skill-1" class="card-skill">
-						<img id="draw-1-skill-1-img" class="card-skill-img" src="">
-						<h5 id="draw-1-skill-1-number" class="card-skill-number"></h5>
-					</figure>
-				</h4>
-			</figure>
-
-			<figure id="draw-2" class="card">
-				<img id="draw-2-img" class="card-img" src="">
-				<h3 id="draw-2-name" class="card-name"></h3>
-				<figure id="draw-2-type" class="card-type">
-					<img id="draw-2-type-img" class="card-type-img" src="">
-				</figure>
-				<figure id="draw-2-level" class="card-level">
-					<img id="draw-2-level-img" class="card-level-img" src="">
-				</figure>
-				<h4 id="draw-2-attack" class="card-attack"></h4>
-				<h4 id="draw-2-health" class="card-health"></h4>
-				<h4 id="draw-2-skills" class="card-skills">
-					<figure id="draw-2-skill-1" class="card-skill">
-						<img id="draw-2-skill-1-img" class="card-skill-img" src="">
-						<h5 id="draw-2-skill-1-number" class="card-skill-number"></h5>
-					</figure>
-				</h4>
-			</figure>
-
-			<figure id="deck-1" class="deck">
-				<img id="deck-1-img" class="deck-img" src="">
-				<h3 id="deck-1-number" class="deck-number"></h3>
-			</figure>
-
-			<figure id="deck-2" class="deck">
-				<img id="deck-2-img" class="deck-img" src="">
-				<h3 id="deck-2-number" class="deck-number"></h3>
-			</figure>
-
-			<figure id="char-1" class="char">
-				<img id="char-1-img" class="char-img" src="">
-				<figure id="char-1-layout" class="char-layout">
-					<img id="char-1-layout-img" class="char-layout-img" src="img/char-layout.png">
-				</figure>
-				<h2 id="char-1-name" class="char-name"></h2>
-				<h3 id="char-1-health" class="char-health"></h3>
-				<h3 id="char-1-skills" class="char-skills">
-					<figure id="char-1-skill-1" class="card-skill">
-						<img id="char-1-skill-1-img" class="card-skill-img" src="">
-						<h4 id="char-1-skill-1-number" class="card-skill-number"></h4>
-					</figure>
-				</h3>
-			</figure>
-
-			<figure id="char-2" class="char">
-				<img id="char-2-img" class="char-img" src="">
-				<h2 id="char-2-name" class="char-name"></h2>
-				<h3 id="char-2-health" class="char-health"></h3>
-				<h3 id="char-2-skills" class="char-skills">
-					<figure id="char-2-skill-1" class="card-skill">
-						<img id="char-2-skill-1-img" class="card-skill-img" src="">
-						<h4 id="char-2-skill-1-number" class="card-skill-number"></h4>
-					</figure>
-				</h3>
-			</figure>
+		<header id="gui">
+			<button id="surrender" onclick="clicou()"><img id="surrender-icon" src="img/icon/gui/surrender.png"></button>
+			<h2 id="game-time">99</h2>
+			<button id="sound" onclick="alternarSom()"><img id="sound-icon" src="img/icon/gui/sound.png"></button>
+			<button id="fullscreen" onclick="alternarFullscreen()"><img id="fullscreen-icon" src="img/icon/gui/fullscreen.png"></button>
 		</header>
 
 		<section id="field-1" class="field">
 			<figure id="field-1-card-1" class="field-card card">
 				<img id="field-1-card-1-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="field-1-card-1-layout" class="card-layout">
-					<img id="field-1-card-1-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="field-1-card-1-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="field-1-card-1-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="field-1-card-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-1-card-1-type" class="card-type">
 					<img id="field-1-card-1-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="field-1-card-1-attack" class="attribute card-attack">
-					<h4 id="field-1-card-1-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="field-1-card-1-attack-number" class="number card-attribute-number">2</h4>
 					<img id="field-1-card-1-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="field-1-card-1-health" class="attribute card-health">
-					<h4 id="field-1-card-1-health-number" class="card-attribute-number">3</h4>
+					<h4 id="field-1-card-1-health-number" class="number card-attribute-number">3</h4>
 					<img id="field-1-card-1-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="field-1-card-1-primary" class="attribute skill card-primary">
-					<h5 id="field-1-card-1-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="field-1-card-1-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="field-1-card-1-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="field-1-card-1-secondary" class="attribute skill card-secondary">
-					<h5 id="field-1-card-1-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="field-1-card-1-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="field-1-card-1-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="field-1-card-1-tertiary" class="attribute skill card-tertiary">
-					<h5 id="field-1-card-1-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="field-1-card-1-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="field-1-card-1-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="field-1-card-1-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="field-1-card-1-special" class="attribute skill card-special">
 					<img id="field-1-card-1-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -127,32 +57,32 @@
 			<figure id="field-1-card-2" class="field-card card">
 				<img id="field-1-card-2-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="field-1-card-2-layout" class="card-layout">
-					<img id="field-1-card-2-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="field-1-card-2-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="field-1-card-2-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="field-1-card-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-1-card-2-type" class="card-type">
 					<img id="field-1-card-2-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="field-1-card-2-attack" class="attribute card-attack">
-					<h4 id="field-1-card-2-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="field-1-card-2-attack-number" class="number card-attribute-number">2</h4>
 					<img id="field-1-card-2-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="field-1-card-2-health" class="attribute card-health">
-					<h4 id="field-1-card-2-health-number" class="card-attribute-number">3</h4>
+					<h4 id="field-1-card-2-health-number" class="number card-attribute-number">3</h4>
 					<img id="field-1-card-2-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="field-1-card-2-primary" class="attribute skill card-primary">
-					<h5 id="field-1-card-2-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="field-1-card-2-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="field-1-card-2-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="field-1-card-2-secondary" class="attribute skill card-secondary">
-					<h5 id="field-1-card-2-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="field-1-card-2-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="field-1-card-2-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="field-1-card-2-tertiary" class="attribute skill card-tertiary">
-					<h5 id="field-1-card-2-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="field-1-card-2-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="field-1-card-2-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="field-1-card-2-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="field-1-card-2-special" class="attribute skill card-special">
 					<img id="field-1-card-2-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -162,32 +92,32 @@
 			<figure id="field-1-card-3" class="field-card card">
 				<img id="field-1-card-3-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="field-1-card-3-layout" class="card-layout">
-					<img id="field-1-card-3-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="field-1-card-3-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="field-1-card-3-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="field-1-card-3-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-1-card-3-type" class="card-type">
 					<img id="field-1-card-3-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="field-1-card-3-attack" class="attribute card-attack">
-					<h4 id="field-1-card-3-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="field-1-card-3-attack-number" class="number card-attribute-number">2</h4>
 					<img id="field-1-card-3-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="field-1-card-3-health" class="attribute card-health">
-					<h4 id="field-1-card-3-health-number" class="card-attribute-number">3</h4>
+					<h4 id="field-1-card-3-health-number" class="number card-attribute-number">3</h4>
 					<img id="field-1-card-3-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="field-1-card-3-primary" class="attribute skill card-primary">
-					<h5 id="field-1-card-3-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="field-1-card-3-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="field-1-card-3-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="field-1-card-3-secondary" class="attribute skill card-secondary">
-					<h5 id="field-1-card-3-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="field-1-card-3-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="field-1-card-3-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="field-1-card-3-tertiary" class="attribute skill card-tertiary">
-					<h5 id="field-1-card-3-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="field-1-card-3-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="field-1-card-3-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="field-1-card-3-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="field-1-card-3-special" class="attribute skill card-special">
 					<img id="field-1-card-3-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -197,32 +127,32 @@
 			<figure id="field-1-card-4" class="field-card card">
 				<img id="field-1-card-4-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="field-1-card-4-layout" class="card-layout">
-					<img id="field-1-card-4-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="field-1-card-4-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="field-1-card-4-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="field-1-card-4-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-1-card-4-type" class="card-type">
 					<img id="field-1-card-4-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="field-1-card-4-attack" class="attribute card-attack">
-					<h4 id="field-1-card-4-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="field-1-card-4-attack-number" class="number card-attribute-number">2</h4>
 					<img id="field-1-card-4-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="field-1-card-4-health" class="attribute card-health">
-					<h4 id="field-1-card-4-health-number" class="card-attribute-number">3</h4>
+					<h4 id="field-1-card-4-health-number" class="number card-attribute-number">3</h4>
 					<img id="field-1-card-4-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="field-1-card-4-primary" class="attribute skill card-primary">
-					<h5 id="field-1-card-4-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="field-1-card-4-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="field-1-card-4-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="field-1-card-4-secondary" class="attribute skill card-secondary">
-					<h5 id="field-1-card-4-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="field-1-card-4-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="field-1-card-4-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="field-1-card-4-tertiary" class="attribute skill card-tertiary">
-					<h5 id="field-1-card-4-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="field-1-card-4-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="field-1-card-4-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="field-1-card-4-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="field-1-card-4-special" class="attribute skill card-special">
 					<img id="field-1-card-4-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -232,32 +162,32 @@
 			<figure id="field-1-card-5" class="field-card card">
 				<img id="field-1-card-5-img" class="card-img" src="img/card/card-1.jpg">
 				<figure id="field-1-card-5-layout" class="card-layout">
-					<img id="field-1-card-5-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="field-1-card-5-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="field-1-card-5-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="field-1-card-5-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-1-card-5-type" class="card-type">
 					<img id="field-1-card-5-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="field-1-card-5-attack" class="attribute card-attack">
-					<h4 id="field-1-card-5-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="field-1-card-5-attack-number" class="number card-attribute-number">2</h4>
 					<img id="field-1-card-5-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="field-1-card-5-health" class="attribute card-health">
-					<h4 id="field-1-card-5-health-number" class="card-attribute-number">3</h4>
+					<h4 id="field-1-card-5-health-number" class="number card-attribute-number">3</h4>
 					<img id="field-1-card-5-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="field-1-card-5-primary" class="attribute skill card-primary">
-					<h5 id="field-1-card-5-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="field-1-card-5-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="field-1-card-5-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="field-1-card-5-secondary" class="attribute skill card-secondary">
-					<h5 id="field-1-card-5-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="field-1-card-5-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="field-1-card-5-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="field-1-card-5-tertiary" class="attribute skill card-tertiary">
-					<h5 id="field-1-card-5-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="field-1-card-5-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="field-1-card-5-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="field-1-card-5-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="field-1-card-5-special" class="attribute skill card-special">
 					<img id="field-1-card-5-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -269,32 +199,32 @@
 			<figure id="field-2-card-1" class="field-card card">
 				<img id="field-2-card-1-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="field-2-card-1-layout" class="card-layout">
-					<img id="field-2-card-1-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="field-2-card-1-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="field-2-card-1-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="field-2-card-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-2-card-1-type" class="card-type">
 					<img id="field-2-card-1-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="field-2-card-1-attack" class="attribute card-attack">
-					<h4 id="field-2-card-1-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="field-2-card-1-attack-number" class="number card-attribute-number">2</h4>
 					<img id="field-2-card-1-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="field-2-card-1-health" class="attribute card-health">
-					<h4 id="field-2-card-1-health-number" class="card-attribute-number">3</h4>
+					<h4 id="field-2-card-1-health-number" class="number card-attribute-number">3</h4>
 					<img id="field-2-card-1-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="field-2-card-1-primary" class="attribute skill card-primary">
-					<h5 id="field-2-card-1-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="field-2-card-1-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="field-2-card-1-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="field-2-card-1-secondary" class="attribute skill card-secondary">
-					<h5 id="field-2-card-1-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="field-2-card-1-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="field-2-card-1-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="field-2-card-1-tertiary" class="attribute skill card-tertiary">
-					<h5 id="field-2-card-1-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="field-2-card-1-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="field-2-card-1-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="field-2-card-1-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="field-2-card-1-special" class="attribute skill card-special">
 					<img id="field-2-card-1-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -304,32 +234,32 @@
 			<figure id="field-2-card-2" class="field-card card">
 				<img id="field-2-card-2-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="field-2-card-2-layout" class="card-layout">
-					<img id="field-2-card-2-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="field-2-card-2-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="field-2-card-2-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="field-2-card-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-2-card-2-type" class="card-type">
 					<img id="field-2-card-2-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="field-2-card-2-attack" class="attribute card-attack">
-					<h4 id="field-2-card-2-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="field-2-card-2-attack-number" class="number card-attribute-number">2</h4>
 					<img id="field-2-card-2-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="field-2-card-2-health" class="attribute card-health">
-					<h4 id="field-2-card-2-health-number" class="card-attribute-number">3</h4>
+					<h4 id="field-2-card-2-health-number" class="number card-attribute-number">3</h4>
 					<img id="field-2-card-2-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="field-2-card-2-primary" class="attribute skill card-primary">
-					<h5 id="field-2-card-2-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="field-2-card-2-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="field-2-card-2-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="field-2-card-2-secondary" class="attribute skill card-secondary">
-					<h5 id="field-2-card-2-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="field-2-card-2-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="field-2-card-2-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="field-2-card-2-tertiary" class="attribute skill card-tertiary">
-					<h5 id="field-2-card-2-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="field-2-card-2-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="field-2-card-2-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="field-2-card-2-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="field-2-card-2-special" class="attribute skill card-special">
 					<img id="field-2-card-2-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -339,32 +269,32 @@
 			<figure id="field-2-card-3" class="field-card card">
 				<img id="field-2-card-3-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="field-2-card-3-layout" class="card-layout">
-					<img id="field-2-card-3-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="field-2-card-3-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="field-2-card-3-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="field-2-card-3-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-2-card-3-type" class="card-type">
 					<img id="field-2-card-3-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="field-2-card-3-attack" class="attribute card-attack">
-					<h4 id="field-2-card-3-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="field-2-card-3-attack-number" class="number card-attribute-number">2</h4>
 					<img id="field-2-card-3-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="field-2-card-3-health" class="attribute card-health">
-					<h4 id="field-2-card-3-health-number" class="card-attribute-number">3</h4>
+					<h4 id="field-2-card-3-health-number" class="number card-attribute-number">3</h4>
 					<img id="field-2-card-3-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="field-2-card-3-primary" class="attribute skill card-primary">
-					<h5 id="field-2-card-3-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="field-2-card-3-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="field-2-card-3-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="field-2-card-3-secondary" class="attribute skill card-secondary">
-					<h5 id="field-2-card-3-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="field-2-card-3-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="field-2-card-3-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="field-2-card-3-tertiary" class="attribute skill card-tertiary">
-					<h5 id="field-2-card-3-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="field-2-card-3-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="field-2-card-3-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="field-2-card-3-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="field-2-card-3-special" class="attribute skill card-special">
 					<img id="field-2-card-3-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -374,32 +304,32 @@
 			<figure id="field-2-card-4" class="field-card card">
 				<img id="field-2-card-4-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="field-2-card-4-layout" class="card-layout">
-					<img id="field-2-card-4-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="field-2-card-4-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="field-2-card-4-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="field-2-card-4-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-2-card-4-type" class="card-type">
 					<img id="field-2-card-4-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="field-2-card-4-attack" class="attribute card-attack">
-					<h4 id="field-2-card-4-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="field-2-card-4-attack-number" class="number card-attribute-number">2</h4>
 					<img id="field-2-card-4-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="field-2-card-4-health" class="attribute card-health">
-					<h4 id="field-2-card-4-health-number" class="card-attribute-number">3</h4>
+					<h4 id="field-2-card-4-health-number" class="number card-attribute-number">3</h4>
 					<img id="field-2-card-4-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="field-2-card-4-primary" class="attribute skill card-primary">
-					<h5 id="field-2-card-4-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="field-2-card-4-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="field-2-card-4-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="field-2-card-4-secondary" class="attribute skill card-secondary">
-					<h5 id="field-2-card-4-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="field-2-card-4-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="field-2-card-4-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="field-2-card-4-tertiary" class="attribute skill card-tertiary">
-					<h5 id="field-2-card-4-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="field-2-card-4-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="field-2-card-4-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="field-2-card-4-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="field-2-card-4-special" class="attribute skill card-special">
 					<img id="field-2-card-4-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -409,32 +339,32 @@
 			<figure id="field-2-card-5" class="field-card card">
 				<img id="field-2-card-5-img" class="card-img" src="img/card/card-1.jpg">
 				<figure id="field-2-card-5-layout" class="card-layout">
-					<img id="field-2-card-5-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="field-2-card-5-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="field-2-card-5-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="field-2-card-5-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-2-card-5-type" class="card-type">
 					<img id="field-2-card-5-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="field-2-card-5-attack" class="attribute card-attack">
-					<h4 id="field-2-card-5-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="field-2-card-5-attack-number" class="number card-attribute-number">2</h4>
 					<img id="field-2-card-5-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="field-2-card-5-health" class="attribute card-health">
-					<h4 id="field-2-card-5-health-number" class="card-attribute-number">3</h4>
+					<h4 id="field-2-card-5-health-number" class="number card-attribute-number">3</h4>
 					<img id="field-2-card-5-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="field-2-card-5-primary" class="attribute skill card-primary">
-					<h5 id="field-2-card-5-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="field-2-card-5-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="field-2-card-5-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="field-2-card-5-secondary" class="attribute skill card-secondary">
-					<h5 id="field-2-card-5-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="field-2-card-5-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="field-2-card-5-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="field-2-card-5-tertiary" class="attribute skill card-tertiary">
-					<h5 id="field-2-card-5-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="field-2-card-5-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="field-2-card-5-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="field-2-card-5-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="field-2-card-5-special" class="attribute skill card-special">
 					<img id="field-2-card-5-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -446,32 +376,32 @@
 			<figure id="hand-1-card-1" class="hand-card card">
 				<img id="hand-1-card-1-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="hand-1-card-1-layout" class="card-layout">
-					<img id="hand-1-card-1-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="hand-1-card-1-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="hand-1-card-1-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="hand-1-card-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-1-card-1-type" class="card-type">
 					<img id="hand-1-card-1-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="hand-1-card-1-attack" class="attribute card-attack">
-					<h4 id="hand-1-card-1-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="hand-1-card-1-attack-number" class="number card-attribute-number">2</h4>
 					<img id="hand-1-card-1-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="hand-1-card-1-health" class="attribute card-health">
-					<h4 id="hand-1-card-1-health-number" class="card-attribute-number">3</h4>
+					<h4 id="hand-1-card-1-health-number" class="number card-attribute-number">3</h4>
 					<img id="hand-1-card-1-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="hand-1-card-1-primary" class="attribute skill card-primary">
-					<h5 id="hand-1-card-1-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="hand-1-card-1-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="hand-1-card-1-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="hand-1-card-1-secondary" class="attribute skill card-secondary">
-					<h5 id="hand-1-card-1-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="hand-1-card-1-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="hand-1-card-1-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="hand-1-card-1-tertiary" class="attribute skill card-tertiary">
-					<h5 id="hand-1-card-1-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="hand-1-card-1-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="hand-1-card-1-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="hand-1-card-1-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="hand-1-card-1-special" class="attribute skill card-special">
 					<img id="hand-1-card-1-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -481,32 +411,32 @@
 			<figure id="hand-1-card-2" class="hand-card card">
 				<img id="hand-1-card-2-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="hand-1-card-2-layout" class="card-layout">
-					<img id="hand-1-card-2-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="hand-1-card-2-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="hand-1-card-2-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="hand-1-card-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-1-card-2-type" class="card-type">
 					<img id="hand-1-card-2-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="hand-1-card-2-attack" class="attribute card-attack">
-					<h4 id="hand-1-card-2-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="hand-1-card-2-attack-number" class="number card-attribute-number">2</h4>
 					<img id="hand-1-card-2-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="hand-1-card-2-health" class="attribute card-health">
-					<h4 id="hand-1-card-2-health-number" class="card-attribute-number">3</h4>
+					<h4 id="hand-1-card-2-health-number" class="number card-attribute-number">3</h4>
 					<img id="hand-1-card-2-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="hand-1-card-2-primary" class="attribute skill card-primary">
-					<h5 id="hand-1-card-2-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="hand-1-card-2-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="hand-1-card-2-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="hand-1-card-2-secondary" class="attribute skill card-secondary">
-					<h5 id="hand-1-card-2-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="hand-1-card-2-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="hand-1-card-2-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="hand-1-card-2-tertiary" class="attribute skill card-tertiary">
-					<h5 id="hand-1-card-2-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="hand-1-card-2-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="hand-1-card-2-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="hand-1-card-2-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="hand-1-card-2-special" class="attribute skill card-special">
 					<img id="hand-1-card-2-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -516,32 +446,32 @@
 			<figure id="hand-1-card-3" class="hand-card card">
 				<img id="hand-1-card-3-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="hand-1-card-3-layout" class="card-layout">
-					<img id="hand-1-card-3-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="hand-1-card-3-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="hand-1-card-3-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="hand-1-card-3-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-1-card-3-type" class="card-type">
 					<img id="hand-1-card-3-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="hand-1-card-3-attack" class="attribute card-attack">
-					<h4 id="hand-1-card-3-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="hand-1-card-3-attack-number" class="number card-attribute-number">2</h4>
 					<img id="hand-1-card-3-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="hand-1-card-3-health" class="attribute card-health">
-					<h4 id="hand-1-card-3-health-number" class="card-attribute-number">3</h4>
+					<h4 id="hand-1-card-3-health-number" class="number card-attribute-number">3</h4>
 					<img id="hand-1-card-3-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="hand-1-card-3-primary" class="attribute skill card-primary">
-					<h5 id="hand-1-card-3-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="hand-1-card-3-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="hand-1-card-3-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="hand-1-card-3-secondary" class="attribute skill card-secondary">
-					<h5 id="hand-1-card-3-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="hand-1-card-3-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="hand-1-card-3-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="hand-1-card-3-tertiary" class="attribute skill card-tertiary">
-					<h5 id="hand-1-card-3-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="hand-1-card-3-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="hand-1-card-3-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="hand-1-card-3-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="hand-1-card-3-special" class="attribute skill card-special">
 					<img id="hand-1-card-3-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -551,32 +481,32 @@
 			<figure id="hand-1-card-4" class="hand-card card">
 				<img id="hand-1-card-4-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="hand-1-card-4-layout" class="card-layout">
-					<img id="hand-1-card-4-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="hand-1-card-4-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="hand-1-card-4-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="hand-1-card-4-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-1-card-4-type" class="card-type">
 					<img id="hand-1-card-4-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="hand-1-card-4-attack" class="attribute card-attack">
-					<h4 id="hand-1-card-4-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="hand-1-card-4-attack-number" class="number card-attribute-number">2</h4>
 					<img id="hand-1-card-4-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="hand-1-card-4-health" class="attribute card-health">
-					<h4 id="hand-1-card-4-health-number" class="card-attribute-number">3</h4>
+					<h4 id="hand-1-card-4-health-number" class="number card-attribute-number">3</h4>
 					<img id="hand-1-card-4-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="hand-1-card-4-primary" class="attribute skill card-primary">
-					<h5 id="hand-1-card-4-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="hand-1-card-4-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="hand-1-card-4-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="hand-1-card-4-secondary" class="attribute skill card-secondary">
-					<h5 id="hand-1-card-4-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="hand-1-card-4-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="hand-1-card-4-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="hand-1-card-4-tertiary" class="attribute skill card-tertiary">
-					<h5 id="hand-1-card-4-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="hand-1-card-4-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="hand-1-card-4-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="hand-1-card-4-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="hand-1-card-4-special" class="attribute skill card-special">
 					<img id="hand-1-card-4-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -588,32 +518,32 @@
 			<figure id="hand-2-card-1" class="hand-card card">
 				<img id="hand-2-card-1-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="hand-2-card-1-layout" class="card-layout">
-					<img id="hand-2-card-1-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="hand-2-card-1-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="hand-2-card-1-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="hand-2-card-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-2-card-1-type" class="card-type">
 					<img id="hand-2-card-1-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="hand-2-card-1-attack" class="attribute card-attack">
-					<h4 id="hand-2-card-1-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="hand-2-card-1-attack-number" class="number card-attribute-number">2</h4>
 					<img id="hand-2-card-1-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="hand-2-card-1-health" class="attribute card-health">
-					<h4 id="hand-2-card-1-health-number" class="card-attribute-number">3</h4>
+					<h4 id="hand-2-card-1-health-number" class="number card-attribute-number">3</h4>
 					<img id="hand-2-card-1-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="hand-2-card-1-primary" class="attribute skill card-primary">
-					<h5 id="hand-2-card-1-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="hand-2-card-1-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="hand-2-card-1-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="hand-2-card-1-secondary" class="attribute skill card-secondary">
-					<h5 id="hand-2-card-1-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="hand-2-card-1-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="hand-2-card-1-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="hand-2-card-1-tertiary" class="attribute skill card-tertiary">
-					<h5 id="hand-2-card-1-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="hand-2-card-1-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="hand-2-card-1-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="hand-2-card-1-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="hand-2-card-1-special" class="attribute skill card-special">
 					<img id="hand-2-card-1-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -623,32 +553,32 @@
 			<figure id="hand-2-card-2" class="hand-card card">
 				<img id="hand-2-card-2-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="hand-2-card-2-layout" class="card-layout">
-					<img id="hand-2-card-2-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="hand-2-card-2-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="hand-2-card-2-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="hand-2-card-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-2-card-2-type" class="card-type">
 					<img id="hand-2-card-2-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="hand-2-card-2-attack" class="attribute card-attack">
-					<h4 id="hand-2-card-2-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="hand-2-card-2-attack-number" class="number card-attribute-number">2</h4>
 					<img id="hand-2-card-2-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="hand-2-card-2-health" class="attribute card-health">
-					<h4 id="hand-2-card-2-health-number" class="card-attribute-number">3</h4>
+					<h4 id="hand-2-card-2-health-number" class="number card-attribute-number">3</h4>
 					<img id="hand-2-card-2-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="hand-2-card-2-primary" class="attribute skill card-primary">
-					<h5 id="hand-2-card-2-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="hand-2-card-2-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="hand-2-card-2-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="hand-2-card-2-secondary" class="attribute skill card-secondary">
-					<h5 id="hand-2-card-2-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="hand-2-card-2-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="hand-2-card-2-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="hand-2-card-2-tertiary" class="attribute skill card-tertiary">
-					<h5 id="hand-2-card-2-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="hand-2-card-2-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="hand-2-card-2-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="hand-2-card-2-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="hand-2-card-2-special" class="attribute skill card-special">
 					<img id="hand-2-card-2-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -658,32 +588,32 @@
 			<figure id="hand-2-card-3" class="hand-card card">
 				<img id="hand-2-card-3-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="hand-2-card-3-layout" class="card-layout">
-					<img id="hand-2-card-3-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="hand-2-card-3-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="hand-2-card-3-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="hand-2-card-3-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-2-card-3-type" class="card-type">
 					<img id="hand-2-card-3-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="hand-2-card-3-attack" class="attribute card-attack">
-					<h4 id="hand-2-card-3-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="hand-2-card-3-attack-number" class="number card-attribute-number">2</h4>
 					<img id="hand-2-card-3-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="hand-2-card-3-health" class="attribute card-health">
-					<h4 id="hand-2-card-3-health-number" class="card-attribute-number">3</h4>
+					<h4 id="hand-2-card-3-health-number" class="number card-attribute-number">3</h4>
 					<img id="hand-2-card-3-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="hand-2-card-3-primary" class="attribute skill card-primary">
-					<h5 id="hand-2-card-3-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="hand-2-card-3-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="hand-2-card-3-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="hand-2-card-3-secondary" class="attribute skill card-secondary">
-					<h5 id="hand-2-card-3-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="hand-2-card-3-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="hand-2-card-3-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="hand-2-card-3-tertiary" class="attribute skill card-tertiary">
-					<h5 id="hand-2-card-3-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="hand-2-card-3-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="hand-2-card-3-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="hand-2-card-3-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="hand-2-card-3-special" class="attribute skill card-special">
 					<img id="hand-2-card-3-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -693,32 +623,32 @@
 			<figure id="hand-2-card-4" class="hand-card card">
 				<img id="hand-2-card-4-img" class="card-img" src="img/card/card-3.jpg">
 				<figure id="hand-2-card-4-layout" class="card-layout">
-					<img id="hand-2-card-4-layout-img" class="card-layout-img" src="img/card-layout.png">
+					<img id="hand-2-card-4-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
-				<h3 id="hand-2-card-4-name" class="card-name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</h4>
+				<h3 id="hand-2-card-4-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-2-card-4-type" class="card-type">
 					<img id="hand-2-card-4-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
 				</figure>
 				<figure id="hand-2-card-4-attack" class="attribute card-attack">
-					<h4 id="hand-2-card-4-attack-number" class="card-attribute-number">2</h4>
+					<h4 id="hand-2-card-4-attack-number" class="number card-attribute-number">2</h4>
 					<img id="hand-2-card-4-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
 				</figure>
 				<figure id="hand-2-card-4-health" class="attribute card-health">
-					<h4 id="hand-2-card-4-health-number" class="card-attribute-number">3</h4>
+					<h4 id="hand-2-card-4-health-number" class="number card-attribute-number">3</h4>
 					<img id="hand-2-card-4-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
 				</figure>
 				<figure id="hand-2-card-4-primary" class="attribute skill card-primary">
-					<h5 id="hand-2-card-4-primary-number" class="card-attribute-number card-skill-number">2</h5>
+					<h5 id="hand-2-card-4-primary-number" class="number card-attribute-number card-skill-number">2</h5>
 					<img id="hand-2-card-4-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
 				</figure>
 				<figure id="hand-2-card-4-secondary" class="attribute skill card-secondary">
-					<h5 id="hand-2-card-4-secondary-number" class="card-attribute-number card-skill-number">5</h5>
+					<h5 id="hand-2-card-4-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
 					<img id="hand-2-card-4-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
 				</figure>
 				<figure id="hand-2-card-4-tertiary" class="attribute skill card-tertiary">
-					<h5 id="hand-2-card-4-tertiary-number" class="card-attribute-number card-skill-number">7</h5>
-					<img id="hand-2-card-4-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/dano-icon.png">
+					<h5 id="hand-2-card-4-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+					<img id="hand-2-card-4-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
 				</figure>
 				<figure id="hand-2-card-4-special" class="attribute skill card-special">
 					<img id="hand-2-card-4-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
@@ -726,12 +656,119 @@
 			</figure>
 		</section>
 
-		<footer id="gui">
-			<button id="surrender" onclick="clicou()"><img id="surrender-icon" src="img/icon/gui/surrender.png"></button>
-			<h2 id="game-time">99</h2>
-			<button id="sound" onclick="alternarSom()"><img id="sound-icon" src="img/icon/gui/sound.png"></button>
-			<button id="fullscreen" onclick="alternarFullscreen()"><img id="fullscreen-icon" src="img/icon/gui/fullscreen.png"></button>
-		</footer>
+		<figure id="draw-1" class="draw-card card">
+			<img id="draw-1-img" class="card-img" src="img/card/card-3.jpg">
+			<figure id="draw-1-layout" class="card-layout">
+				<img id="draw-1-layout-img" class="card-layout-img" src="img/layout/card.png">
+			</figure>
+			<h3 id="draw-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+			<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+			<figure id="draw-1-type" class="card-type">
+				<img id="draw-1-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
+			</figure>
+			<figure id="draw-1-attack" class="attribute card-attack">
+				<h4 id="draw-1-attack-number" class="number card-attribute-number">2</h4>
+				<img id="draw-1-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
+			</figure>
+			<figure id="draw-1-health" class="attribute card-health">
+				<h4 id="draw-1-health-number" class="number card-attribute-number">3</h4>
+				<img id="draw-1-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
+			</figure>
+			<figure id="draw-1-primary" class="attribute skill card-primary">
+				<h5 id="draw-1-primary-number" class="number card-attribute-number card-skill-number">2</h5>
+				<img id="draw-1-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
+			</figure>
+			<figure id="draw-1-secondary" class="attribute skill card-secondary">
+				<h5 id="draw-1-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
+				<img id="draw-1-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
+			</figure>
+			<figure id="draw-1-tertiary" class="attribute skill card-tertiary">
+				<h5 id="draw-1-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+				<img id="draw-1-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
+			</figure>
+			<figure id="draw-1-special" class="attribute skill card-special">
+				<img id="draw-1-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
+			</figure>
+		</figure>
+
+		<figure id="draw-2" class="draw-card card">
+			<img id="draw-2-img" class="card-img" src="img/card/card-3.jpg">
+			<figure id="draw-2-layout" class="card-layout">
+				<img id="draw-2-layout-img" class="card-layout-img" src="img/layout/card.png">
+			</figure>
+			<h3 id="draw-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
+			<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+			<figure id="draw-2-type" class="card-type">
+				<img id="draw-2-type-icon" class="card-type-icon" src="img/icon/type/dragao-type.png">
+			</figure>
+			<figure id="draw-2-attack" class="attribute card-attack">
+				<h4 id="draw-2-attack-number" class="number card-attribute-number">2</h4>
+				<img id="draw-2-attack-icon" class="card-attribute-icon" src="img/icon/attribute/ataque-icon.png">
+			</figure>
+			<figure id="draw-2-health" class="attribute card-health">
+				<h4 id="draw-2-health-number" class="number card-attribute-number">3</h4>
+				<img id="draw-2-health-icon" class="card-attribute-icon" src="img/icon/attribute/vida-icon.png">
+			</figure>
+			<figure id="draw-2-primary" class="attribute skill card-primary">
+				<h5 id="draw-2-primary-number" class="number card-attribute-number card-skill-number">2</h5>
+				<img id="draw-2-primary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/escudo-icon.png">
+			</figure>
+			<figure id="draw-2-secondary" class="attribute skill card-secondary">
+				<h5 id="draw-2-secondary-number" class="number card-attribute-number card-skill-number">5</h5>
+				<img id="draw-2-secondary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/fortalecer-icon.png">
+			</figure>
+			<figure id="draw-2-tertiary" class="attribute skill card-tertiary">
+				<h5 id="draw-2-tertiary-number" class="number card-attribute-number card-skill-number">7</h5>
+				<img id="draw-2-tertiary-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/golpe-icon.png">
+			</figure>
+			<figure id="draw-2-special" class="attribute skill card-special">
+				<img id="draw-2-special-icon" class="card-attribute-icon card-skill-icon" src="img/icon/skill/antidoto-icon.png">
+			</figure>
+		</figure>
+
+		<figure id="deck-1" class="deck">
+			<img id="deck-1-img" class="deck-img" src="img/layout/deck.png">
+			<h3 id="deck-1-number" class="deck-number number">12</h3>
+		</figure>
+
+		<figure id="deck-2" class="deck">
+			<img id="deck-2-img" class="deck-img" src="img/layout/deck.png">
+			<h3 id="deck-2-number" class="deck-number number">12</h3>
+		</figure>
+
+		<figure id="char-1" class="char">
+			<img id="char-1-img" class="char-img" src="img/char/1.png">
+			<figure id="char-1-back" class="char-back">
+				<img id="char-1-back-img" class="char-back-img" src="img/layout/char-back.png">
+			</figure>
+			<figure id="char-1-layout" class="char-layout">
+				<img id="char-1-layout-img" class="char-layout-img" src="img/layout/char.png">
+			</figure>
+			<h2 id="char-1-title" class="char-title name">JASON</h2>
+			<h3 id="char-1-subtitle" class="char-subtitle name">BRONZE</h3>
+			<figure id="char-1-health" class="char-health">
+				<h4 id="char-1-health-number" class="char-health-number number">50</h4>
+				<img id="char-1-health-icon" class="char-health-icon" src="img/icon/attribute/vida-icon.png">
+			</figure>
+		</figure>
+
+		<figure id="char-2" class="char">
+			<img id="char-2-img" class="char-img" src="img/char/2.png">
+			<figure id="char-2-back" class="char-back">
+				<img id="char-2-back-img" class="char-back-img" src="img/layout/char-back.png">
+			</figure>
+			<figure id="char-2-layout" class="char-layout">
+				<img id="char-2-layout-img" class="char-layout-img" src="img/layout/char.png">
+			</figure>
+			<h2 id="char-2-title" class="char-title name">WADSONPONTES</h2>
+			<h3 id="char-2-subtitle" class="char-subtitle name">DIAMOND</h3>
+			<figure id="char-2-health" class="char-health">
+				<h4 id="char-2-health-number" class="char-health-number number">50</h4>
+				<img id="char-2-health-icon" class="char-health-icon" src="img/icon/attribute/vida-icon.png">
+			</figure>
+		</figure>
+
+		<footer>VERSION: 1.2.2 DATE: 2022/11/27</footer>
 	</main>
 
 	<script src="js/gameplay.js"></script>

@@ -21,29 +21,30 @@
 
 const HABILIDADES = [
 	['id', 'nome_habilidade', 'descricao', 'imagem',                ],
-	[1,    'Cura',            '',          'img/icon/skill/cura.png'],
+	[ 1,   'Cura',            '',          'img/icon/skill/cura.png'],
 ];
 
 const ESPECIAIS = [
 	['id', 'nome_especial', 'descricao', 'imagem',                       ],
-	[1,    'Furtividade',   '',          'img/icon/skill/furtividade.png'],
+	[ 1,   'Furtividade',   '',          'img/icon/skill/furtividade.png'],
 ];
 
 const TIPOS_DE_CARTAS = [
-	['id', 'nome_tipo', 'descricao', 'imagem',                       ],
+	['id', 'nome_tipo', 'descricao', 'imagem',                 ],
+	[ 1,   'Dragão',    '',          'img/icon/type/dragao.png'],
 ];
 
 const CARTAS = [
-	['id', 'nome_carta',    'descricao', 'imagem',         'id_tipo', 'nivel', 'dano', 'saude', 'id_primaria', 'id_secundaria', 'id_terciaria', 'id_especial'],
-	[1,    'Dragão Branco', '',          'img/card/1.jpg', 1,         'nivel', 'dano', 'saude', 'id_primaria', 'id_secundaria', 'id_terciaria', 'id_especial'],
+	['id', 'nome_carta',    'descricao', 'imagem',         'id_tipo', 'dano', 'saude', 'id_primaria', 'valor_primario', 'id_secundaria', 'valor_secundario', 'id_terciaria', 'valor_terciaria', 'id_especial'],
+	[ 1,   'Dragão Branco', '',          'img/card/1.jpg',  1,         16,     25,      1,             5,                0,               0,                  0,              0,                 0           ],
 ];
 
 class Habilidade {
 	constructor(id, valor) {
 		this.id = id;
-		this.nome_habilidade = HABILIDADES[id].nome_habilidade;
-		this.descricao = HABILIDADES[id].descricao;
-		this.imagem = HABILIDADES[id].imagem;
+		this.nome_habilidade = HABILIDADES[id][1];
+		this.descricao = HABILIDADES[id][2];
+		this.imagem = HABILIDADES[id][3];
 		this.valor_base = valor;
 		this.valor = valor;
 	}
@@ -52,19 +53,28 @@ class Habilidade {
 class Especial {
 	constructor(id) {
 		this.id = id;
-		this.nome_especial = ESPECIAIS[id].nome_especial;
-		this.descricao = ESPECIAIS[id].descricao;
-		this.imagem = ESPECIAIS[id].imagem;
+		this.nome_especial = ESPECIAIS[id][1];
+		this.descricao = ESPECIAIS[id][2];
+		this.imagem = ESPECIAIS[id][3];
+	}
+}
+
+class TipoCarta {
+	constructor(id) {
+		this.id = id;
+		this.nome_tipo = TIPOS_DE_CARTAS[id][1];
+		this.descricao = TIPOS_DE_CARTAS[id][2];
+		this.imagem = TIPOS_DE_CARTAS[id][3];
 	}
 }
 
 class Carta {
-	constructor(id, nome_carta, descricao, imagem, tipo, elemento, signo, nivel, dano, saude) {
+	constructor(id) {
 		this.id = id;
-		this.nome_carta = nome_carta;
-		this.descricao = descricao;
-		this.imagem = imagem;
-		this.tipo = tipo;
+		this.nome_carta = CARTAS[id][1];
+		this.descricao = CARTAS[id][2];
+		this.imagem = CARTAS[id][3];
+		this.tipo = new TipoCarta(CARTAS[id][4]);
 		this.elemento = elemento;
 		this.signo = signo;
 		this.nivel = nivel;

@@ -40,13 +40,13 @@ const CARTAS = [
 ];
 
 class Habilidade {
-	constructor(id, valor) {
+	constructor(id, valor, nivel) {
 		this.id = id;
 		this.nome_habilidade = HABILIDADES[id][1];
 		this.descricao = HABILIDADES[id][2];
 		this.imagem = HABILIDADES[id][3];
-		this.valor_base = valor;
-		this.valor = valor;
+		this.valor_base = valor * (0.9 + nivel / 10);
+		this.valor = this.valor_base;
 	}
 }
 
@@ -69,23 +69,21 @@ class TipoCarta {
 }
 
 class Carta {
-	constructor(id) {
+	constructor(id, nivel) {
 		this.id = id;
 		this.nome_carta = CARTAS[id][1];
 		this.descricao = CARTAS[id][2];
 		this.imagem = CARTAS[id][3];
 		this.tipo = new TipoCarta(CARTAS[id][4]);
-		this.elemento = elemento;
-		this.signo = signo;
 		this.nivel = nivel;
-		this.dano_base = dano;
-		this.saude_base = saude;
-		this.dano = dano;
-		this.saude = saude;
-		this.primaria = Habilidade(id, 1);
-		this.secundaria = Habilidade(id, 2);
-		this.terciaria = Habilidade(id, 3);
-		this.especial = new Especial();
+		this.dano_base = CARTAS[id][5] * (0.9 + nivel / 10);
+		this.saude_base = CARTAS[id][6] * (0.9 + nivel / 10);
+		this.dano = this.dano_base;
+		this.saude = this.saude_base;
+		this.primaria = Habilidade(CARTAS[id][7], CARTAS[id][8], nivel);
+		this.secundaria = Habilidade(CARTAS[id][9], CARTAS[id][10], nivel);
+		this.terciaria = Habilidade(CARTAS[id][11], CARTAS[id][12], nivel);
+		this.especial = new Especial(CARTAS[id][13]);
 	}
 }
 

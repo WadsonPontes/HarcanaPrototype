@@ -117,11 +117,11 @@ let FULLSCREEN = false;
 function alternarSom() {
   if (SOUND) {
     SOUND = false;
-    document.querySelector("#sound-img").src = "img/icon/gui/sound-off.png";
+    document.querySelector('#sound-img').src = 'img/icon/gui/sound-off.png';
   }
   else {
     SOUND = true;
-    document.querySelector("#sound-img").src = "img/icon/gui/sound.png";
+    document.querySelector('#sound-img').src = 'img/icon/gui/sound.png';
   }
 }
 

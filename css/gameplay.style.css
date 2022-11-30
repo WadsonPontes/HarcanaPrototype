@@ -1,7 +1,7 @@
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -390,8 +390,8 @@ main {
   font-size: 2.5rem;
   line-height: 2.9rem;
   border-radius: 100%;
-  text-shadow: 0.2rem 0 #fff, -0.2rem 0 #fff, 0 0.2rem #fff, 0 -0.2rem #fff,
-             0.15rem 0.15rem #fff, -0.15rem -0.15rem #fff, 0.15rem -0.15rem #fff, -0.15rem 0.15rem #fff;
+  text-shadow: 0.2rem 0 #fff, -0.2rem 0 #fff, 0 0.2rem #fff, 0 -0.2rem #fff, 0.15rem 0.15rem #fff,
+    -0.15rem -0.15rem #fff, 0.15rem -0.15rem #fff, -0.15rem 0.15rem #fff;
   z-index: 88;
 }
 

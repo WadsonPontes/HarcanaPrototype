@@ -44,6 +44,33 @@ const PERSONAGENS = [
 	[ 1,   'Brif Wolfsteam',     '',          'img/char/1.jpg', 'bárbaro',  50    ],
 ];
 
+const BARALHOS = [
+  [
+    ['id', 'nivel'],
+  ],
+  
+  [ // BARALHO 1
+    ['id', 'nivel'],
+    [ 1,    1     ],
+    [ 2,    1     ],
+    [ 3,    1     ],
+    [ 4,    1     ],
+    [ 5,    1     ],
+    [ 6,    1     ],
+    [ 7,    1     ],
+    [ 8,    1     ],
+    [ 9,    1     ],
+    [ 10,   1     ],
+    [ 11,   1     ],
+    [ 12,   1     ],
+  ],
+];
+
+const JOGADORES = [
+  ['id', 'nome_jogador',  'tipo',   'id_personagem', 'nivel_personagem', 'id_baralho'],
+  [ 1,   'Wadson Pontes', 'humano',  1,               1,                  1          ],
+];
+
 class Habilidade {
 	constructor(id, valor, nivel) {
 		this.id = id;
@@ -105,10 +132,26 @@ class Personagem {
 	}
 }
 
+class Baralho {
+	constructor(id) {
+		this.id = id;
+		this.cartas = [];
+
+    for (let linha of BARALHOS[id]) {
+      let carta = new Carta(linha[0], linha[1]);
+      this.cartas.push(carta);
+    }
+	}
+}
+
 class Jogador {
 	constructor(id) {
-		this.nome_jogador = sessionStorage.getItem(`nome_jogador_${id}`);
-		this.personagem = new this.personagem(); sessionStorage.getItem(`personagem_${id}`);
+    this.id = JOGADORES[id][0];
+		this.nome_jogador = JOGADORES[id][1];
+    this.tipo = JOGADORES[id][2];
+		this.personagem = new Personagem(JOGADORES[id][3], JOGADORES[id][4]);
+    this.baralho = new Baralho(JOGADORES[id][5]);
+    this.el;
 	}
 }
 

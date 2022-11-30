@@ -1,361 +1,361 @@
 #resultado {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    width: 100vw;
-    height: 10vh;
-    font-family: cursive;
-    font-size: 50px;
-    font-weight: 900;
-    color: #000;
-    vertical-align: middle;
-    text-align: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100vw;
+  height: 10vh;
+  font-family: cursive;
+  font-size: 50px;
+  font-weight: 900;
+  color: #000;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .vida {
-    display: block;
-    position: absolute;
-    top: 72%;
-    left: 69%;
-    width: 21%;
-    height: 20%;
-    font-family: cursive;
-    font-size: 30px;
-    font-weight: 900;
-    color: #fff;
-    padding: 15px 0 1% 8%;
-    border-radius: 100%;
-    background-color: red;
+  display: block;
+  position: absolute;
+  top: 72%;
+  left: 69%;
+  width: 21%;
+  height: 20%;
+  font-family: cursive;
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+  padding: 15px 0 1% 8%;
+  border-radius: 100%;
+  background-color: red;
 }
 
 .atk {
-    display: none;
-    position: absolute;
-    top: 74%;
-    left: 11%;
-    width: 21%;
-    height: 20%;
-    font-family: cursive;
-    font-size: 30px;
-    font-weight: 900;
-    color: #fff;
-    padding: 0 0 5% 8%;
-    border-radius: 100%;
-    background-color: royalblue;
+  display: none;
+  position: absolute;
+  top: 74%;
+  left: 11%;
+  width: 21%;
+  height: 20%;
+  font-family: cursive;
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+  padding: 0 0 5% 8%;
+  border-radius: 100%;
+  background-color: royalblue;
 }
 
 .vi {
-    display: none;
-    position: absolute;
-    top: 74%;
-    left: 59%;
-    width: 21%;
-    height: 20%;
-    font-family: cursive;
-    font-size: 30px;
-    font-weight: 900;
-    color: #fff;
-    padding: 0 0 5% 8%;
-    border-radius: 100%;
-    background-color: red;
+  display: none;
+  position: absolute;
+  top: 74%;
+  left: 59%;
+  width: 21%;
+  height: 20%;
+  font-family: cursive;
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+  padding: 0 0 5% 8%;
+  border-radius: 100%;
+  background-color: red;
 }
 
 #deck-red {
-    position: fixed;
-    top: 10px;
-    left: 180px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: aquamarine;
+  position: fixed;
+  top: 10px;
+  left: 180px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: aquamarine;
 }
 
 #deck-blue {
-    position: fixed;
-    top: 530px;
-    left: 180px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: aquamarine;
+  position: fixed;
+  top: 530px;
+  left: 180px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: aquamarine;
 }
 
-#personagem-red { 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 300px;
-    border: 1px solid #000;
-    background-color: aqua;
+#personagem-red {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #000;
+  background-color: aqua;
 }
 
 #personagem-blue {
-    position: fixed;
-    top: 440px;
-    left: 0;
-    width: 300px;
-    height: 300px;
-    border: 1px solid #000;
-    background-color: aqua;
+  position: fixed;
+  top: 440px;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #000;
+  background-color: aqua;
 }
 
 .card {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #card-campo-red-1 {
-    position: fixed;
-    top: 148px;
-    left: 340px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: darkorange;
-    transition: all 0.5s linear;
+  position: fixed;
+  top: 148px;
+  left: 340px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: darkorange;
+  transition: all 0.5s linear;
 }
 
 #card-campo-red-2 {
-    position: fixed;
-    top: 148px;
-    left: 508px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: darkorange;
-    transition: all 0.5s linear;
+  position: fixed;
+  top: 148px;
+  left: 508px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: darkorange;
+  transition: all 0.5s linear;
 }
 
 #card-campo-red-3 {
-    position: fixed;
-    top: 148px;
-    left: 677px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: darkorange;
-    transition: all 0.5s linear;
+  position: fixed;
+  top: 148px;
+  left: 677px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: darkorange;
+  transition: all 0.5s linear;
 }
 
 #card-campo-red-4 {
-    position: fixed;
-    top: 148px;
-    left: 845px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: darkorange;
-    transition: all 0.5s linear;
+  position: fixed;
+  top: 148px;
+  left: 845px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: darkorange;
+  transition: all 0.5s linear;
 }
 
 #card-campo-red-5 {
-    position: fixed;
-    top: 148px;
-    left: 1012px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: darkorange;
-    transition: all 0.5s linear;
+  position: fixed;
+  top: 148px;
+  left: 1012px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: darkorange;
+  transition: all 0.5s linear;
 }
 
 #card-campo-red-6 {
-    position: fixed;
-    top: 148px;
-    left: 1181px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: darkorange;
-    transition: all 0.5s linear;
+  position: fixed;
+  top: 148px;
+  left: 1181px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: darkorange;
+  transition: all 0.5s linear;
 }
 
 #card-campo-red-7 {
-    position: fixed;
-    top: 148px;
-    left: 1350px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: darkorange;
-    transition: all 0.5s linear;
+  position: fixed;
+  top: 148px;
+  left: 1350px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: darkorange;
+  transition: all 0.5s linear;
 }
 
 #card-campo-blue-1 {
-    position: fixed;
-    top: 394px;
-    left: 340px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: darkorange;
-    transition: all 0.5s linear;
+  position: fixed;
+  top: 394px;
+  left: 340px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: darkorange;
+  transition: all 0.5s linear;
 }
 
 #card-campo-blue-2 {
-    position: fixed;
-    top: 394px;
-    left: 508px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: darkorange;
-    transition: all 0.5s linear;
+  position: fixed;
+  top: 394px;
+  left: 508px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: darkorange;
+  transition: all 0.5s linear;
 }
 
-#card-campo-blue-3 {    
-    position: fixed;
-    top: 394px;
-    left: 675px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: darkorange;
-    transition: all 0.5s linear;
+#card-campo-blue-3 {
+  position: fixed;
+  top: 394px;
+  left: 675px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: darkorange;
+  transition: all 0.5s linear;
 }
 
 #card-campo-blue-4 {
-    position: fixed;
-    top: 394px;
-    left: 843px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: darkorange;
-    transition: all 0.5s linear;
+  position: fixed;
+  top: 394px;
+  left: 843px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: darkorange;
+  transition: all 0.5s linear;
 }
 
 #card-campo-blue-5 {
-    position: fixed;
-    top: 394px;
-    left: 1012px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: darkorange;
-    transition: all 0.5s linear;
+  position: fixed;
+  top: 394px;
+  left: 1012px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: darkorange;
+  transition: all 0.5s linear;
 }
 
 #card-campo-blue-6 {
-    position: fixed;
-    top: 394px;
-    left: 1182px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: darkorange;
-    transition: all 0.5s linear;
+  position: fixed;
+  top: 394px;
+  left: 1182px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: darkorange;
+  transition: all 0.5s linear;
 }
 
 #card-campo-blue-7 {
-    position: fixed;
-    top: 394px;
-    left: 1352px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: darkorange;
-    transition: all 0.5s linear;
+  position: fixed;
+  top: 394px;
+  left: 1352px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: darkorange;
+  transition: all 0.5s linear;
 }
 
 #card-mao-red-1 {
-    position: fixed;
-    top: 0;
-    left: 600px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: burlywood;
-    transition: all 0.5s linear;
-    z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 600px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: burlywood;
+  transition: all 0.5s linear;
+  z-index: 5;
 }
 
 #card-mao-red-2 {
-    position: fixed;
-    top: 0;
-    left: 800px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: burlywood;
-    transition: all 0.5s linear;
-    z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 800px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: burlywood;
+  transition: all 0.5s linear;
+  z-index: 5;
 }
 
 #card-mao-red-3 {
-    position: fixed;
-    top: 0;
-    left: 1000px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: burlywood;
-    transition: all 0.5s linear;
-    z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 1000px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: burlywood;
+  transition: all 0.5s linear;
+  z-index: 5;
 }
 
 #card-mao-red-4 {
-    position: fixed;
-    top: 0;
-    left: 1200px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: burlywood;
-    transition: all 0.5s linear;
-    z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 1200px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: burlywood;
+  transition: all 0.5s linear;
+  z-index: 5;
 }
 
 #card-mao-blue-1 {
-    position: fixed;
-    top: 540px;
-    left: 600px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: burlywood;
-    transition: all 0.5s linear;
-    z-index: 5;
+  position: fixed;
+  top: 540px;
+  left: 600px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: burlywood;
+  transition: all 0.5s linear;
+  z-index: 5;
 }
 
 #card-mao-blue-2 {
-    position: fixed;
-    top: 540px;
-    left: 800px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: burlywood;
-    transition: all 0.5s linear;
-    z-index: 5;
+  position: fixed;
+  top: 540px;
+  left: 800px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: burlywood;
+  transition: all 0.5s linear;
+  z-index: 5;
 }
 
 #card-mao-blue-3 {
-    position: fixed;
-    top: 540px;
-    left: 1000px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: burlywood;
-    transition: all 0.5s linear;
-    z-index: 5;
+  position: fixed;
+  top: 540px;
+  left: 1000px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: burlywood;
+  transition: all 0.5s linear;
+  z-index: 5;
 }
 
 #card-mao-blue-4 {
-    position: fixed;
-    top: 540px;
-    left: 1200px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #000;
-    background-color: burlywood;
-    transition: all 0.5s linear;
-    z-index: 5;
+  position: fixed;
+  top: 540px;
+  left: 1200px;
+  width: 150px;
+  height: 200px;
+  border: 1px solid #000;
+  background-color: burlywood;
+  transition: all 0.5s linear;
+  z-index: 5;
 }

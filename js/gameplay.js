@@ -39,6 +39,11 @@ const CARTAS = [
 	[ 1,   'Dragão Branco', '',          'img/card/1.jpg',  1,         16,     25,      1,             5,                0,               0,                  0,              0,                 0           ],
 ];
 
+const PERSONAGENS = [
+	['id', 'nome_personagem',    'descricao', 'imagem',         'classe',  'saude'],
+	[ 1,   'Brif Wolfsteam',     '',          'img/char/1.jpg', 'bárbaro',  50    ],
+];
+
 class Habilidade {
 	constructor(id, valor, nivel) {
 		this.id = id;
@@ -88,19 +93,15 @@ class Carta {
 }
 
 class Personagem {
-	constructor(id, nome_personagem, descricao, imagem, classe, nivel, dano, saude) {
+	constructor(id, nivel) {
 		this.id = id;
-		this.nome_personagem = nome_personagem;
-		this.descricao = descricao;
-		this.imagem = imagem;
-		this.classe = classe;
+		this.nome_carta = PERSONAGENS[id][1];
+		this.descricao = PERSONAGENS[id][2];
+		this.imagem = PERSONAGENS[id][3];
+		this.classe = PERSONAGENS[id][4];
 		this.nivel = nivel;
-		this.dano = dano;
-		this.saude = saude;
-		this.primaria = Habilidade(id, 1);
-		this.secundaria = Habilidade(id, 2);
-		this.terciaria = Habilidade(id, 3);
-		this.especial = new Especial();
+		this.saude_base = PERSONAGENS[id][5] * (0.9 + nivel / 10);
+		this.saude = this.saude_base;
 	}
 }
 

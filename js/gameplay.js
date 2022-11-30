@@ -145,18 +145,33 @@ class Baralho {
 }
 
 class Jogador {
-	constructor(id) {
+	constructor(id, partida, oponente) {
     this.id = JOGADORES[id][0];
 		this.nome_jogador = JOGADORES[id][1];
     this.tipo = JOGADORES[id][2];
 		this.personagem = new Personagem(JOGADORES[id][3], JOGADORES[id][4]);
     this.baralho = new Baralho(JOGADORES[id][5]);
     this.el;
+    this.oponente = oponente;
+    oponente.oponente = this;
+	}
+}
+
+class Partida {
+	constructor(id_jogador_1, id_jogador_2) {
+    this.jogador_1 = new Jogador(id_jogador_1, this, null);
+    this.jogador_2 = new Jogador(id_jogador_2, this, this.jogador_1);
+    this.turno = 1;
+    this.
 	}
 }
 
 let SOUND = true;
 let FULLSCREEN = false;
+
+function gameplay() {
+  let partida = new Partida();
+}
 
 function alternarSom() {
   if (SOUND) {

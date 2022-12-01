@@ -38,12 +38,7 @@ body {
   margin-top: 0vh;
   background-color: var(--main-color-grey);
   text-align: center;
-  margin-right: 100vh;
-}
-
-#title:active {
-  color: grey;
-  animation: jello;
+  margin-right: 20vh;
 }
 
 #button {

@@ -39,6 +39,38 @@ const CARTAS = [
 	[ 1,   'Dragão Branco', '',          'img/card/1.jpg',  1,         16,     25,      1,             5,                0,               0,                  0,              0,                 0           ],
 ];
 
+const PERSONAGENS = [
+	['id', 'nome_personagem',    'descricao', 'imagem',         'classe',  'saude'],
+	[ 1,   'Brif Wolfsteam',     '',          'img/char/1.jpg', 'bárbaro',  50    ],
+];
+
+const BARALHOS = [
+  [
+    ['id', 'nivel'],
+  ],
+  
+  [ // BARALHO 1
+    ['id', 'nivel'],
+    [ 1,    1     ],
+    [ 2,    1     ],
+    [ 3,    1     ],
+    [ 4,    1     ],
+    [ 5,    1     ],
+    [ 6,    1     ],
+    [ 7,    1     ],
+    [ 8,    1     ],
+    [ 9,    1     ],
+    [ 10,   1     ],
+    [ 11,   1     ],
+    [ 12,   1     ],
+  ],
+];
+
+const JOGADORES = [
+  ['id', 'nome_jogador',  'tipo',   'id_personagem', 'nivel_personagem', 'id_baralho'],
+  [ 1,   'Wadson Pontes', 'humano',  1,               1,                  1          ],
+];
+
 class Habilidade {
 	constructor(id, valor, nivel) {
 		this.id = id;
@@ -88,31 +120,63 @@ class Carta {
 }
 
 class Personagem {
-	constructor(id, nome_personagem, descricao, imagem, classe, nivel, dano, saude) {
+	constructor(id, nivel) {
 		this.id = id;
-		this.nome_personagem = nome_personagem;
-		this.descricao = descricao;
-		this.imagem = imagem;
-		this.classe = classe;
+		this.nome_carta = PERSONAGENS[id][1];
+		this.descricao = PERSONAGENS[id][2];
+		this.imagem = PERSONAGENS[id][3];
+		this.classe = PERSONAGENS[id][4];
 		this.nivel = nivel;
-		this.dano = dano;
-		this.saude = saude;
-		this.primaria = Habilidade(id, 1);
-		this.secundaria = Habilidade(id, 2);
-		this.terciaria = Habilidade(id, 3);
-		this.especial = new Especial();
+		this.saude_base = PERSONAGENS[id][5] * (0.9 + nivel / 10);
+		this.saude = this.saude_base;
+	}
+}
+
+class Baralho {
+	constructor(id) {
+		this.id = id;
+		this.cartas = [];
+
+    for (let linha of BARALHOS[id]) {
+      let carta = new Carta(linha[0], linha[1]);
+      this.cartas.push(carta);
+    }
 	}
 }
 
 class Jogador {
-	constructor(id) {
-		this.nome_jogador = sessionStorage.getItem(`nome_jogador_${id}`);
-		this.personagem = new this.personagem(); sessionStorage.getItem(`personagem_${id}`);
+	constructor(id, partida, oponente) {
+    this.id = JOGADORES[id][0];
+		this.nome_jogador = JOGADORES[id][1];
+    this.tipo = JOGADORES[id][2];
+		this.personagem = new Personagem(JOGADORES[id][3], JOGADORES[id][4]);
+    this.baralho = new Baralho(JOGADORES[id][5]);
+    this.el;
+    this.partida = partida;
+    this.oponente = oponente;
+    oponente.oponente = this;
+	}
+}
+
+class Partida {
+	constructor(id_jogador1, id_jogador2) {
+    this.jogador1 = new Jogador(id_jogador1, this, null);
+    this.jogador2 = new Jogador(id_jogador2, this, this.jogador1);
+    this.ataque = this.jogador1;
+    this.defesa = this.jogador2;
+    this.turno = 1;
+    this.tempo = 99;
+    this.som = true;
+    this.fullscreen = false;
 	}
 }
 
 let SOUND = true;
 let FULLSCREEN = false;
+
+function gameplay() {
+  let partida = new Partida();
+}
 
 function alternarSom() {
   if (SOUND) {

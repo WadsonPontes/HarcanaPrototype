@@ -52,8 +52,8 @@ body {
   height: 7%;
   width: 15%;
   justify-content: left;
-  margin-left: 50px;
-  margin-top: 120px;
+  margin-left: 8%;
+  margin-top: 10%;
 }
 
 .mission-two {
@@ -61,8 +61,8 @@ body {
   height: 7%;
   width: 15%;
   justify-content: left;
-  margin-left: 150px;
-  margin-top: 350px;
+  margin-left: 15%;
+  margin-top: 22%;
 }
 
 .mission-three {
@@ -70,8 +70,8 @@ body {
   height: 7%;
   width: 15%;
   justify-content: center;
-  margin-right: 600px;
-  margin-top: 250px;
+  margin-right: 42%;
+  margin-top: 20%;
 }
 
 .mission-four {
@@ -79,8 +79,8 @@ body {
   height: 7%;
   width: 15%;
   justify-content: center;
-  margin-left: 250px;
-  margin-top: 250px;
+  margin-left: 20%;
+  margin-top: 14%;
 }
 
 .mission-five {
@@ -88,8 +88,8 @@ body {
   height: 7%;
   width: 15%;
   justify-content: center;
-  margin-left: -420px;
-  margin-top: 150px;
+  margin-left: -33%;
+  margin-top: 10%;
 }
 
 .mission-six {
@@ -97,8 +97,8 @@ body {
   height: 7%;
   width: 15%;
   justify-content: center;
-  margin-left: -220px;
-  margin-top: 200px;
+  margin-left: -18%;
+  margin-top: 12%;
 }
 
 .cta {

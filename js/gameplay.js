@@ -152,17 +152,22 @@ class Jogador {
 		this.personagem = new Personagem(JOGADORES[id][3], JOGADORES[id][4]);
     this.baralho = new Baralho(JOGADORES[id][5]);
     this.el;
+    this.partida = partida;
     this.oponente = oponente;
     oponente.oponente = this;
 	}
 }
 
 class Partida {
-	constructor(id_jogador_1, id_jogador_2) {
-    this.jogador_1 = new Jogador(id_jogador_1, this, null);
-    this.jogador_2 = new Jogador(id_jogador_2, this, this.jogador_1);
+	constructor(id_jogador1, id_jogador2) {
+    this.jogador1 = new Jogador(id_jogador1, this, null);
+    this.jogador2 = new Jogador(id_jogador2, this, this.jogador1);
+    this.ataque = this.jogador1;
+    this.defesa = this.jogador2;
     this.turno = 1;
-    this.
+    this.tempo = 99;
+    this.som = true;
+    this.fullscreen = false;
 	}
 }
 

@@ -162,14 +162,19 @@ class Jogador {
   getEl() {
     this.el.mao = [];
     this.el.campo = [];
-    this.el.draw = {};
-    this.el.personagem = {};
     
-    for (let i = 1; i < 5; ++i) {
+    for (let i = 1; i <= 4; ++i) {
       let carta = this.getElCarta('hand', this.posicao, i);
-
       this.el.mao.push(carta);
     }
+
+    for (let i = 1; i <= 5; ++i) {
+      let carta = this.getElCarta('field', this.posicao, i);
+      this.el.campo.push(carta);
+    }
+
+    this.el.draw = this.getElCarta('draw', this.posicao);
+    this.el.personagem = this.getElPersonagem(this.posicao);
   }
 
   getElCarta(tipo, posicao_jogador, posicao_carta) {
@@ -196,6 +201,19 @@ class Jogador {
     carta.terciaria.valor = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-tertiary-number`);
     carta.terciaria.icone = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-tertiary-icon`);
     carta.especial.icone = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-special-icon`);
+
+    return carta;
+  }
+
+  getElPersonagem(posicao_jogador) {
+    let personagem = {};
+    personagem.saude = {};
+
+    personagem.imagem = document.querySelector(`#char-${posicao_jogador}-img`);
+    personagem.titulo = document.querySelector(`#char-${posicao_jogador}-title`);
+    personagem.subtitulo = document.querySelector(`#char-${posicao_jogador}-subtitle`);
+    personagem.saude.valor = document.querySelector(`#char-${posicao_jogador}-health-number`);
+    personagem.saude.icone = document.querySelector(`#char-${posicao_jogador}-health-icon`);
   }
 }
 

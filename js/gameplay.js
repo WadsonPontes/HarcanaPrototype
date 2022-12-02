@@ -214,6 +214,8 @@ class Jogador {
     personagem.subtitulo = document.querySelector(`#char-${posicao_jogador}-subtitle`);
     personagem.saude.valor = document.querySelector(`#char-${posicao_jogador}-health-number`);
     personagem.saude.icone = document.querySelector(`#char-${posicao_jogador}-health-icon`);
+
+    return personagem;
   }
 }
 

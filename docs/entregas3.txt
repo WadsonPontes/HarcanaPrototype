@@ -1,0 +1,21 @@
+Grupo:
+	JASON WILLYAN CASTRO DO NASCIMENTO
+	ROBERT MATHEUS COSTA TARGINO
+	RODRIGO SAADS PINTO
+	WADSON PONTES DE SOUZA
+
+Entregas:
+	Design da carta melhorado.
+	Design da gameplay finalizado.
+	Classes da gamepley criadas.
+	Criado 32 novas cartas.
+	Criado 3 novos personagens.
+	Tela Missões criada em substitução a tela Map.
+	Tela Shop criada.
+
+GitHub:
+	https://github.com/WadsonPontes/HarcanaPrototype/tree/prototipo-3
+GDD:
+	https://drive.google.com/file/d/18wXSLxyJZ9PByv4KHwoB1M94Dzv4RRWz/view?usp=sharing
+Site:
+	wjogo.com/prototipo-3

@@ -12,11 +12,10 @@
 <body>
 	<main>
 		<header id="gui">
-			<button id="surrender" onclick="clicou()"><img id="surrender-icon" src="img/icon/gui/surrender.png"></button>
 			<h2 id="game-time">99</h2>
+			<button id="fullscreen" onclick="alternarFullscreen()"><img id="fullscreen-icon" src="img/icon/gui/fullscreen.png"></button>
+			<button id="surrender" onclick="clicou()"><img id="surrender-icon" src="img/icon/gui/surrender.png"></button>
 			<button id="sound" onclick="alternarSom()"><img id="sound-icon" src="img/icon/gui/sound.png"></button>
-			<button id="fullscreen" onclick="alternarFullscreen()"><img id="fullscreen-icon"
-					src="img/icon/gui/fullscreen.png"></button>
 		</header>
 
 		<section id="field-1" class="field">
@@ -26,7 +25,7 @@
 					<img id="field-1-card-1-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="field-1-card-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="field-1-card-1-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-1-card-1-type" class="card-type">
 					<img id="field-1-card-1-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -65,7 +64,7 @@
 					<img id="field-1-card-2-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="field-1-card-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="field-1-card-2-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-1-card-2-type" class="card-type">
 					<img id="field-1-card-2-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -104,7 +103,7 @@
 					<img id="field-1-card-3-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="field-1-card-3-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="field-1-card-3-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-1-card-3-type" class="card-type">
 					<img id="field-1-card-3-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -143,7 +142,7 @@
 					<img id="field-1-card-4-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="field-1-card-4-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="field-1-card-4-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-1-card-4-type" class="card-type">
 					<img id="field-1-card-4-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -182,7 +181,7 @@
 					<img id="field-1-card-5-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="field-1-card-5-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="field-1-card-5-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-1-card-5-type" class="card-type">
 					<img id="field-1-card-5-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -223,7 +222,7 @@
 					<img id="field-2-card-1-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="field-2-card-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="field-2-card-1-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-2-card-1-type" class="card-type">
 					<img id="field-2-card-1-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -262,7 +261,7 @@
 					<img id="field-2-card-2-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="field-2-card-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="field-2-card-2-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-2-card-2-type" class="card-type">
 					<img id="field-2-card-2-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -301,7 +300,7 @@
 					<img id="field-2-card-3-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="field-2-card-3-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="field-2-card-3-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-2-card-3-type" class="card-type">
 					<img id="field-2-card-3-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -340,7 +339,7 @@
 					<img id="field-2-card-4-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="field-2-card-4-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="field-2-card-4-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-2-card-4-type" class="card-type">
 					<img id="field-2-card-4-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -379,7 +378,7 @@
 					<img id="field-2-card-5-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="field-2-card-5-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="field-2-card-5-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="field-2-card-5-type" class="card-type">
 					<img id="field-2-card-5-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -420,7 +419,7 @@
 					<img id="hand-1-card-1-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="hand-1-card-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="hand-1-card-1-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-1-card-1-type" class="card-type">
 					<img id="hand-1-card-1-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -459,7 +458,7 @@
 					<img id="hand-1-card-2-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="hand-1-card-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="hand-1-card-2-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-1-card-2-type" class="card-type">
 					<img id="hand-1-card-2-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -498,7 +497,7 @@
 					<img id="hand-1-card-3-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="hand-1-card-3-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="hand-1-card-3-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-1-card-3-type" class="card-type">
 					<img id="hand-1-card-3-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -537,7 +536,7 @@
 					<img id="hand-1-card-4-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="hand-1-card-4-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="hand-1-card-4-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-1-card-4-type" class="card-type">
 					<img id="hand-1-card-4-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -578,7 +577,7 @@
 					<img id="hand-2-card-1-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="hand-2-card-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="hand-2-card-1-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-2-card-1-type" class="card-type">
 					<img id="hand-2-card-1-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -617,7 +616,7 @@
 					<img id="hand-2-card-2-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="hand-2-card-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="hand-2-card-2-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-2-card-2-type" class="card-type">
 					<img id="hand-2-card-2-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -656,7 +655,7 @@
 					<img id="hand-2-card-3-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="hand-2-card-3-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="hand-2-card-3-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-2-card-3-type" class="card-type">
 					<img id="hand-2-card-3-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
@@ -695,7 +694,7 @@
 					<img id="hand-2-card-4-layout-img" class="card-layout-img" src="img/layout/card.png">
 				</figure>
 				<h3 id="hand-2-card-4-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-				<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+				<h4 id="hand-2-card-4-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-2-card-4-type" class="card-type">
 					<img id="hand-2-card-4-type-icon" class="card-type-icon" src="img/icon/type/monstro.png">
 				</figure>
@@ -735,7 +734,7 @@
 				<img id="draw-1-layout-img" class="card-layout-img" src="img/layout/card.png">
 			</figure>
 			<h3 id="draw-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-			<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+			<h4 id="draw-1-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 			<figure id="draw-1-type" class="card-type">
 				<img id="draw-1-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 			</figure>
@@ -772,7 +771,7 @@
 				<img id="draw-2-layout-img" class="card-layout-img" src="img/layout/card.png">
 			</figure>
 			<h3 id="draw-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
-			<h4 class="card-level">⭐⭐⭐⭐⭐</h4>
+			<h4 id="draw-2-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 			<figure id="draw-2-type" class="card-type">
 				<img id="draw-2-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 			</figure>

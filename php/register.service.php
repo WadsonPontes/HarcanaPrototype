@@ -1,5 +1,7 @@
 <?php
 
+require_once('api.php');
+
 function validar_cadastro() {
     $resposta = array(
         'status' => 'error',

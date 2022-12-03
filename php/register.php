@@ -1,7 +1,6 @@
 <?php
 
-require_once('api.php');
-require_once('util.php');
+require_once('register.service.php');
 
 validar_cadastro();
 

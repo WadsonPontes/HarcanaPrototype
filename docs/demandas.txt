@@ -72,9 +72,13 @@
 @Wadson Pontes
 
 *03/12/2022 - 10/12/2022*
-- Tela Gameplay:
+- Geral
+	- [FEITO] Criar logo
+- Tela Gameplay
 	- Obrigatórios:
-		- criar class para carta inexistente
+		- [FEITO] Corrigir design do campo tempo_restante
+		- [FEITO] Corrigir centralização do background
+		- [FEITO] criar class para carta inexistente
 		- criar métodos da Partida
 		- criar criar eventos do Jogador
 		- criar métodos do Jogador
@@ -101,6 +105,8 @@
 		- retornar dados do jogador
 	- Tela Login
 		- adicionar dados retornados no window.sessionStorage
+	Tela Gameplay
+		- passar a usar dados do window.sessionStorage
 	- Tela Profile
 		- imprimir dados do window.sessionStorage nos campos
 	- Tela Missions

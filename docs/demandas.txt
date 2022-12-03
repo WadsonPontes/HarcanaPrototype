@@ -32,16 +32,17 @@
 *03/12/2022 - 10/12/2022*
 - Tela Shop:
 	- Posicionar recursos no canto superior direito com valores padrões
-	- Lista a venda:
+	- Lista itens à venda:
 		- img/item/package.png
 		- img/icon/gui/jewel-of-exalt.png
 		- img/icon/gui/jewel-of-glorify.png
 		- img/item/card-exemple-1.png
-	- Adicionar preços:
-		- 100 [icon: img/icon/gui/gold.png]
-		- 200 [icon: img/icon/gui/gold.png]
-		- 500 [icon: img/icon/gui/gold.png]
-		- 250 [icon: img/icon/gui/gold.png]
+	- Trocar texto BUY dos botões para:
+		- 100 <img src='img/icon/gui/gold.png'>
+		- 200 <img src='img/icon/gui/gold.png'>
+		- 500 <img src='img/icon/gui/gold.png'>
+		- 250 <img src='img/icon/gui/gold.png'>
+		- no estilo do https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/other/clash_of_clans.png
 
 @rbertin 👨🏻‍💻 
 
@@ -89,7 +90,7 @@
 		- criar método de fusão de Carta
 		- criar animação de fusão de Carta
 *10/12/2022 - 14/12/2022*
-- Back-end
+- Integração
 	- Alterar tabelas do banco de dados para refletir as classes JavaScript
 		- mudar nome da tabela carta_jogador para baralho
 		- criar tabela inventario

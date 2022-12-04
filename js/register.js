@@ -29,7 +29,7 @@ function registrar() {
     .then((res) => {
       console.log(res);
       if (res && res.status == "success") window.location.href = "index.html";
-      else mensagemDeErro("Dados de login inválidos");
+      else mensagemDeErro(res.error);
     })
     .catch((erro) => {
       console.log(`error: ${erro.message}`);

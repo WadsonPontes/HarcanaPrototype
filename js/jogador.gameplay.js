@@ -10,7 +10,6 @@ class Jogador {
     this.campo = [];
     this.partida = partida;
     this.oponente = oponente;
-    oponente.oponente = this;
     this.el = {};
     this.getEl();
 	}

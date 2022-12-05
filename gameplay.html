@@ -14,9 +14,9 @@
 	<main>
 		<header id="gui">
 			<h2 id="game-time">99</h2>
-			<button id="fullscreen" onclick="alternarFullscreen()"><img id="fullscreen-icon" src="img/icon/gui/fullscreen.png"></button>
-			<button id="surrender" onclick="clicou()"><img id="surrender-icon" src="img/icon/gui/surrender.png"></button>
-			<button id="sound" onclick="alternarSom()"><img id="sound-icon" src="img/icon/gui/sound.png"></button>
+			<button id="fullscreen" onclick="partida.alternarFullscreen()"><img id="fullscreen-icon" src="img/icon/gui/fullscreen.png"></button>
+			<button id="surrender" onclick="partida.desistir()"><img id="surrender-icon" src="img/icon/gui/surrender.png"></button>
+			<button id="sound" onclick="partida.alternarSom()"><img id="sound-icon" src="img/icon/gui/sound.png"></button>
 		</header>
 
 		<section id="field-1" class="field">
@@ -697,7 +697,7 @@
 				<h3 id="hand-2-card-4-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="hand-2-card-4-level" class="card-level">⭐⭐⭐⭐⭐</h4>
 				<figure id="hand-2-card-4-type" class="card-type">
-					<img id="hand-2-card-4-type-icon" class="card-type-icon" src="img/icon/type/monstro.png">
+					<img id="hand-2-card-4-type-icon" class="card-type-icon" src="img/icon/type/dragao.png">
 				</figure>
 				<figure id="hand-2-card-4-attack" class="attribute card-attack">
 					<h4 id="hand-2-card-4-attack-number" class="number card-attribute-number">2</h4>
@@ -845,7 +845,7 @@
 			</figure>
 		</figure>
 
-		<footer>VERSION: 1.5.2 DATE: 2022/12/03</footer>
+		<footer>VERSION: 1.5.5 DATE: 2022/12/05</footer>
 	</main>
 
 	<script src="js/constantes.gameplay.js"></script>

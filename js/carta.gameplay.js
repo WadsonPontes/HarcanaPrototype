@@ -10,9 +10,9 @@ class Carta {
 		this.saude_base = Math.round(CARTAS[id][6] * (0.9 + nivel / 10));
 		this.dano = this.dano_base;
 		this.saude = this.saude_base;
-		this.primaria = Habilidade(CARTAS[id][7], CARTAS[id][8], nivel);
-		this.secundaria = Habilidade(CARTAS[id][9], CARTAS[id][10], nivel);
-		this.terciaria = Habilidade(CARTAS[id][11], CARTAS[id][12], nivel);
+		this.primaria = new Habilidade(CARTAS[id][7], CARTAS[id][8], nivel);
+		this.secundaria = new Habilidade(CARTAS[id][9], CARTAS[id][10], nivel);
+		this.terciaria = new Habilidade(CARTAS[id][11], CARTAS[id][12], nivel);
 		this.especial = new Especial(CARTAS[id][13]);
 	}
 }

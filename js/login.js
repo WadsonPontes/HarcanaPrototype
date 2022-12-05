@@ -25,7 +25,7 @@ function logar() {
     .then((raw) => raw.json())
     .then((res) => {
       console.log(res);
-      if (res && res.status == "success") window.location.href = "map.html";
+      if (res && res.status == "success") window.location.href = "missions.html";
       else mensagemDeErro("Dados de login inválidos");
     })
     .catch((erro) => {

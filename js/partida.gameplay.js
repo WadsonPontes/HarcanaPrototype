@@ -3,6 +3,7 @@ class Partida {
     this.estado = 'iniciando';
     this.jogador1 = new Jogador(id_jogador1, 1, this, null);
     this.jogador2 = new Jogador(id_jogador2, 2, this, this.jogador1);
+    this.jogador1.oponente = this.jogador2;
     this.ataque = this.jogador1;
     this.defesa = this.jogador2;
     this.turno = 1;
@@ -21,26 +22,26 @@ class Partida {
   }
 
   alternarSom() {
-    if (SOUND) {
-      SOUND = false;
-      document.querySelector('#sound-img').src = 'img/icon/gui/sound-off.png';
+    if (this.som) {
+      this.som = false;
+      this.el.som.src = 'img/icon/gui/sound-off.png';
     }
     else {
-      SOUND = true;
-      document.querySelector('#sound-img').src = 'img/icon/gui/sound.png';
+      this.som = true;
+      this.el.som.src = 'img/icon/gui/sound.png';
     }
   }
   
   alternarFullscreen() {
-    if (FULLSCREEN) {
-      FULLSCREEN = false;
-      document.querySelector('#fullscreen-img').src = 'img/icon/gui/fullscreen.png';
-      fecharFullscreen();
+    if (this.tela_cheia) {
+      this.tela_cheia = false;
+      this.el.tela_cheia.src = 'img/icon/gui/fullscreen.png';
+      this.fecharFullscreen();
     }
     else {
-      FULLSCREEN = true;
-      document.querySelector('#fullscreen-img').src = 'img/icon/gui/fullscreen-off.png';
-      abrirFullscreen();
+      this.tela_cheia = true;
+      this.el.tela_cheia.src = 'img/icon/gui/fullscreen-off.png';
+      this.abrirFullscreen();
     }
   }
   
@@ -66,6 +67,10 @@ class Partida {
     else if (document.msExitFullscreen) { /* IE11 */
       document.msExitFullscreen();
     }
+  }
+
+  desistir() {
+    window.location.href = "missions.html";
   }
 }
 

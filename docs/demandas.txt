@@ -1,0 +1,142 @@
+@Jason Willyan
+
+*03/12/2022 - 05/12/2022*
+- Tela Missions: Criar classe CSS com botão da missão desativado
+
+*05/12/2022 - 10/12/2022*
+- Tela Deck:
+	- Criar <section>
+		- posicionar no canto superior direito, como fixed, top 64px, right 0px
+		- adicionar <figure>
+			- adicionar <img> img/icon/gui/jewel-of-exalt.png
+			- adicionar <h4> valor
+		- adicionar <figure>
+			- adicionar <img> img/icon/gui/jewel-of-glorify.png
+			- adicionar <h4> valor
+	- Criar duas <section> com id 'deck' e outra 'inventory'
+	- Inserir 12 <figure> id 'draw-1' lá do gameplay.html no 'deck'
+	- Inserir 3 cartas <figure> no 'inventory'
+	- Posicionar 'card', como fixed, top 64px, left 0px
+	- Posicionar 'inventory', como fixed, top 64px, left 50vw
+	- Redimensionar 'card' e 'inventory', para width 50vw, height calc(100vh - 64px)
+	- Adicionar em 'card' e 'inventory', scroll lateral permanente com overflow-y scroll
+	- Adicionar class '.draw-card' do gameplay.style.css
+	- Adicionar class das sessões CARD e CARD ATTRIBUTE do gameplay.style.css
+	- Verificar pelo Console se carta está na resolução 289x400 ou 288x399
+		- mudar width e height para ficar o mais próximo da resolução ideal, use até 2 casas decimais
+	- Tentar fazer Drag and Drop, arrastar carta de 'deck' para 'inventory' e vice-versa
+		- caso não consiga, criar class para carta selecionada similar a wadsonpontes.com/triple-triad
+
+@Rodrigo
+
+*03/12/2022 - 10/12/2022*
+- Tela Shop:
+	- Posicionar recursos no canto superior direito com valores padrões
+	- Lista itens à venda:
+		- img/item/package.png
+		- img/icon/gui/jewel-of-exalt.png
+		- img/icon/gui/jewel-of-glorify.png
+		- img/item/card-exemple-1.png
+	- Trocar texto BUY dos botões para:
+		- 100 <img src='img/icon/gui/gold.png'>
+		- 200 <img src='img/icon/gui/gold.png'>
+		- 500 <img src='img/icon/gui/gold.png'>
+		- 250 <img src='img/icon/gui/gold.png'>
+		- no estilo do https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/other/clash_of_clans.png
+
+@rbertin 👨🏻‍💻 
+
+*03/12/2022 - 10/12/2022*
+- Marcar reunião com Wadson dia 03/12 ou 04/12 em qualquer horário com pautas:
+	- Instação e configuração do Xampp
+	- Subir o banco de dados
+	- Como usar funções da api.php
+- Rota register.service.php:
+	- Crie a função validar_nome_usuario($nome_usuario):
+		- verifique se contém no mínimo 3 caracteres
+		- verifique se contém espaço e retorne
+		- verifique se contém caracter diferente de letras
+		- use função existe($tabela, $id, $valor) de api.php e verifique se 'nome_usuario' já foi cadastrado
+	- Crie a função validar_email($email):
+		- verifique se é um email valido
+		- use função existe($tabela, $id, $valor) de api.php e verifique se 'email' já foi cadastrado
+	- Crie a função validar_senha($senha):
+		- verifique se contém no mínimo 8 caracteres
+		- verifique se contém no mínimo 1 letra minúscula
+		- verifique se contém no mínimo 1 letra maiúscula
+		- verifique se contém no mínimo 1 número
+		- verifique se contém no mínimo 1 caracter especial
+	- Altere a função validar_cadastro() para usar as novas funções
+
+
+@Wadson Pontes
+
+*03/12/2022 - 10/12/2022*
+- Geral
+	- [FEITO] Criar logo
+- Tela Gameplay
+	- Obrigatórios:
+		- [FEITO] Corrigir design do campo tempo_restante
+		- [FEITO] Corrigir centralização do background
+		- [FEITO] criar class para carta inexistente
+		- criar métodos da Partida
+		- criar criar eventos do Jogador
+		- criar métodos do Jogador
+		- criar métodos de Carta
+		- criar métodos de Personagem
+		- criar animações de Carta
+		- criar animações de Personagem
+	- Opcionais:
+		- criar métodos de Habilidade
+		- criar métodos de Especial
+		- criar animações de Habilidade
+		- criar animações de Especial
+		- criar método de fusão de Carta
+		- criar animação de fusão de Carta
+*10/12/2022 - 14/12/2022*
+- Integração
+	- Alterar tabelas do banco de dados para refletir as classes JavaScript
+		- mudar nome da tabela carta_jogador para baralho
+		- criar tabela inventario
+		- adicionar campo missoes_habilitadas na tabela jogador
+	- Rota register.php
+		- adicionar baralho inicial ao jogador cadastrado
+	- Rota login.php
+		- retornar dados do jogador
+	- Tela Login
+		- adicionar dados retornados no window.sessionStorage
+	Tela Gameplay
+		- passar a usar dados do window.sessionStorage
+	- Tela Profile
+		- imprimir dados do window.sessionStorage nos campos
+	- Tela Missions
+		- desativar missões acima da missoes_habilitadas
+		- criar evento de clique:
+			- armazenar missao_atual no window.sessionStorage
+			- redirecionar para Tela Gameplay
+	- Tela Shop
+		- imprimir quantidade de recursos do window.sessionStorage
+		- desativar botão BUY dos itens que não da para comprar
+		- criar evento de compra
+			- enviar requisição para a rota
+			- armazenar dados atualizados do jogador no window.sessionStorage
+			- recarregar a página
+	- Rota shop.php
+		- validar compra
+		- reduzir Gold do jogador
+		- adicionar item ao inventário do jogador
+		- retornar dados do jogador atualizado
+	- Tela Deck
+		- criar evento de adição/remoção de Carta do 'deck'
+			- criar animação
+			- atualizar dados do window.sessionStorage
+			- enviar dados para a rota	
+		- criar evento de subir nível de carta
+			- criar animação
+			- atualizar dados
+			- enviar dados para a rota
+	Rota deck.php
+		- validar alteração
+		- atualizar baralho do jogador
+		- atualizar inventario do jogador
+		- retornar sucesso

@@ -145,30 +145,100 @@ class Baralho {
 }
 
 class Jogador {
-	constructor(id, partida, oponente) {
+	constructor(id, posicao, partida, oponente) {
     this.id = JOGADORES[id][0];
+    this.posicao = posicao;
 		this.nome_jogador = JOGADORES[id][1];
     this.tipo = JOGADORES[id][2];
 		this.personagem = new Personagem(JOGADORES[id][3], JOGADORES[id][4]);
     this.baralho = new Baralho(JOGADORES[id][5]);
-    this.el;
     this.partida = partida;
     this.oponente = oponente;
     oponente.oponente = this;
+    this.el = {};
+    this.getEl();
 	}
+
+  getEl() {
+    this.el.mao = [];
+    this.el.campo = [];
+    
+    for (let i = 1; i <= 4; ++i) {
+      let carta = this.getElCarta('hand', this.posicao, i);
+      this.el.mao.push(carta);
+    }
+
+    for (let i = 1; i <= 5; ++i) {
+      let carta = this.getElCarta('field', this.posicao, i);
+      this.el.campo.push(carta);
+    }
+
+    this.el.draw = this.getElCarta('draw', this.posicao);
+    this.el.personagem = this.getElPersonagem(this.posicao);
+  }
+
+  getElCarta(tipo, posicao_jogador, posicao_carta) {
+    let carta = {};
+    carta.dano = {};
+    carta.saude = {};
+    carta.primaria = {};
+    carta.secundaria = {};
+    carta.terciaria = {};
+    carta.especial = {};
+    
+    carta.imagem = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-img`);
+    carta.nome = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-name`);
+    carta.nivel = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-level`);
+    carta.tipo = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-type-icon`);
+    carta.dano.valor = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-attack-number`);
+    carta.dano.icone = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-attack-icon`);
+    carta.saude.valor = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-health-number`);
+    carta.saude.icone = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-health-icon`);
+    carta.primaria.valor = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-primary-number`);
+    carta.primaria.icone = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-primary-icon`);
+    carta.secundaria.valor = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-secondary-number`);
+    carta.secundaria.icone = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-secondary-icon`);
+    carta.terciaria.valor = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-tertiary-number`);
+    carta.terciaria.icone = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-tertiary-icon`);
+    carta.especial.icone = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-special-icon`);
+
+    return carta;
+  }
+
+  getElPersonagem(posicao_jogador) {
+    let personagem = {};
+    personagem.saude = {};
+
+    personagem.imagem = document.querySelector(`#char-${posicao_jogador}-img`);
+    personagem.titulo = document.querySelector(`#char-${posicao_jogador}-title`);
+    personagem.subtitulo = document.querySelector(`#char-${posicao_jogador}-subtitle`);
+    personagem.saude.valor = document.querySelector(`#char-${posicao_jogador}-health-number`);
+    personagem.saude.icone = document.querySelector(`#char-${posicao_jogador}-health-icon`);
+
+    return personagem;
+  }
 }
 
 class Partida {
 	constructor(id_jogador1, id_jogador2) {
-    this.jogador1 = new Jogador(id_jogador1, this, null);
-    this.jogador2 = new Jogador(id_jogador2, this, this.jogador1);
+    this.jogador1 = new Jogador(id_jogador1, 1, this, null);
+    this.jogador2 = new Jogador(id_jogador2, 2, this, this.jogador1);
     this.ataque = this.jogador1;
     this.defesa = this.jogador2;
     this.turno = 1;
     this.tempo = 99;
     this.som = true;
-    this.fullscreen = false;
+    this.tela_cheia = false;
+    this.el = {};
+    this.getEl();
 	}
+
+  getEl() {
+    this.el.tempo = document.querySelector('#game-time');
+    this.el.tela_cheia = document.querySelector('#fullscreen-icon');
+    this.el.desistir = document.querySelector('#surrender-icon');
+    this.el.som = document.querySelector('#sound-icon');
+  }
 }
 
 let SOUND = true;

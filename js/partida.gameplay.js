@@ -4,14 +4,15 @@ class Partida {
     this.jogador1 = new Jogador(id_jogador1, 1, this, null);
     this.jogador2 = new Jogador(id_jogador2, 2, this, this.jogador1);
     this.jogador1.oponente = this.jogador2;
-    this.ataque = this.jogador1;
-    this.defesa = this.jogador2;
+    this.noataque = this.jogador1;
+    this.nadefesa = this.jogador2;
     this.turno = 1;
     this.tempo = 99;
     this.som = true;
     this.tela_cheia = false;
     this.el = {};
     this.getEl();
+    this.noataque.jogar();
 	}
 
   getEl() {

@@ -5,16 +5,52 @@ class Jogador {
 		this.nome_jogador = JOGADORES[id][1];
     this.tipo = JOGADORES[id][2];
 		this.personagem = new Personagem(JOGADORES[id][3], JOGADORES[id][4]);
-    this.baralho = new Baralho(JOGADORES[id][5]);
-    this.mao = [];
-    this.campo = [];
+    this.baralho = new Baralho(JOGADORES[id][5], this);
+    this.mao = ['posicao', null, null, null, null];
+    this.campo = ['posicao', null, null, null, null, null];
     this.partida = partida;
     this.oponente = oponente;
     this.el = {};
     this.getEl();
 	}
 
+  jogar() {
+    this.puxar();
+
+    if (this.tipo == 'computador') {
+      this.inteligencia();
+    }
+  }
+
+  async puxar() {
+    this.partida.estado = 'puxando';
+
+    for (let i = 1; i <= 4 && this.baralho.cartas.length; ++i) {
+      if (this.mao[i]) {
+        continue;
+      }
+
+      let carta = jogador.baralho.pop();
+
+      await carta.animPuxar(i);
+
+      this.mao[i] = carta;
+    }
+
+    this.partida.estado = 'jogando';
+  }
+
+  inteligencia() {
+
+  }
+
+  dormir(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
   getEl() {
+    this.el.compra = this.getElCarta('draw', this.posicao);
+    this.el.personagem = this.getElPersonagem(this.posicao);
     this.el.mao = [];
     this.el.campo = [];
     
@@ -27,9 +63,6 @@ class Jogador {
       let carta = this.getElCarta('field', this.posicao, i);
       this.el.campo.push(carta);
     }
-
-    this.el.draw = this.getElCarta('draw', this.posicao);
-    this.el.personagem = this.getElPersonagem(this.posicao);
   }
 
   getElCarta(tipo, posicao_jogador, posicao_carta) {

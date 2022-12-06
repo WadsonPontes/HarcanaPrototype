@@ -52,6 +52,7 @@ class Partida {
   }
 
   getEl() {
+    this.el.main = document.querySelector('main');
     this.el.tempo = document.querySelector('#game-time');
     this.el.tela_cheia = document.querySelector('#fullscreen-icon');
     this.el.desistir = document.querySelector('#surrender-icon');

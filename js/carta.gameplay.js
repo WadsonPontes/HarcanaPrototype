@@ -21,20 +21,33 @@ class Carta {
 
   // REFERNCIA: https://codepen.io/tjramage/details/yOEbyw
   segurar() {
-    this.jogador.el.mao[this.posicao].classList.add('segurando');
+    this.jogador.el.mao[this.posicao].el.classList.add('segurando');
   }
 
   // REFERENCIA: https://codepen.io/bramus/pen/eBZgPB
   movendo() {
-    let x = event.clientX / innerWidth;
-    let y = event.clientY / innerHeight;
- 
-    root.style.setProperty('--mouse-x', x);
-    root.style.setProperty('--mouse-y', y);
+    const root = document.documentElement;
+    let main = {
+      x: this.jogador.partida.el.main.offsetLeft,
+      y: this.jogador.partida.el.main.offsetTop,
+    };
+    let mao = {
+      x: this.jogador.el.mao[0].offsetLeft,
+      y: this.jogador.el.mao[0].offsetTop,
+    };
+    let carta = {
+      largura: this.jogador.el[this.local][this.posicao].el.offsetWidth,
+      altura: this.jogador.el[this.local][this.posicao].el.offsetHeight,
+    };
+    let x = (event.clientX ) / window.innerWidth;
+    let y = (event.clientY ) / window.innerHeight;
+    
+    root.style.setProperty('--mouse-x', `${x}vw`);
+    root.style.setProperty('--mouse-y', `${y}vh`);
   }
 
   soltar() {
-    this.jogador.el.mao[this.posicao].classList.remove('segurando');
+    this.jogador.el.mao[this.posicao].el.classList.remove('segurando');
   }
 
   puxar(i) {

@@ -712,8 +712,9 @@ footer {
 
 /* ===================== ANIMAÇÃO SEGURANDO CARTA NO MOUSE ========================================================== */
 
-.segurar {
-  position: fixed;
-  top: --mouse-y;
-  left: --mouse-x;
+.segurando {
+  top: var(--mouse-y) !important;
+  left: var(--mouse-x) !important;
+  /* width: 15%!important;
+  height: 37%!important; */
 }

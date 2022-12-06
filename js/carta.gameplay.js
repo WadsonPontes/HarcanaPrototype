@@ -26,7 +26,7 @@ class Carta {
   }
 
   // REFERENCIA: https://codepen.io/bramus/pen/eBZgPB
-  movendo() {
+  movendoMouse() {
     const root = document.documentElement;
     let main = {
       x: this.jogador.partida.el.main.offsetLeft,
@@ -49,7 +49,7 @@ class Carta {
     root.style.setProperty('--mouse-y', `${y}px`);
 
     if (this.jogador.partida.estado == 'segurando-carta') {
-      if (event.clientX < main.x + main.largura * 0.17 || event.clientY < main.y || event.clientX > main.x + main.largura || event.clientY > main.y + main.altura) {
+      if (event.clientX < (main.x + main.largura * 0.17) || event.clientY < (main.y + main.altura*0.1) || event.clientX > (main.x + main.largura - main.largura*0.05) || event.clientY > (main.y + main.altura)) {
         this.soltar(true);
       }
     }

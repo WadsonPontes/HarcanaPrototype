@@ -1,7 +1,9 @@
 @Jason Willyan
 
 *03/12/2022 - 05/12/2022*
-- Tela Missions: Criar classe CSS com botão da missão desativado
+- [FEITO] Tela Missions: Criar classe CSS com botão da missão desativado
+- Tela Missions: Criar função JS que remove a classe CSS do botão desativado
+- Tela Missions: Mudar cor do @keyframes para vermelho quando o botão estiver "bloqueado"
 
 *05/12/2022 - 10/12/2022*
 - Tela Deck:

@@ -121,6 +121,7 @@ body {
 .no-transition:hover {
   transition: none !important;
   box-shadow: 0px 0px 0 transparent !important;
+  cursor: no-drop !important;
 }
 
 .no-transition:hover span:nth-child(2) {
@@ -135,6 +136,10 @@ body {
 
 .no-transition:hover path.two {
   transform: translateX(-30%) !important;
+  animation: none !important;
+}
+
+.no-transition:hover path.three {
   animation: none !important;
 }
 

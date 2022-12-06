@@ -86,6 +86,8 @@
 		- [FEITO] corrigir H da logo não aparecendo no Chrome modo claro
 		- [FEITO] criar função de puxar carta
 		- [FEITO] criar animação de puxar carta
+		- [FEITO] criar função de abaixar mão
+		- [FEITO] criar animação de abaixar mão
 		- criar métodos da Partida
 		- criar criar eventos do Jogador
 		- criar métodos do Jogador

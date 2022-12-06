@@ -43,8 +43,8 @@ class Jogador {
   getEl() {
     this.el.compra = this.getElCarta('draw', this.posicao);
     this.el.personagem = this.getElPersonagem(this.posicao);
-    this.el.mao = [null];
-    this.el.campo = [null];
+    this.el.mao = [document.querySelector(`#hand-${this.posicao}`)]; // Container, ou seja, o pai fica no indice 0
+    this.el.campo = [document.querySelector(`#field-${this.posicao}`)]; // Container, ou seja, o pai fica no indice 0
     
     for (let i = 1; i <= 4; ++i) {
       let carta = this.getElCarta('hand', this.posicao, i);
@@ -93,5 +93,9 @@ class Jogador {
     personagem.saude = document.querySelector(`#char-${posicao_jogador}-health-number`);
 
     return personagem;
+  }
+
+  dormir(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 }

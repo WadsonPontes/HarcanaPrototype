@@ -50,6 +50,10 @@ main {
 
 /* ===================== COMUNS ========================================================== */
 
+.card {
+  cursor: pointer;
+}
+
 .title {
   letter-spacing: 0rem;
   line-height: 2rem;
@@ -591,7 +595,19 @@ main {
   width: 48%;
 }
 
-/* ===================== ANIM ========================================================== */
+/* ===================== FOOTER ========================================================== */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 1%;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+/* ===================== ANIMAÇÃO DE PUXAR ========================================================== */
 
 .field-1-card-1 {
   top: 11%!important;
@@ -683,14 +699,12 @@ main {
   left: 75.5%!important;
 }
 
-/* ===================== FOOTER ========================================================== */
+/* ===================== ANIMAÇÃO DE ABAIXAR MÃO ========================================================== */
 
-footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 0 1%;
-  font-size: 0.8rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 100;
+.hand-down-1 {
+  top: -30%!important;
+}
+
+.hand-down-2 {
+  bottom: -30%!important;
 }

@@ -10,7 +10,7 @@
 	<title>Harcana</title>
 </head>
 
-<body>
+<body onmousemove="partida.jogadores[2].mao[1].movendo()">
 	<main onmousedown="partida.esconderMao()" onmouseup="partida.mostrarMao()">
 		<header id="gui">
 			<h2 id="game-time">99</h2>
@@ -23,7 +23,7 @@
 			<figure id="field-1-card-1" class="field-card card off">
 				<img id="field-1-card-1-img" class="card-img" src="img/card/4.jpg">
 				<figure id="field-1-card-1-layout" class="card-layout">
-					<img id="field-1-card-1-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="field-1-card-1-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="field-1-card-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="field-1-card-1-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -62,7 +62,7 @@
 			<figure id="field-1-card-2" class="field-card card off">
 				<img id="field-1-card-2-img" class="card-img" src="img/card/5.jpg">
 				<figure id="field-1-card-2-layout" class="card-layout">
-					<img id="field-1-card-2-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="field-1-card-2-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="field-1-card-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="field-1-card-2-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -101,7 +101,7 @@
 			<figure id="field-1-card-3" class="field-card card off">
 				<img id="field-1-card-3-img" class="card-img" src="img/card/6.jpg">
 				<figure id="field-1-card-3-layout" class="card-layout">
-					<img id="field-1-card-3-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="field-1-card-3-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="field-1-card-3-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="field-1-card-3-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -140,7 +140,7 @@
 			<figure id="field-1-card-4" class="field-card card off">
 				<img id="field-1-card-4-img" class="card-img" src="img/card/6.jpg">
 				<figure id="field-1-card-4-layout" class="card-layout">
-					<img id="field-1-card-4-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="field-1-card-4-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="field-1-card-4-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="field-1-card-4-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -179,7 +179,7 @@
 			<figure id="field-1-card-5" class="field-card card off">
 				<img id="field-1-card-5-img" class="card-img" src="img/card/2.jpg">
 				<figure id="field-1-card-5-layout" class="card-layout">
-					<img id="field-1-card-5-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="field-1-card-5-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="field-1-card-5-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="field-1-card-5-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -220,7 +220,7 @@
 			<figure id="field-2-card-1" class="field-card card off">
 				<img id="field-2-card-1-img" class="card-img" src="img/card/1.jpg">
 				<figure id="field-2-card-1-layout" class="card-layout">
-					<img id="field-2-card-1-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="field-2-card-1-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="field-2-card-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="field-2-card-1-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -259,7 +259,7 @@
 			<figure id="field-2-card-2" class="field-card card off">
 				<img id="field-2-card-2-img" class="card-img" src="img/card/5.jpg">
 				<figure id="field-2-card-2-layout" class="card-layout">
-					<img id="field-2-card-2-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="field-2-card-2-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="field-2-card-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="field-2-card-2-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -298,7 +298,7 @@
 			<figure id="field-2-card-3" class="field-card card off">
 				<img id="field-2-card-3-img" class="card-img" src="img/card/7.jpg">
 				<figure id="field-2-card-3-layout" class="card-layout">
-					<img id="field-2-card-3-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="field-2-card-3-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="field-2-card-3-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="field-2-card-3-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -337,7 +337,7 @@
 			<figure id="field-2-card-4" class="field-card card off">
 				<img id="field-2-card-4-img" class="card-img" src="img/card/7.jpg">
 				<figure id="field-2-card-4-layout" class="card-layout">
-					<img id="field-2-card-4-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="field-2-card-4-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="field-2-card-4-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="field-2-card-4-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -376,7 +376,7 @@
 			<figure id="field-2-card-5" class="field-card card off">
 				<img id="field-2-card-5-img" class="card-img" src="img/card/2.jpg">
 				<figure id="field-2-card-5-layout" class="card-layout">
-					<img id="field-2-card-5-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="field-2-card-5-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="field-2-card-5-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="field-2-card-5-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -417,7 +417,7 @@
 			<figure id="hand-1-card-1" class="hand-card card">
 				<img id="hand-1-card-1-img" class="card-img" src="img/card/29.jpg">
 				<figure id="hand-1-card-1-layout" class="card-layout">
-					<img id="hand-1-card-1-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="hand-1-card-1-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="hand-1-card-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="hand-1-card-1-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -456,7 +456,7 @@
 			<figure id="hand-1-card-2" class="hand-card card">
 				<img id="hand-1-card-2-img" class="card-img" src="img/card/32.jpg">
 				<figure id="hand-1-card-2-layout" class="card-layout">
-					<img id="hand-1-card-2-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="hand-1-card-2-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="hand-1-card-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="hand-1-card-2-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -495,7 +495,7 @@
 			<figure id="hand-1-card-3" class="hand-card card">
 				<img id="hand-1-card-3-img" class="card-img" src="img/card/31.jpg">
 				<figure id="hand-1-card-3-layout" class="card-layout">
-					<img id="hand-1-card-3-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="hand-1-card-3-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="hand-1-card-3-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="hand-1-card-3-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -534,7 +534,7 @@
 			<figure id="hand-1-card-4" class="hand-card card">
 				<img id="hand-1-card-4-img" class="card-img" src="img/card/30.jpg">
 				<figure id="hand-1-card-4-layout" class="card-layout">
-					<img id="hand-1-card-4-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="hand-1-card-4-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="hand-1-card-4-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="hand-1-card-4-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -572,10 +572,10 @@
 		</section>
 
 		<section id="hand-2" class="hand" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()">
-			<figure id="hand-2-card-1" class="hand-card card off">
+			<figure id="hand-2-card-1" class="hand-card card off" onmousedown="partida.jogadores[2].mao[1].segurar()" onmouseup="partida.jogadores[2].mao[1].soltar()">
 				<img id="hand-2-card-1-img" class="card-img" src="img/card/dinossauro-15.jpg">
 				<figure id="hand-2-card-1-layout" class="card-layout">
-					<img id="hand-2-card-1-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="hand-2-card-1-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="hand-2-card-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="hand-2-card-1-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -614,7 +614,7 @@
 			<figure id="hand-2-card-2" class="hand-card card off">
 				<img id="hand-2-card-2-img" class="card-img" src="img/card/50.jpg">
 				<figure id="hand-2-card-2-layout" class="card-layout">
-					<img id="hand-2-card-2-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="hand-2-card-2-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="hand-2-card-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="hand-2-card-2-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -653,7 +653,7 @@
 			<figure id="hand-2-card-3" class="hand-card card off">
 				<img id="hand-2-card-3-img" class="card-img" src="img/card/14.jpg">
 				<figure id="hand-2-card-3-layout" class="card-layout">
-					<img id="hand-2-card-3-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="hand-2-card-3-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="hand-2-card-3-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="hand-2-card-3-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -692,7 +692,7 @@
 			<figure id="hand-2-card-4" class="hand-card card off">
 				<img id="hand-2-card-4-img" class="card-img" src="img/card/21.jpg">
 				<figure id="hand-2-card-4-layout" class="card-layout">
-					<img id="hand-2-card-4-layout-img" class="card-layout-img" src="img/layout/card.png">
+					<img id="hand-2-card-4-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 				</figure>
 				<h3 id="hand-2-card-4-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 				<h4 id="hand-2-card-4-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -732,7 +732,7 @@
 		<figure id="draw-1" class="draw-card card off">
 			<img id="draw-1-img" class="card-img" src="img/card/1.jpg">
 			<figure id="draw-1-layout" class="card-layout">
-				<img id="draw-1-layout-img" class="card-layout-img" src="img/layout/card.png">
+				<img id="draw-1-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 			</figure>
 			<h3 id="draw-1-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 			<h4 id="draw-1-level" class="card-level">⭐⭐⭐⭐⭐</h4>
@@ -769,7 +769,7 @@
 		<figure id="draw-2" class="draw-card card off">
 			<img id="draw-2-img" class="card-img" src="img/card/1.jpg">
 			<figure id="draw-2-layout" class="card-layout">
-				<img id="draw-2-layout-img" class="card-layout-img" src="img/layout/card.png">
+				<img id="draw-2-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
 			</figure>
 			<h3 id="draw-2-name" class="card-name name">LUMINOUS UNICORN DRAGON</h3>
 			<h4 id="draw-2-level" class="card-level">⭐⭐⭐⭐⭐</h4>

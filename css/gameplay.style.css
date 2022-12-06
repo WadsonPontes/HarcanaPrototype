@@ -709,3 +709,11 @@ footer {
 .hand-down-2 {
   bottom: -30%!important;
 }
+
+/* ===================== ANIMAÇÃO SEGURANDO CARTA NO MOUSE ========================================================== */
+
+.segurando {
+  top: var(--mouse-y) !important;
+  left: var(--mouse-x) !important;
+  z-index: 100!important;
+}

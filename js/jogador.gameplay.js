@@ -30,7 +30,7 @@ class Jogador {
 
       let carta = this.baralho.cartas.pop();
       await carta.animPuxar(i);
-      this.mao[i] = carta;
+      carta.puxar(i);
     }
 
     this.partida.estado = 'jogando';

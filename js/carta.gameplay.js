@@ -1,6 +1,8 @@
 class Carta {
-	constructor(id, nivel, jogador) {
+	constructor(id, posicao, local, nivel, jogador) {
 		this.id = id;
+    this.posicao = posicao;
+    this.local = local;
     this.jogador = jogador;
 		this.nome_carta = CARTAS[id][1];
 		this.descricao = CARTAS[id][2];
@@ -16,6 +18,53 @@ class Carta {
 		this.terciaria = new Habilidade(CARTAS[id][11], 'terciaria', CARTAS[id][12], nivel, jogador);
 		this.especial = new Especial(CARTAS[id][13], 'especial', jogador);
 	}
+
+  // REFERNCIA: https://codepen.io/tjramage/details/yOEbyw
+  segurar() {
+    this.jogador.partida.estado = 'segurando-carta';
+    this.jogador.el.mao[this.posicao].el.classList.add('segurando');
+  }
+
+  // REFERENCIA: https://codepen.io/bramus/pen/eBZgPB
+  movendo() {
+    const root = document.documentElement;
+    let main = {
+      x: this.jogador.partida.el.main.offsetLeft,
+      y: this.jogador.partida.el.main.offsetTop,
+      largura: this.jogador.partida.el.main.offsetWidth,
+      altura: this.jogador.partida.el.main.offsetHeight,
+    };
+    let mao = {
+      x: this.jogador.el.mao[0].offsetLeft,
+      y: this.jogador.el.mao[0].offsetTop,
+    };
+    let carta = {
+      largura: this.jogador.el[this.local][this.posicao].el.offsetWidth,
+      altura: this.jogador.el[this.local][this.posicao].el.offsetHeight,
+    };
+    let x = event.clientX - main.x - mao.x - (carta.largura/2);
+    let y = event.clientY - main.y - mao.y - (carta.altura/2);
+    
+    root.style.setProperty('--mouse-x', `${x}px`);
+    root.style.setProperty('--mouse-y', `${y}px`);
+
+    if (this.jogador.partida.estado == 'segurando-carta') {
+      if (event.clientX < main.x + main.largura * 0.17 || event.clientY < main.y || event.clientX > main.x + main.largura || event.clientY > main.y + main.altura) {
+        this.soltar();
+      }
+    }
+  }
+
+  soltar() {
+    this.jogador.partida.estado = 'jogando';
+    this.jogador.el.mao[this.posicao].el.classList.remove('segurando');
+  }
+
+  puxar(i) {
+    this.posicao = i;
+    this.local = 'mao';
+    this.jogador.mao[i] = this;
+  }
 
   async animPuxar(i) {
     await this.dormir(100);
@@ -47,7 +96,7 @@ class Carta {
     this.terciaria.mostrarHabilidade(local, i);
     this.especial.mostrarEspecial(local, i);
     this.jogador.el[local][i].el.style.visibility = 'visible';
-    this.jogador.el[local][i].el.style.transition = 'all 0.5s linear';
+    this.jogador.el[local][i].el.style.transition = '';
 	}
 
 	mostrarCompra() {

@@ -79,7 +79,7 @@ class Carta {
     this.jogador.partida.estado = 'jogando';
     this.jogador.el.mao[this.posicao].el.classList.remove('segurando');
 
-    if (this.jogador.partida.noataque.id == this.jogador.id && !forcado && y < main.altura * 0.38) {
+    if (this.jogador.partida.noataque.id == this.jogador.id && !forcado && y < main.y + main.altura * 0.62) {
       this.irParaCampo();
     }
   }

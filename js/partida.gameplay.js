@@ -6,14 +6,47 @@ class Partida {
     this.jogador1.oponente = this.jogador2;
     this.noataque = this.jogador2;
     this.nadefesa = this.jogador1;
+    this.humano = null;
     this.turno = 1;
     this.tempo = 99;
     this.som = true;
     this.tela_cheia = false;
     this.el = {};
     this.getEl();
-    this.noataque.jogar();
+    this.iniciar();
 	}
+
+  iniciar() {
+    if (this.jogador1.tipo == 'humano')
+      this.humano = this.jogador1;
+    else
+      this.humano = this.jogador2;
+    
+    this.jogador1.personagem.monstrar();
+    this.jogador2.personagem.monstrar();
+    this.noataque.jogar();
+  }
+
+  async mostrarMao() {
+    if (this.estado != 'jogando' && this.estado != 'abaixando-mao')
+      return;
+
+    this.estado = 'mostrando-mao';
+    this.humano.el.mao[0].style.transition = 'all 0.2s linear';
+    this.humano.el.mao[0].classList.remove(`hand-down-${this.humano.posicao}`);
+    await this.dormir(200);
+    this.estado = 'jogando';
+  }
+
+  async esconderMao() {
+    if (this.estado != 'jogando') return;
+
+    this.estado = 'abaixando-mao';
+    this.humano.el.mao[0].style.transition = 'all 0.2s linear';
+    this.humano.el.mao[0].classList.add(`hand-down-${this.humano.posicao}`);
+    await this.dormir(200);
+    this.estado = 'jogando';
+  }
 
   getEl() {
     this.el.tempo = document.querySelector('#game-time');
@@ -72,6 +105,10 @@ class Partida {
 
   desistir() {
     window.location.href = "missions.html";
+  }
+
+  dormir(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
 

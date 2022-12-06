@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<main>
+	<main onmousedown="partida.esconderMao()" onmouseup="partida.mostrarMao()">
 		<header id="gui">
 			<h2 id="game-time">99</h2>
 			<button id="fullscreen" onclick="partida.alternarFullscreen()"><img id="fullscreen-icon" src="img/icon/gui/fullscreen.png"></button>
@@ -413,7 +413,7 @@
 			</figure>
 		</section>
 
-		<section id="hand-1" class="hand">
+		<section id="hand-1" class="hand" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()">
 			<figure id="hand-1-card-1" class="hand-card card">
 				<img id="hand-1-card-1-img" class="card-img" src="img/card/29.jpg">
 				<figure id="hand-1-card-1-layout" class="card-layout">
@@ -571,7 +571,7 @@
 			</figure>
 		</section>
 
-		<section id="hand-2" class="hand">
+		<section id="hand-2" class="hand" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()">
 			<figure id="hand-2-card-1" class="hand-card card off">
 				<img id="hand-2-card-1-img" class="card-img" src="img/card/dinossauro-15.jpg">
 				<figure id="hand-2-card-1-layout" class="card-layout">
@@ -845,7 +845,7 @@
 			</figure>
 		</figure>
 
-		<footer>VERSION: 1.6.4 DATE: 2022/12/05</footer>
+		<footer>VERSION: 1.8.3 DATE: 2022/12/06</footer>
 	</main>
 
 	<script src="js/constantes.gameplay.js"></script>

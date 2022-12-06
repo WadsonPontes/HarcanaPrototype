@@ -84,8 +84,12 @@
 		- [FEITO] corrigir design de botões da GUI
 		- [FEITO] corrigir eventos de botões da GUI
 		- [FEITO] corrigir H da logo não aparecendo no Chrome modo claro
+		- [FEITO] criar função de mostrar carta na tela
 		- [FEITO] criar função de puxar carta
 		- [FEITO] criar animação de puxar carta
+		- [FEITO] criar função de abaixar mão
+		- [FEITO] criar animação de abaixar mão
+		- [FEITO] criar função de mostrar dados do personagem
 		- criar métodos da Partida
 		- criar criar eventos do Jogador
 		- criar métodos do Jogador

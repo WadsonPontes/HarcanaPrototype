@@ -39,11 +39,11 @@ class Carta {
       largura: this.jogador.el[this.local][this.posicao].el.offsetWidth,
       altura: this.jogador.el[this.local][this.posicao].el.offsetHeight,
     };
-    let x = (event.clientX ) / window.innerWidth;
-    let y = (event.clientY ) / window.innerHeight;
-    
-    root.style.setProperty('--mouse-x', `${x}vw`);
-    root.style.setProperty('--mouse-y', `${y}vh`);
+    let x = event.clientX - main.x - mao.x - (carta.largura/2);
+    let y = event.clientY - main.y - mao.y - (carta.altura/2);
+    console.log(mao);
+    root.style.setProperty('--mouse-x', `${x}px`);console.log(root.style.getPropertyValue('--mouse-x'));
+    root.style.setProperty('--mouse-y', `${y}px`);console.log(root.style.getPropertyValue('--mouse-y'));
   }
 
   soltar() {

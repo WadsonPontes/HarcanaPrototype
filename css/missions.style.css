@@ -120,7 +120,7 @@ body {
 
 .no-transition:hover {
   transition: none !important;
-  box-shadow: 0px 0px 0 transparent !important;
+  box-shadow: 6px 6px 0 black !important;
   cursor: no-drop !important;
 }
 

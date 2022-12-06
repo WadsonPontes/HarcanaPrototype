@@ -50,14 +50,18 @@ class Carta {
 
     if (this.jogador.partida.estado == 'segurando-carta') {
       if (event.clientX < main.x + main.largura * 0.17 || event.clientY < main.y || event.clientX > main.x + main.largura || event.clientY > main.y + main.altura) {
-        this.soltar();
+        this.soltar(true);
       }
     }
   }
 
-  soltar() {
+  soltar(forcado) {
     this.jogador.partida.estado = 'jogando';
     this.jogador.el.mao[this.posicao].el.classList.remove('segurando');
+
+    if (this.jogador.partida.noataque.id == this.jogador.id && !forcado) {
+      console.log(event.clientX);
+    }
   }
 
   puxar(i) {

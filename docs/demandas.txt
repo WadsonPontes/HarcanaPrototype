@@ -47,13 +47,14 @@
 @rbertin 👨🏻‍💻 
 
 *03/12/2022 - 10/12/2022*
-- Marcar reunião com Wadson dia 03/12 ou 04/12 em qualquer horário com pautas:
-	- Instação e configuração do Xampp
-	- Subir o banco de dados
-	- Como usar funções da api.php
+- [FEITO] Marcar reunião com Wadson dia 03/12 ou 04/12 em qualquer horário com pautas:
+	- [FEITO] Instalação e configuração do Xampp
+	- [FEITO] Subir o banco de dados
+	- [FEITO] Como usar funções da api.php
 - Rota register.service.php:
 	- Crie a função validar_nome_usuario($nome_usuario):
 		- verifique se contém no mínimo 3 caracteres
+		- verifique se contém no máximo 15 caracteres
 		- verifique se contém espaço e retorne
 		- verifique se contém caracter diferente de letras
 		- use função existe($tabela, $id, $valor) de api.php e verifique se 'nome_usuario' já foi cadastrado
@@ -79,6 +80,12 @@
 		- [FEITO] Corrigir design do campo tempo_restante
 		- [FEITO] Corrigir centralização do background
 		- [FEITO] criar class para carta inexistente
+		- [FEITO] armazenar referências a elementos do DOM nas classes
+		- [FEITO] corrigir design de botões da GUI
+		- [FEITO] corrigir eventos de botões da GUI
+		- [FEITO] corrigir H da logo não aparecendo no Chrome modo claro
+		- [FEITO] criar função de puxar carta
+		- [FEITO] criar animação de puxar carta
 		- criar métodos da Partida
 		- criar criar eventos do Jogador
 		- criar métodos do Jogador

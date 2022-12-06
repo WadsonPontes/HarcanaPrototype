@@ -120,7 +120,7 @@ body {
 
 .no-transition:hover {
   transition: none !important;
-  box-shadow: 0px 0px 0 transparent !important;
+  box-shadow: 6px 6px 0 black !important;
 }
 
 .no-transition:hover span:nth-child(2) {
@@ -135,6 +135,11 @@ body {
 
 .no-transition:hover path.two {
   transform: translateX(-30%) !important;
+  animation: none !important;
+}
+
+.no-transition:hover path.three {
+  transform: translateX(0%) !important;
   animation: none !important;
 }
 
@@ -178,10 +183,6 @@ path.two {
   transform: translateX(-30%);
 }
 
-.cta:hover path.three {
-  animation: color_anim 1s infinite 0.2s;
-}
-
 .cta:hover path.one {
   transform: translateX(0%);
   animation: color_anim 1s infinite 0.6s;
@@ -190,6 +191,10 @@ path.two {
 .cta:hover path.two {
   transform: translateX(0%);
   animation: color_anim 1s infinite 0.4s;
+}
+
+.cta:hover path.three {
+  animation: color_anim 1s infinite 0.2s;
 }
 
 @keyframes color_anim {

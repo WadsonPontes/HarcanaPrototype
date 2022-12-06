@@ -55,6 +55,7 @@ main {
 }
 
 .title {
+  text-transform: uppercase;
   letter-spacing: 0rem;
   line-height: 2rem;
 }

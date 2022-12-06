@@ -22,6 +22,8 @@ class Partida {
     else
       this.humano = this.jogador2;
     
+    this.jogador1.personagem.monstrar();
+    this.jogador2.personagem.monstrar();
     this.noataque.jogar();
   }
 

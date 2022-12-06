@@ -4,7 +4,7 @@ class Jogador {
     this.posicao = posicao;
 		this.nome_jogador = JOGADORES[id][1];
     this.tipo = JOGADORES[id][2];
-		this.personagem = new Personagem(JOGADORES[id][3], JOGADORES[id][4]);
+		this.personagem = new Personagem(JOGADORES[id][3], JOGADORES[id][4], this);
     this.baralho = new Baralho(JOGADORES[id][5], this);
     this.mao = ['posicao', null, null, null, null];
     this.campo = ['posicao', null, null, null, null, null];
@@ -42,7 +42,7 @@ class Jogador {
 
   getEl() {
     this.el.compra = this.getElCarta('draw', this.posicao);
-    this.el.personagem = this.getElPersonagem(this.posicao);
+    this.el.personagem = this.personagem.getEl();
     this.el.mao = [document.querySelector(`#hand-${this.posicao}`)]; // Container, ou seja, o pai fica no indice 0
     this.el.campo = [document.querySelector(`#field-${this.posicao}`)]; // Container, ou seja, o pai fica no indice 0
     
@@ -82,17 +82,6 @@ class Jogador {
     carta.especial = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-special-icon`);
 
     return carta;
-  }
-
-  getElPersonagem(posicao_jogador) {
-    let personagem = {};
-
-    personagem.imagem = document.querySelector(`#char-${posicao_jogador}-img`);
-    personagem.titulo = document.querySelector(`#char-${posicao_jogador}-title`);
-    personagem.subtitulo = document.querySelector(`#char-${posicao_jogador}-subtitle`);
-    personagem.saude = document.querySelector(`#char-${posicao_jogador}-health-number`);
-
-    return personagem;
   }
 
   dormir(ms) {

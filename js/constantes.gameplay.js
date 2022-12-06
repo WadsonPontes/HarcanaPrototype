@@ -45,8 +45,8 @@ const CARTAS = [
 
 const PERSONAGENS = [
 	['id', 'nome_personagem',    'descricao', 'imagem',         'classe',    'saude'],
-  [ 1,   'Garffon Delpho',     '',          'img/char/1.jpg', 'apprentice', 50    ],
-	[ 2,   'Brif Wolfsteam',     '',          'img/char/4.jpg', 'barbarian',  50    ],
+  [ 1,   'Garffon Delpho',     '',          'img/char/1.png', 'apprentice', 50    ],
+	[ 2,   'Brif Wolfsteam',     '',          'img/char/4.png', 'barbarian',  50    ],
 ];
 
 const BARALHOS = [

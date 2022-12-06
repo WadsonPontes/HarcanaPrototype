@@ -17,23 +17,19 @@ class Jogador {
   jogar() {
     this.puxar();
 
-    if (this.tipo == 'computador') {
+    if (this.tipo == 'computador')
       this.inteligencia();
-    }
   }
 
   async puxar() {
     this.partida.estado = 'puxando';
 
     for (let i = 1; i <= 4 && this.baralho.cartas.length; ++i) {
-      if (this.mao[i]) {
+      if (this.mao[i])
         continue;
-      }
 
-      let carta = jogador.baralho.pop();
-
+      let carta = this.baralho.cartas.pop();
       await carta.animPuxar(i);
-
       this.mao[i] = carta;
     }
 
@@ -44,15 +40,11 @@ class Jogador {
 
   }
 
-  dormir(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
   getEl() {
     this.el.compra = this.getElCarta('draw', this.posicao);
     this.el.personagem = this.getElPersonagem(this.posicao);
-    this.el.mao = [];
-    this.el.campo = [];
+    this.el.mao = [null];
+    this.el.campo = [null];
     
     for (let i = 1; i <= 4; ++i) {
       let carta = this.getElCarta('hand', this.posicao, i);
@@ -71,18 +63,22 @@ class Jogador {
     carta.secundaria = {};
     carta.terciaria = {};
     
+    carta.el = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}`);
     carta.imagem = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-img`);
     carta.nome = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-name`);
     carta.nivel = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-level`);
     carta.tipo = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-type-icon`);
     carta.dano = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-attack-number`);
     carta.saude = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-health-number`);
+    carta.primaria.el = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-primary`);
     carta.primaria.valor = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-primary-number`);
-    carta.primaria.icone = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-primary-icon`);
+    carta.primaria.imagem = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-primary-icon`);
+    carta.secundaria.el = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-secondary`);
     carta.secundaria.valor = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-secondary-number`);
-    carta.secundaria.icone = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-secondary-icon`);
+    carta.secundaria.imagem = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-secondary-icon`);
+    carta.terciaria.el = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-tertiary`);
     carta.terciaria.valor = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-tertiary-number`);
-    carta.terciaria.icone = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-tertiary-icon`);
+    carta.terciaria.imagem = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-tertiary-icon`);
     carta.especial = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-special-icon`);
 
     return carta;

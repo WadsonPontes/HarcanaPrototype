@@ -50,12 +50,18 @@ main {
 
 /* ===================== COMUNS ========================================================== */
 
+.card {
+  cursor: pointer;
+}
+
 .title {
+  text-transform: uppercase;
   letter-spacing: 0rem;
   line-height: 2rem;
 }
 
 .name {
+  text-transform: uppercase;
   letter-spacing: -0.06rem;
 }
 
@@ -600,4 +606,106 @@ footer {
   font-size: 0.8rem;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
+}
+
+/* ===================== ANIMAÇÃO DE PUXAR ========================================================== */
+
+.field-1-card-1 {
+  top: 11%!important;
+  left: 17.8%!important;
+}
+
+.field-1-card-2 {
+  top: 11%!important;
+  left: 34.4%!important;
+}
+
+.field-1-card-3 {
+  top: 11%!important;
+  left: 51%!important;
+}
+
+.field-1-card-4 {
+  top: 11%!important;
+  left: 67.5%!important;
+}
+
+.field-1-card-5 {
+  top: 11%!important;
+  left: 84.1%!important;
+}
+
+.field-2-card-1 {
+  top: 52%!important;
+  left: 17.8%!important;
+}
+
+.field-2-card-2 {
+  top: 52%!important;
+  left: 34.4%!important;
+}
+
+.field-2-card-3 {
+  top: 52%!important;
+  left: 51%!important;
+}
+
+.field-2-card-4 {
+  top: 52%!important;
+  left: 67.5%!important;
+}
+
+.field-2-card-5 {
+  top: 52%!important;
+  left: 84.1%!important;
+}
+
+.hand-1-card-1 {
+  top: -38%!important;
+  left: 26.3%!important;
+}
+
+.hand-1-card-2 {
+  top: -38%!important;
+  left: 42.7%!important;
+}
+
+.hand-1-card-3 {
+  top: -38%!important;
+  left: 59.2%!important;
+}
+
+.hand-1-card-4 {
+  top: -38%!important;
+  left: 75.5%!important;
+}
+
+.hand-2-card-1 {
+  top: 62%!important;
+  left: 26.3%!important;
+}
+
+.hand-2-card-2 {
+  top: 62%!important;
+  left: 42.7%!important;
+}
+
+.hand-2-card-3 {
+  top: 62%!important;
+  left: 59.2%!important;
+}
+
+.hand-2-card-4 {
+  top: 62%!important;
+  left: 75.5%!important;
+}
+
+/* ===================== ANIMAÇÃO DE ABAIXAR MÃO ========================================================== */
+
+.hand-down-1 {
+  top: -30%!important;
+}
+
+.hand-down-2 {
+  bottom: -30%!important;
 }

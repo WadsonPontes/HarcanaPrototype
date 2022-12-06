@@ -183,10 +183,6 @@ path.two {
   transform: translateX(-30%);
 }
 
-.cta:hover path.three {
-  animation: color_anim 1s infinite 0.2s;
-}
-
 .cta:hover path.one {
   transform: translateX(0%);
   animation: color_anim 1s infinite 0.6s;
@@ -195,6 +191,10 @@ path.two {
 .cta:hover path.two {
   transform: translateX(0%);
   animation: color_anim 1s infinite 0.4s;
+}
+
+.cta:hover path.three {
+  animation: color_anim 1s infinite 0.2s;
 }
 
 @keyframes color_anim {

@@ -572,7 +572,7 @@
 		</section>
 
 		<section id="hand-2" class="hand" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()">
-			<figure id="hand-2-card-1" class="hand-card card off">
+			<figure id="hand-2-card-1" class="hand-card card off" ontouchstart="partida.jogadores[2].mao[1].segurar()" onmousedown="partida.jogadores[2].mao[1].segurar()" ontouchmove="partida.jogadores[2].mao[1].movendo()" onmousemove="partida.jogadores[2].mao[1].movendo()" onmouseup="partida.jogadores[2].mao[1].soltar()" ontouchend="partida.jogadores[2].mao[1].soltar()">
 				<img id="hand-2-card-1-img" class="card-img" src="img/card/dinossauro-15.jpg">
 				<figure id="hand-2-card-1-layout" class="card-layout">
 					<img id="hand-2-card-1-layout-img" class="card-layout-img" src="img/layout/card.png">

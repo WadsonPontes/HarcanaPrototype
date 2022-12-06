@@ -55,6 +55,7 @@ const BARALHOS = [
   ],
   
   [ // BARALHO 1
+    ['id', 'nivel'],
     [ 1,    1     ],
     [ 2,    1     ],
     [ 3,    1     ],
@@ -70,6 +71,7 @@ const BARALHOS = [
   ],
 
   [ // BARALHO 2
+    ['id', 'nivel'],
     [ 13,   1     ],
     [ 14,   1     ],
     [ 15,   1     ],

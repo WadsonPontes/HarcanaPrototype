@@ -1,6 +1,7 @@
 class Partida {
 	constructor(id_jogador1, id_jogador2) {
     this.estado = 'iniciando';
+    this.jogadores = [null];
     this.jogador1 = new Jogador(id_jogador1, 1, this, null);
     this.jogador2 = new Jogador(id_jogador2, 2, this, this.jogador1);
     this.jogador1.oponente = this.jogador2;
@@ -22,6 +23,8 @@ class Partida {
     else
       this.humano = this.jogador2;
     
+    this.jogadores.push(this.jogador1);
+    this.jogadores.push(this.jogador2);
     this.jogador1.personagem.monstrar();
     this.jogador2.personagem.monstrar();
     this.noataque.jogar();

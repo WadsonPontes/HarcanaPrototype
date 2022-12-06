@@ -1,6 +1,8 @@
 class Carta {
-	constructor(id, nivel, jogador) {
+	constructor(id, posicao, local, nivel, jogador) {
 		this.id = id;
+    this.posicao = posicao;
+    this.local = local;
     this.jogador = jogador;
 		this.nome_carta = CARTAS[id][1];
 		this.descricao = CARTAS[id][2];
@@ -16,6 +18,30 @@ class Carta {
 		this.terciaria = new Habilidade(CARTAS[id][11], 'terciaria', CARTAS[id][12], nivel, jogador);
 		this.especial = new Especial(CARTAS[id][13], 'especial', jogador);
 	}
+
+  // REFERNCIA: https://codepen.io/tjramage/details/yOEbyw
+  segurar() {
+    this.jogador.el.mao[this.posicao].classList.add('segurando');
+  }
+
+  // REFERENCIA: https://codepen.io/bramus/pen/eBZgPB
+  movendo() {
+    let x = event.clientX / innerWidth;
+    let y = event.clientY / innerHeight;
+ 
+    root.style.setProperty('--mouse-x', x);
+    root.style.setProperty('--mouse-y', y);
+  }
+
+  soltar() {
+    this.jogador.el.mao[this.posicao].classList.remove('segurando');
+  }
+
+  puxar(i) {
+    this.posicao = i;
+    this.local = 'mao';
+    this.jogador.mao[i] = this;
+  }
 
   async animPuxar(i) {
     await this.dormir(100);

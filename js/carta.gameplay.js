@@ -21,6 +21,7 @@ class Carta {
 
   // REFERNCIA: https://codepen.io/tjramage/details/yOEbyw
   segurar() {
+    this.jogador.partida.estado = 'segurando-carta';
     this.jogador.el.mao[this.posicao].el.classList.add('segurando');
   }
 
@@ -30,6 +31,8 @@ class Carta {
     let main = {
       x: this.jogador.partida.el.main.offsetLeft,
       y: this.jogador.partida.el.main.offsetTop,
+      largura: this.jogador.partida.el.main.offsetWidth,
+      altura: this.jogador.partida.el.main.offsetHeight,
     };
     let mao = {
       x: this.jogador.el.mao[0].offsetLeft,
@@ -41,12 +44,19 @@ class Carta {
     };
     let x = event.clientX - main.x - mao.x - (carta.largura/2);
     let y = event.clientY - main.y - mao.y - (carta.altura/2);
-    console.log(mao);
-    root.style.setProperty('--mouse-x', `${x}px`);console.log(root.style.getPropertyValue('--mouse-x'));
-    root.style.setProperty('--mouse-y', `${y}px`);console.log(root.style.getPropertyValue('--mouse-y'));
+    
+    root.style.setProperty('--mouse-x', `${x}px`);
+    root.style.setProperty('--mouse-y', `${y}px`);
+
+    if (this.jogador.partida.estado == 'segurando-carta') {
+      if (event.clientX < main.x + main.largura * 0.17 || event.clientY < main.y || event.clientX > main.x + main.largura || event.clientY > main.y + main.altura) {
+        this.soltar();
+      }
+    }
   }
 
   soltar() {
+    this.jogador.partida.estado = 'jogando';
     this.jogador.el.mao[this.posicao].el.classList.remove('segurando');
   }
 

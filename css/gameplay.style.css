@@ -715,6 +715,5 @@ footer {
 .segurando {
   top: var(--mouse-y) !important;
   left: var(--mouse-x) !important;
-  /* width: 15%!important;
-  height: 37%!important; */
+  z-index: 100!important;
 }

@@ -55,12 +55,32 @@ class Carta {
     }
   }
 
+  irParaCampo() {
+    console.log('vai para campo!');
+  }
+
   soltar(forcado) {
+    let main = {
+      x: this.jogador.partida.el.main.offsetLeft,
+      y: this.jogador.partida.el.main.offsetTop,
+      largura: this.jogador.partida.el.main.offsetWidth,
+      altura: this.jogador.partida.el.main.offsetHeight,
+    };
+    let mao = {
+      x: this.jogador.el.mao[0].offsetLeft,
+      y: this.jogador.el.mao[0].offsetTop,
+    };
+    let carta = {
+      largura: this.jogador.el[this.local][this.posicao].el.offsetWidth,
+      altura: this.jogador.el[this.local][this.posicao].el.offsetHeight,
+    };
+    let y = event.clientY - main.y - mao.y - (carta.altura/2);
+
     this.jogador.partida.estado = 'jogando';
     this.jogador.el.mao[this.posicao].el.classList.remove('segurando');
 
-    if (this.jogador.partida.noataque.id == this.jogador.id && !forcado) {
-      console.log(event.clientX);
+    if (this.jogador.partida.noataque.id == this.jogador.id && !forcado && y < main.altura * 0.38) {
+      this.irParaCampo();
     }
   }
 

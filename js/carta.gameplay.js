@@ -86,7 +86,7 @@ class Carta {
     this.terciaria.mostrarHabilidade(local, i);
     this.especial.mostrarEspecial(local, i);
     this.jogador.el[local][i].el.style.visibility = 'visible';
-    this.jogador.el[local][i].el.style.transition = 'all 0.5s linear';
+    this.jogador.el[local][i].el.style.transition = '';
 	}
 
 	mostrarCompra() {

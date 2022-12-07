@@ -30,6 +30,40 @@ class Partida {
     this.noataque.jogar();
   }
 
+  // REFERENCIA: https://codepen.io/bramus/pen/eBZgPB
+  movendoMouse() {
+    let main = {
+      x: this.el.main.offsetLeft,
+      y: this.el.main.offsetTop,
+      largura: this.el.main.offsetWidth,
+      altura: this.el.main.offsetHeight
+    };
+    let mao = {
+      x: this.jogador.el.mao[0].offsetLeft,
+      y: this.jogador.el.mao[0].offsetTop
+    };
+    let carta = {
+      largura: this.jogador.el.compra.offsetWidth,
+      altura: this.jogador.el.compra.offsetHeight
+    };
+    let x = event.clientX - main.x - mao.x - (carta.largura/2);
+    let y = event.clientY - main.y - mao.y - (carta.altura/2);
+    
+    this.el.root.style.setProperty('--mouse-x', `${x}px`);
+    this.el.root.style.setProperty('--mouse-y', `${y}px`);
+
+    if (this.estado == 'segurando-carta') {
+      if (event.clientX < (main.x + main.largura * 0.17)) // Esquerda
+        this.soltar(true);
+      else if (event.clientY < (main.y + main.altura * 0.1)) // Cima
+        this.soltar(true);
+      else if (event.clientX > (main.x + main.largura - main.largura * 0.05)) // Direita
+        this.soltar(true);
+      else if (event.clientY > (main.y + main.altura)) // Baixo
+        this.soltar(true);
+    }
+  }
+
   async mostrarMao() {
     if (this.estado != 'jogando' && this.estado != 'abaixando-mao')
       return;
@@ -52,6 +86,7 @@ class Partida {
   }
 
   getEl() {
+    this.el.root = document.documentElement;
     this.el.main = document.querySelector('main');
     this.el.tempo = document.querySelector('#game-time');
     this.el.tela_cheia = document.querySelector('#fullscreen-icon');

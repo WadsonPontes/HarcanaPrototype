@@ -7,16 +7,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="img/icon/logo/favicon.png">
 	<link rel="stylesheet" type="text/css" href="css/profile.style.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<title>Harcana</title>
 </head>
 
 <body>
-	<nav class="navbar">
+
+	<!-- <nav class="navbar">
 		<div class="nav-wrapper">
-			<a href="index.html" class="brand-logo center"> HARCANA </a>
-			<ul id="nav-mobile" class="hide-on-med-and-down">
+			<a href="index.html" class="logo"> HARCANA </a>
+			<ul class="nav-list">
 				<li class="menu"><a href="missions.html"> MISSIONS </a></li>
 				<li class="menu"><a href="shop.html"> SHOP </a></li>
 				<li class="menu"><a href="deck.html"> DECK </a></li>
@@ -24,38 +23,197 @@
 				<li class="menu right"><a href="index.html"> EXIT </a></li>
 			</ul>
 		</div>
-	</nav>
-	<div id="profile-box">
-		<img class="profile-imagem" src="https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png"></img>
-		<div class="row">
-			<form class="col s12">
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="first_name" type="text" class="validate">
-						<label class="active" for="first_name">Nickname</label>
+	</nav> -->
+
+	<script src="https://kit.fontawesome.com/aa4a5692e9.js" crossorigin="anonymous"></script>
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<nav id="menu">
+		<div class="menu-item">
+			<div class="menu-text">
+				<a href="#">Profile</a>
+			</div>
+			<div class="sub-menu">
+				<div class="icon-box">
+					<div class="icon"><i class="fal fa-wind-turbine"></i></div>
+					<div class="text">
+						<div class="title">Turbo Editor <i class="far fa-arrow-right"></i></div>
+						<div class="sub-text">Edit your code while slowing down time.</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="email" type="email" class="validate">
-						<label for="email" data-error="wrong" data-success="right" class="active"> Email </label>
+				<div class="icon-box">
+					<div class="icon"><i class="fal fa-lightbulb-on"></i></div>
+					<div class="text">
+						<div class="title">Idea Creator <i class="far fa-arrow-right"></i></div>
+						<div class="sub-text">Think of an idea, and have an AI create it.</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="password" type="password" class="validate">
-						<i class="fa fa-eye" id="text"></i>
-						<i class="fa fa-eye-slash" id="pass"></i>
-						<label for="password" class="active"> Password </label>
+				<div class="icon-box">
+					<div class="icon"><i class="fal fa-bomb"></i></div>
+					<div class="text">
+						<div class="title">Super Collider <i class="far fa-arrow-right"></i></div>
+						<div class="sub-text">Remove mass from any object.</div>
 					</div>
 				</div>
-			</form>
+				<div class="sub-menu-holder"></div>
+			</div>
 		</div>
-	</div>
-	<img src="img/home/dragon-animate-3.svg" class="image-profile-animate-3">
+
+		<div class="menu-item highlight">
+			<div class="menu-text">
+				<a href="#">Missions</a>
+			</div>
+			<div class="sub-menu double">
+				<div class="icon-box gb a">
+					<div class="icon"><i class="fa-duotone fa-square-1"></i></i></div>
+					<div class="text">
+						<div class="title">Mission <i class="far fa-arrow-right"></i></div>
+						<div class="sub-text">From Professionals</div>
+					</div>
+				</div>
+				<div class="icon-box gb b">
+					<div class="icon"><i class="far fa-users-class"></i></div>
+					<div class="text">
+						<div class="title">Teach <i class="far fa-arrow-right"></i></div>
+						<div class="sub-text">In Classroom</div>
+					</div>
+				</div>
+				<div class="icon-box gb c">
+					<div class="icon"><i class="far fa-school"></i></div>
+					<div class="text">
+						<div class="title">Learn <i class="far fa-arrow-right"></i></div>
+						<div class="sub-text">By Video</div>
+					</div>
+				</div>
+				<div class="icon-box gb d">
+					<div class="icon"><i class="far fa-chess-rook"></i></div>
+					<div class="text">
+						<div class="title">Keep <i class="far fa-arrow-right"></i></div>
+						<div class="sub-text">The Castle</div>
+					</div>
+				</div>
+				<div class="icon-box gb e">
+					<div class="icon"><i class="far fa-video-plus"></i></div>
+					<div class="text">
+						<div class="title">Become <i class="far fa-arrow-right"></i></div>
+						<div class="sub-text">A Creator</div>
+					</div>
+				</div>
+				<div class="icon-box gb f">
+					<div class="icon"><i class="far fa-cat"></i></div>
+					<div class="text">
+						<div class="title">Understand <i class="far fa-arrow-right"></i></div>
+						<div class="sub-text">Our Journey</div>
+					</div>
+				</div>
+				<div class="bottom-container">
+					Ready to dive in? <a href="#">Get Started</a>
+				</div>
+				<div class="sub-menu-holder"></div>
+			</div>
+		</div>
+
+		<div class="menu-item highlight">
+			<div class="menu-text">
+				<a href="#">Shop</a>
+			</div>
+			<div class="sub-menu triple">
+				<div class="top-container gb c icon-box">
+					<div class="icon big"><i class="far fa-book"></i></div>
+					<div class="text">
+						<div class="title">Where to start</div>
+						<div class="sub-text">Find out where to begin below</div>
+					</div>
+				</div>
+				<div class="box">
+					<h3>Your Journey</h3>
+					<a href="#">Get Started</a>
+					<a href="#">Learn the Basics</a>
+					<a href="#">Get Advanced</a>
+					<a href="#">Start Teaching</a>
+				</div>
+				<div class="box">
+					<h3>Your Tools</h3>
+					<a href="#">Turbo Editor</a>
+					<a href="#">Time Stopper</a>
+					<a href="#">Brain Enhancer</a>
+					<a href="#">Network Maker</a>
+				</div>
+				<div class="icon-box flat">
+					<div class="icon"><i class="fal fa-plug"></i></div>
+					<div class="text">
+						<div class="title">API Guide <i class="far fa-arrow-right"></i></div>
+					</div>
+				</div>
+				<div class="icon-box flat">
+					<div class="icon"><i class="fal fa-comments"></i></div>
+					<div class="text">
+						<div class="title">Support Line <i class="far fa-arrow-right"></i></div>
+					</div>
+				</div>
+				<div class="icon-box flat">
+					<div class="icon"><i class="fal fa-phone-volume"></i></div>
+					<div class="text">
+						<div class="title">Live Chat <i class="far fa-arrow-right"></i></div>
+					</div>
+				</div>
+				<div class="icon-box flat">
+					<div class="icon"><i class="fal fa-book-spells"></i></div>
+					<div class="text">
+						<div class="title">Documentation <i class="far fa-arrow-right"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="menu-item">
+			<div class="menu-text">
+				<a href="#">Creators</a>
+			</div>
+			<div class="sub-menu">
+				<div class="icon-box">
+					<div class="icon"><i class="fa-brands fa-github"></i></div>
+					<div class="text">
+						<div class="title">Github<i class="fa-regular fa-arrow-right"></i></div>
+						<div class="sub-text">Jason Willyan Castro do Nascimento</div>
+					</div>
+				</div>
+				<div class="icon-box">
+					<div class="icon"><i class="fa-brands fa-github"></i></div>
+					<div class="text">
+						<div class="title">Github<i class="fa-regular fa-arrow-right"></i></div>
+						<div class="sub-text">Wadson</div>
+					</div>
+				</div>
+				<div class="icon-box">
+					<div class="icon"><i class="fa-brands fa-github"></i></div>
+					<div class="text">
+						<div class="title">Github<i class="fa-regular fa-arrow-right"></i></div>
+						<div class="sub-text">Wadson</div>
+					</div>
+				</div>
+				<div class="sub-menu-holder"></div>
+			</div>
+		</div>
+		<div id="sub-menu-container">
+			<div id="sub-menu-holder">
+				<div id="sub-menu-bottom">
+				</div>
+			</div>
+		</div>
+		
+		<div class="menu-item">
+			<div class="menu-text">
+				<a href="#">Exit</a>
+			</div>
+		</div>
+	</nav>
+
+
+
+	<img src="img/home/dragon-animate-3.svg" class="image-animate-3">
 	<script type="text/javascript" src="js/profile.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
 </body>
 
 </html>

@@ -25,11 +25,11 @@
  }
 .img2{
 	height: 40px;
-	width: 30px;
+	width: 100%;
 }
 .img3{
 	height: 400px;
-	width: 250px;
+	width: 100%;
 
 }
 .menu:hover
@@ -44,11 +44,11 @@
 .box{
 	display:inline-block;
 	margin: 0 20;
-	margin-right: 125px;
+	margin-right: 11%;
 }
 .box1{
-	margin-top: 100px;
-	margin-left: 100px;
+	margin-top: 10%;
+	margin-left: 10%;
 	
 }
 body{
@@ -56,22 +56,22 @@ body{
 	overflow: hidden;
 }
 .jeweOfExalt{
-	height: 40px;
-	width: 150px;
+	height: 4%;
+	width: 8%;
 	background-color: #13aa52;
 	float: right;	
 	margin-right: 10px;
 }
 .jeweOfGlorify{
-	height: 40px;
-	width: 150px;
+	height: 4%;
+	width: 10%;
 	background-color: aquamarine;
 	float: right;
 	text-align: justify;
 }
 .goldenCoin{
-	height: 40px;
-	width: 150px;
+	height: 4%;
+	width: 8%;
 	background-color: red;
 	float: right;
 }
@@ -133,13 +133,14 @@ body{
 	width: 60%;
 	height: 60%;
 	float: center;
-	margin-left: 425px;
-	margin-top: 150px;
+	margin-left: 23%;
+	margin-top: 5%;
 }
+/*
 .container-fluid2{
 	margin-top: 50px;
 }
-
+*/
 .display {
     text-align: left;
     height: 60px;
@@ -166,7 +167,7 @@ body{
 
 .daily_card {
 	grid-area: pos3;
-	margin-top: 100px;
+	margin-top: 0%;
 }
 
 .btn {

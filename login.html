@@ -7,41 +7,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="img/icon/logo/favicon.png">
 	<link rel="stylesheet" type="text/css" href="css/login.style.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<title>Harcana</title>
 </head>
 
 <body>
-	<div id="login-box">
-		<h1 id="title-login"> LOGIN </h1>
-		<div class="row">
-			<form class="col s12">
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="email" type="email" class="validate" aria-required="true">
-						<label for="email" data-error="Invalid email address. Did you type it in correctly?" data-success="right"
-							class="active"> Email </label>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="password" type="password" class="validate">
-						<label for="password" class="active"> Password </label>
-					</div>
-				</div>
-			</form>
-		</div>
-		<div class="aligne center">
-			<a onclick="logar(); return false;" href="#" class="waves-effect waves-light btn-large green" id="button"><i
-					type="submit" name="action" class="large material-icons center" class="fas fa-code fa-2x">fingerprint</i></a>
-		</div>
-		<label id="mensagem-de-erro"></label>
+	<div class="login-box">
+		<h2>LOGIN</h2>
+		<form>
+			<div class="user-box">
+				<input type="text" name="" required="">
+				<label>E-MAIL</label>
+			</div>
+			<div class="user-box">
+				<input type="password" name="" required="">
+				<label>PASSWORD</label>
+			</div>
+			<a href="index.html">
+				<span></span><span></span><span></span><span></span>
+				Back
+			</a>
+			<a onclick="logar(); return false;" href="#">
+				<span></span><span></span><span></span><span></span>
+				Submit
+			</a>
+		</form>
 	</div>
-	<img src="img/home/dragon-animate-1.svg" class="image-login-animate-1">
+	<img src="img/home/dragon-animate-1.svg" class="image-animate-1">
 	<script type="text/javascript" src="js/login.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
 </body>
 
 </html>

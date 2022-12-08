@@ -12,49 +12,37 @@
 </head>
 
 <body>
-	<div id="register-box">
-		<h1 id="title-login"> Register </h1>
-		<div class="row">
-			<form class="col s12">
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="username" type="text">
-						<label for="username" class="active">Nickname</label>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="email" type="email" class="validate">
-						<label for="email" data-error="wrong" data-success="right" class="active"> Email </label>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="password" type="password" class="validate">
-						<i class="fa fa-eye" id="text"></i>
-						<i class="fa fa-eye-slash" id="pass"></i>
-						<label for="password" class="active"> Password </label>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="password" type="password" class="validate">
-						<i class="fa fa-eye" id="text"></i>
-						<i class="fa fa-eye-slash" id="pass"></i>
-						<label for="password" class="active"> Confirm password </label>
-					</div>
-				</div>
-			</form>
-		</div>
-		<div class="aligne center">
-			<a onclick="registrar(); return false;" href="#" class="waves-effect waves-light btn-large green" type="submit"
-				id="button"><i class="large material-icons center" class="fas fa-code fa-2x">done</i></a>
-		</div>
+	<div class="login-box">
+		<h2>LOGIN</h2>
+		<form>
+			<div class="user-box">
+				<input type="text" name="" required="">
+				<label>NICKNAME</label>
+			</div>
+			<div class="user-box">
+				<input type="text" name="" required="">
+				<label>E-MAIL</label>
+			</div>
+			<div class="user-box">
+				<input type="password" name="" required="">
+				<label>PASSWORD</label>
+			</div>
+			<div class="user-box">
+				<input type="password" name="" required="">
+				<label>CONFIRM PASSWORD</label>
+			</div>
+			<a href="index.html">
+				<span></span><span></span><span></span><span></span>
+				Back
+			</a>
+			<a onclick="registrar(); return false;" href="#">
+				<span></span><span></span><span></span><span></span>
+				Submit
+			</a>
+		</form>
 	</div>
-	<img src="img/home/dragon-animate-register.svg" class="image-register-animate-1">
+	<img src="img/home/dragon-animate-4.svg" class="image-animate-4">
 	<script src="js/register.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
 </body>
 
 </html>

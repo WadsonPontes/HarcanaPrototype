@@ -7,8 +7,8 @@
 
 *05/12/2022 - 10/12/2022*
 - Tela Deck:
-	- Criar <section>
-		- posicionar no canto superior direito, como fixed, top 64px, right 0px
+	- [FEITO] Criar <section>
+		- [FEITO] posicionar no canto superior direito, como fixed, top 64px, right 0px
 		- adicionar <figure>
 			- adicionar <img> img/icon/gui/jewel-of-exalt.png
 			- adicionar <h4> valor

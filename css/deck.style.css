@@ -5,14 +5,32 @@
   --main-font: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
 }
 
+.back::-webkit-scrollbar {
+  width: 10px;
+  height: 20px;
+}
+
+.back::-webkit-scrollbar-track {
+  background: #f1f1f1;  
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+}
+ 
+.back::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+.back::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 body {
   font-family: var(--main-font);
   background: linear-gradient(var(--main-color-grey) 60%, black) padding-box;
   background-color: var(--main-color-grey);
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
-  background-position: 25vw 0vh;
-  display: flex;
+  background-position: 0vw 0vh;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
@@ -38,4 +56,199 @@ body {
 .menu:hover {
   background-color: var(--main-color-blue);
   border: 0px solid var(--main-color-grey);
+}
+
+h2 {
+  text-align: center;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: -2%;
+  color: white;
+  font-size: 40px !important;
+  letter-spacing: 4px;
+}
+
+.content {
+  position: fixed;
+  height: calc(100vh - 64px);
+  top: 64px;
+  width: 50vw;
+}
+
+#deck {
+  left: 0;
+}
+
+#inventory {
+  right: 0;
+}
+
+.back {
+  background-color: rgb(58, 70, 48);
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 88%;
+  width: 96%;
+  border-radius: 1rem;
+  overflow-y: scroll;
+}
+
+.draw-card {
+  position: absolute;
+  left: 1%;
+  width: 15%;
+  height: 37%;
+  z-index: 60;
+}
+
+/* ===================== CARD ========================================================== */
+
+.card-img {
+  position: absolute;
+  top: 13.5%;
+  left: 3.5%;
+  width: 82%;
+  height: 84%;
+  z-index: 90;
+}
+
+.card-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 91;
+}
+
+.card-layout-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 92;
+}
+
+.card-type {
+  position: absolute;
+  top: 13.5%;
+  left: 3.8%;
+  width: 13%;
+  height: 10%;
+  z-index: 93;
+}
+
+.card-type-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 95;
+}
+
+.card-name {
+  position: absolute;
+  top: 3%;
+  left: 0;
+  width: 100%;
+  height: 4%;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  z-index: 95;
+}
+
+.card-level {
+  position: absolute;
+  top: 7%;
+  left: 0;
+  width: 100%;
+  height: 6%;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  z-index: 95;
+}
+
+/* ===================== CARD ATTRIBUTE ========================================================== */
+
+.attribute {
+  position: absolute;
+  right: 0;
+  width: 32%;
+  height: 16%;
+  z-index: 93;
+}
+
+.skill {
+  position: absolute;
+  width: 28%;
+  height: 10%;
+}
+
+.card-attack {
+  top: 15%;
+}
+
+.card-health {
+  top: 30%;
+}
+
+.card-primary {
+  top: 50%;
+}
+
+.card-secondary {
+  top: 62%;
+}
+
+.card-tertiary {
+  top: 74%;
+}
+
+.card-special {
+  top: 86%;
+}
+
+.card-attribute-number {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  bottom: 0;
+  margin: auto;
+  padding-right: 10%;
+  width: 64%;
+  height: 50%;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 94;
+}
+
+.card-skill-number {
+  height: 75%;
+  width: 60%;
+  line-height: 1.5rem;
+}
+
+.card-attribute-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 95;
+}
+
+.card-skill-icon {
+  right: 2%;
+  width: 48%;
 }

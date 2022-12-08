@@ -12,17 +12,21 @@
 }
 
 .back::-webkit-scrollbar-track {
-  background: #f1f1f1;  
+  background: #f1f1f1;
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
 }
- 
+
 .back::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
 }
 
 .back::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
+}
+
+html {
+  height: 100%;
 }
 
 * {
@@ -34,36 +38,55 @@
 
 body {
   font-family: var(--main-font);
-  background: linear-gradient(var(--main-color-grey) 60%, black) padding-box;
-  background-color: var(--main-color-grey);
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
-  background-position: 0vw 0vh;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  width: 100vw;
-  height: 100vh;
+  background: linear-gradient(#141e30, #243b55);
   margin: 0;
   padding: 0;
   overflow: hidden;
+  line-height: 30px;
+  font-size: 16px;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  background-color: var(--main-color-grey);
-  letter-spacing: 4px;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(0.25turn, var(--main-color-blue), var(--main-color-purple));
-  border-image-slice: 1;
-  width: 100%;
+nav {
+  font-family: var(--main-font);
+  width: var(--menu-width);
+  display: flex;
+  transform-style: preserve-3d;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 2;
+  margin: 0px 20%;
+  perspective: 2000px;
+  flex-wrap: wrap;
+  top: 1em;
 }
 
-.menu:hover {
-  background-color: var(--main-color-blue);
-  border: 0px solid var(--main-color-grey);
+nav .menu-item {
+  color: white;
+  font-weight: 600;
+  transform-style: preserve-3d;
+  flex-grow: 1;
+  display: flex;
+  flex-basis: var(--item-width);
+  box-sizing: border-box;
+  padding: 1em 1.5em;
+  justify-content: center;
+  perspective: 200px;
+  letter-spacing: 0.5px;
+  min-height: 7.5em;
+}
+
+nav .menu-text,
+nav .menu-text a {
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: color 0.1s ease-out;
+  text-align: center;
+}
+
+nav .menu-text a:hover {
+  color: var(--main-color-blue);
 }
 
 /* ===================== ITEMS ======================================================================= */
@@ -79,6 +102,51 @@ header {
 /* ===================== DECK AND INVENTORY ========================================================== */
 
 h2 {
+  font-size: 20px;
+  font-weight: 1000;
+  color: rgb(255, 255, 255);
+  margin-top: 1%;
+  margin-left: -500%;
+  text-transform: uppercase;
+  animation: lights 5s 750ms linear infinite;
+}
+
+@keyframes lights {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2), 0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0), 1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+
+  30% {
+    color: hsl(230, 80%, 90%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+
+  40% {
+    color: hsl(230, 100%, 95%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2), 0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0), -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+}
+
+.logo {
   text-align: center;
   display: block;
   position: absolute;
@@ -107,7 +175,7 @@ h2 {
 }
 
 .back {
-  background-color: #CFCFC9;
+  background-color: #cfcfc9;
   position: absolute;
   top: 10%;
   left: 0;
@@ -116,7 +184,7 @@ h2 {
   height: 88%;
   width: 96%;
   border-radius: 1rem;
-  border: 1rem inset #FCFCFC;
+  border: 1rem inset #fcfcfc;
   overflow-y: scroll;
 }
 

@@ -1,3 +1,4 @@
+/* ===================== MENU ========================================================== */
 :root {
   --main-color-grey: #202124;
   --main-color-purple: #845ec2;
@@ -11,21 +12,28 @@
 }
 
 .back::-webkit-scrollbar-track {
-  background: #f1f1f1;  
+  background: #f1f1f1;
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
 }
- 
+
 .back::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
 }
 
 .back::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 
 html {
   height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -81,6 +89,18 @@ nav .menu-text a:hover {
   color: var(--main-color-blue);
 }
 
+/* ===================== ITEMS ======================================================================= */
+
+header {
+  position: fixed;
+  top: 64px;
+  right: 1vw;
+  width: 15vw;
+  height: 4vw;
+}
+
+/* ===================== DECK AND INVENTORY ========================================================== */
+
 h2 {
   font-size: 20px;
   font-weight: 1000;
@@ -88,55 +108,42 @@ h2 {
   margin-top: 1%;
   margin-left: -500%;
   text-transform: uppercase;
-  animation: lights 5s 750ms linear infinite
+  animation: lights 5s 750ms linear infinite;
 }
 
 @keyframes lights {
   0% {
     color: hsl(230, 40%, 80%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.2),
-      0 0 0.125em hsla(320, 100%, 60%, 0.3),
-      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
-      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2), 0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0), 1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
   }
-  
-  30% { 
+
+  30% {
     color: hsl(230, 80%, 90%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 60%, 0.5),
       -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
       0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
   }
-  
-  40% { 
+
+  40% {
     color: hsl(230, 100%, 95%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 90%, 0.5),
       -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
       0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
   }
-  
+
   70% {
     color: hsl(230, 80%, 90%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 60%, 0.5),
       0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
       -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
   }
-  
+
   100% {
     color: hsl(230, 40%, 80%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.2),
-      0 0 0.125em hsla(320, 100%, 60%, 0.3),
-      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
-      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2), 0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0), -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
   }
-  
 }
 
 .logo {
@@ -168,7 +175,7 @@ h2 {
 }
 
 .back {
-  background-color: rgb(58, 70, 48);
+  background-color: #cfcfc9;
   position: absolute;
   top: 10%;
   left: 0;
@@ -177,18 +184,23 @@ h2 {
   height: 88%;
   width: 96%;
   border-radius: 1rem;
+  border: 1rem inset #fcfcfc;
   overflow-y: scroll;
 }
 
-.draw-card {
-  position: absolute;
-  left: 1%;
-  width: 15%;
-  height: 37%;
+/* ===================== CARD ========================================================== */
+
+.card {
+  display: inline-block;
+  position: relative !important;
+  width: 31.7%;
+  height: 44.8%;
+  margin: 2% !important;
+  font-size: 1.78vh !important;
+  background-color: transparent !important;
+  cursor: pointer;
   z-index: 60;
 }
-
-/* ===================== CARD ========================================================== */
 
 .card-img {
   position: absolute;
@@ -205,6 +217,10 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
   z-index: 91;
 }
 
@@ -241,8 +257,17 @@ h2 {
   left: 0;
   width: 100%;
   height: 4%;
+  margin: 0;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
+  color: #fff;
   font-size: 0.8rem;
+  font-weight: bold;
   line-height: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: -0.06rem;
+  word-spacing: 0.4rem;
+  box-sizing: border-box;
   z-index: 95;
 }
 

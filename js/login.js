@@ -11,8 +11,7 @@ function getEntrada() {
 }
 
 function mensagemDeErro(msg) {
-  console.log(msg);
-  document.querySelector("#mensagem-de-erro").textContent = msg;
+  document.querySelector("#error-message").textContent = msg;
 }
 
 function logar() {
@@ -24,23 +23,18 @@ function logar() {
   fetch("php/login.php", { method: "POST", body: dados })
     .then((raw) => raw.json())
     .then((res) => {
-      console.log(res);
       if (res && res.status == "success") window.location.href = "missions.html";
-      else mensagemDeErro("Dados de login inválidos");
+      else mensagemDeErro(res.error);
     })
     .catch((erro) => {
       console.log(`error: ${erro.message}`);
     });
 }
 
-document.querySelector("#login-box").onmousemove = (e) => {
+document.querySelector(".login-box").onmousemove = (e) => {
   const x = e.pageX - e.target.offsetLeft;
   const y = e.pageY - e.target.offsetTop;
 
   e.target.style.setProperty("--x", `${x}px`);
   e.target.style.setProperty("--y", `${y}px`);
 };
-
-$(document).ready(function () {
-  Materialize.updateTextFields();
-});

@@ -8,7 +8,8 @@ $dados = array(
 );
 
 $resposta = array(
-    'status' => 'success'
+    'status' => 'success',
+    'error' => ''
 );
 
 if (existe('jogador', 'email', $dados['email'])) {
@@ -19,10 +20,12 @@ if (existe('jogador', 'email', $dados['email'])) {
     }
     else {
         $resposta['status'] = 'error';
+        $resposta['error'] = 'Dados de login inválidos';
         echo json_encode($resposta);
     }
 }
 else {
     $resposta['status'] = 'error';
+    $resposta['error'] = 'Dados de login inválidos';
     echo json_encode($resposta);
 }

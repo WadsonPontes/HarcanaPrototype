@@ -165,13 +165,17 @@ h2 {
 
 .content {
   position: fixed;
-  height: calc(100vh - 64px);
+  height: calc(98vh - 64px);
   top: 64px;
-  width: 50vw;
+  width: 48vw;
+  margin: 0 1vw;
+  border-radius: 30px;
+  /* background-color: #fff; */
+  background: linear-gradient(#243b55, #2B4766);
 }
 
 .back {
-  background-color: #001234;
+  background-color: #111A28;
   position: absolute;
   top: 10%;
   left: 0;
@@ -180,8 +184,8 @@ h2 {
   height: 88%;
   width: 96%;
   border-radius: 1rem;
-  border: 5px inset #b2acac;
-  overflow-y: scroll;
+  border: 5px inset #243b55;
+  /* overflow-y: scroll; */
 }
 
 #deck {

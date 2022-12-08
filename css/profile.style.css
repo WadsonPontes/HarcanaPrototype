@@ -31,6 +31,7 @@ body {
 }
 
 nav {
+  position: fixed;
   font-family: var(--main-font);
   width: var(--menu-width);
   display: flex;
@@ -41,7 +42,7 @@ nav {
   margin: 0px 20%;
   perspective: 2000px;
   flex-wrap: wrap;
-  top: 1em;
+  top: 1%;
 }
 
 nav .menu-item {

@@ -25,36 +25,6 @@ class Carta {
     this.jogador.el.mao[this.posicao].el.classList.add('segurando');
   }
 
-  // REFERENCIA: https://codepen.io/bramus/pen/eBZgPB
-  movendoMouse() {
-    const root = document.documentElement;
-    let main = {
-      x: this.jogador.partida.el.main.offsetLeft,
-      y: this.jogador.partida.el.main.offsetTop,
-      largura: this.jogador.partida.el.main.offsetWidth,
-      altura: this.jogador.partida.el.main.offsetHeight,
-    };
-    let mao = {
-      x: this.jogador.el.mao[0].offsetLeft,
-      y: this.jogador.el.mao[0].offsetTop,
-    };
-    let carta = {
-      largura: this.jogador.el[this.local][this.posicao].el.offsetWidth,
-      altura: this.jogador.el[this.local][this.posicao].el.offsetHeight,
-    };
-    let x = event.clientX - main.x - mao.x - (carta.largura/2);
-    let y = event.clientY - main.y - mao.y - (carta.altura/2);
-    
-    root.style.setProperty('--mouse-x', `${x}px`);
-    root.style.setProperty('--mouse-y', `${y}px`);
-
-    if (this.jogador.partida.estado == 'segurando-carta') {
-      if (event.clientX < (main.x + main.largura * 0.17) || event.clientY < (main.y + main.altura*0.1) || event.clientX > (main.x + main.largura - main.largura*0.05) || event.clientY > (main.y + main.altura)) {
-        this.soltar(true);
-      }
-    }
-  }
-
   irParaCampo() {
     console.log('vai para campo!');
   }

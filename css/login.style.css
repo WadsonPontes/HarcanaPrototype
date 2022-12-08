@@ -186,3 +186,10 @@ body {
     bottom: 100%;
   }
 }
+
+#error-message {
+  display: block;
+  height: 0;
+  color: red;
+  text-align: center;
+}

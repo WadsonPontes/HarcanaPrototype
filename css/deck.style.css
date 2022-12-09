@@ -188,9 +188,6 @@ header {
   position: relative;
   width: 15vw;
   height: 20.8vw;
-  margin: 0.1vw !important;
-  font-size: 1.78vh;
-  background-color: transparent !important;
   cursor: pointer;
   z-index: 60;
 }

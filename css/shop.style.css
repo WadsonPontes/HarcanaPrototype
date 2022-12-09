@@ -3,7 +3,7 @@
   --main-color-purple: #845ec2;
   --main-color-blue: #00c9a7;
   --main-font: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
-	--menu-width: 42.5em; /* Width of menu */
+  --menu-width: 42.5em; /* Width of menu */
   --items: 7; /* Number of items you have */
   --item-width: calc(var(--menu-width) / var(--items));
 }
@@ -76,55 +76,42 @@ nav .menu-text a:hover {
   margin-top: 1%;
   margin-left: -500%;
   text-transform: uppercase;
-  animation: lights 5s 750ms linear infinite
+  animation: lights 5s 750ms linear infinite;
 }
 
 @keyframes lights {
   0% {
     color: hsl(230, 40%, 80%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.2),
-      0 0 0.125em hsla(320, 100%, 60%, 0.3),
-      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
-      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2), 0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0), 1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
   }
-  
-  30% { 
+
+  30% {
     color: hsl(230, 80%, 90%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 60%, 0.5),
       -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
       0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
   }
-  
-  40% { 
+
+  40% {
     color: hsl(230, 100%, 95%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 90%, 0.5),
       -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
       0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
   }
-  
+
   70% {
     color: hsl(230, 80%, 90%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.5),
-      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 60%, 0.5),
       0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
       -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
   }
-  
+
   100% {
     color: hsl(230, 40%, 80%);
-    text-shadow:
-      0 0 1em hsla(320, 100%, 50%, 0.2),
-      0 0 0.125em hsla(320, 100%, 60%, 0.3),
-      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
-      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2), 0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0), -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
   }
-  
 }
 
 .img1 {

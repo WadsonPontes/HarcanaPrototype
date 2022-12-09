@@ -166,9 +166,9 @@ header {
   width: 96%;
   overflow-y: scroll;
   border-radius: 1rem;
-  border: 5px inset #A02838;
+  border: 5px inset #a02838;
   border-right: none;
-  background-color: #DD909A;
+  background-color: #dd909a;
 }
 
 #deck {
@@ -366,10 +366,10 @@ header {
 }
 
 .back::-webkit-scrollbar-thumb {
-  background: #33080D;
+  background: #33080d;
   border-radius: 1rem;
 }
 
 .back::-webkit-scrollbar-thumb:hover {
-  background: #490B13;
+  background: #490b13;
 }

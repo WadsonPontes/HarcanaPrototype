@@ -151,8 +151,8 @@ header {
   top: 64px;
   width: 49.5vw;
   margin: 0 0.25vw;
-  border-radius: 30px;
-  background-color: #111A28;
+  border-radius: 20px;
+  background-color: #881422;
 }
 
 .back {
@@ -166,9 +166,9 @@ header {
   width: 96%;
   overflow-y: scroll;
   border-radius: 1rem;
-  border: 5px inset #243b55;
+  border: 5px inset #A02838;
   border-right: none;
-  background-color: #2B4766;
+  background-color: #DD909A;
 }
 
 #deck {
@@ -357,7 +357,6 @@ header {
 
 .back::-webkit-scrollbar {
   width: 7px;
-  height: 20px;
 }
 
 .back::-webkit-scrollbar-track {
@@ -367,9 +366,10 @@ header {
 }
 
 .back::-webkit-scrollbar-thumb {
-  background: #C31313;
+  background: #33080D;
+  border-radius: 1rem;
 }
 
 .back::-webkit-scrollbar-thumb:hover {
-  background: #E31616;
+  background: #490B13;
 }

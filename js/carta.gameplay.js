@@ -21,7 +21,9 @@ class Carta {
     this.el = null;
 	}
 
-  atualizarSegurando(x, y, main) {
+  atualizarSegurando(x, y, main, mao) {
+    let yfinal = y - main.y;
+
     if (x < (main.x + main.largura * 0.17)) // Esquerda
       this.soltar(true);
     else if (y < (main.y + main.altura * 0.1)) // Cima
@@ -30,6 +32,10 @@ class Carta {
       this.soltar(true);
     else if (y > (main.y + main.altura)) // Baixo
       this.soltar(true);
+    else if (yfinal < main.altura - mao.altura)
+      this.partida.esconderMaoSegurandoCarta();
+    else
+      this.partida.mostrarMaoSegurandoCarta();
   }
 
   // REFERNCIA: https://codepen.io/tjramage/details/yOEbyw
@@ -56,18 +62,21 @@ class Carta {
     let mao = {
       x: this.jogador.el.mao[0].offsetLeft,
       y: this.jogador.el.mao[0].offsetTop,
+      largura: this.jogador.el.mao[0].offsetWidth,
+      altura: this.jogador.el.mao[0].offsetHeight
     };
     let carta = {
       largura: this.jogador.el.compra.pai.offsetWidth,
       altura: this.jogador.el.compra.pai.offsetHeight
     };
-    let y = event.clientY - main.y - mao.y - (carta.altura/2);
+    let y = event.clientY - main.y;
 
     if (this.partida.estado == 'segurando-carta') {
+      this.partida.mostrarMaoSegurandoCarta();
       this.partida.estado = 'jogando';
       this.el.pai.classList.remove('segurando');
 
-      if (this.partida.noataque.id == this.jogador.id && !forcado && y < main.y + main.altura * 0.62)
+      if (this.partida.noataque.id == this.jogador.id && !forcado && y < main.altura - mao.altura)
         this.irParaCampo();
     }
   }

@@ -31,7 +31,7 @@ class Partida {
   }
 
   // REFERENCIA: https://codepen.io/bramus/pen/eBZgPB
-  movendoMouse() {
+  movendoMouse(naoAtualizarSegurando) {
     let main = {
       x: this.el.main.offsetLeft,
       y: this.el.main.offsetTop,
@@ -61,8 +61,8 @@ class Partida {
     this.el.root.style.setProperty('--mouse-x', `${x}px`);
     this.el.root.style.setProperty('--mouse-y', `${y}px`);
 
-    if (this.estado == 'segurando-carta') {
-      this.humano.segurando.atualizarSegurando(event.clientX, event.clientY, main);
+    if (this.estado == 'segurando-carta' && !naoAtualizarSegurando) {
+      this.humano.segurando.atualizarSegurando(event.clientX, event.clientY, main, mao);
     }
   }
 
@@ -85,6 +85,18 @@ class Partida {
     this.humano.el.mao[0].classList.add(`hand-down-${this.humano.posicao}`);
     await this.dormir(200);
     this.estado = 'jogando';
+  }
+
+  async mostrarMaoSegurandoCarta() {
+    this.humano.el.mao[0].style.transition = 'all 0.2s linear';
+    this.humano.el.mao[0].classList.remove(`hand-down-${this.humano.posicao}`);
+    this.movendoMouse(true);
+  }
+
+  async esconderMaoSegurandoCarta() {
+    this.humano.el.mao[0].style.transition = 'all 0.2s linear';
+    this.humano.el.mao[0].classList.add(`hand-down-${this.humano.posicao}`);
+    this.movendoMouse(true);
   }
 
   getEl() {

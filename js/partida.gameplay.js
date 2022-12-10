@@ -90,13 +90,15 @@ class Partida {
   async mostrarMaoSegurandoCarta() {
     this.humano.el.mao[0].style.transition = 'all 0.2s linear';
     this.humano.el.mao[0].classList.remove(`hand-down-${this.humano.posicao}`);
-    this.movendoMouse(true);
+    await this.dormir(200);
+    document.body.dispatchEvent(new Event('mousemove'));
   }
 
   async esconderMaoSegurandoCarta() {
     this.humano.el.mao[0].style.transition = 'all 0.2s linear';
     this.humano.el.mao[0].classList.add(`hand-down-${this.humano.posicao}`);
-    this.movendoMouse(true);
+    await this.dormir(200);
+    document.body.dispatchEvent(new Event('mousemove'));
   }
 
   getEl() {

@@ -11,9 +11,8 @@ class Especial {
 
   mostrarCompra() {
 		if (this.id) {
-			this.jogador.el.compra[this.tipo].el.style.display = 'block';
-			this.jogador.el.compra[this.tipo].valor.textContent = this.valor;
-			this.jogador.el.compra[this.tipo].imagem.src = this.imagem;
+			this.jogador.el.compra[this.tipo].style.display = 'block';
+			this.jogador.el.compra[this.tipo].src = this.imagem;
 		}
 		else {
 		  this.jogador.el.compra[this.tipo].style.display = 'none';

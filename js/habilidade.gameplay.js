@@ -13,12 +13,12 @@ class Habilidade {
 
 	mostrarCompra() {
 		if (this.id) {
-			this.jogador.el.compra[this.tipo].el.style.display = 'block';
+			this.jogador.el.compra[this.tipo].pai.style.display = 'block';
 			this.jogador.el.compra[this.tipo].valor.textContent = this.valor;
 			this.jogador.el.compra[this.tipo].imagem.src = this.imagem;
 		}
 		else {
-		  this.jogador.el.compra[this.tipo].el.style.display = 'none';
+		  this.jogador.el.compra[this.tipo].pai.style.display = 'none';
 		}
 	}
 
@@ -28,7 +28,7 @@ class Habilidade {
       this.jogador.el[local][i][this.tipo].imagem.src = this.imagem;
     }
     else {
-      this.jogador.el[local][i][this.tipo].el.style.display = 'none';
+      this.jogador.el[local][i][this.tipo].pai.style.display = 'none';
     }
   }
 }

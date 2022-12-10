@@ -1,7 +1,8 @@
 class Personagem {
-	constructor(id, nivel, jogador) {
+	constructor(id, nivel, jogador, partida) {
 		this.id = id;
 		this.jogador = jogador;
+		this.partida = partida;
 		this.nome_carta = PERSONAGENS[id][1];
 		this.descricao = PERSONAGENS[id][2];
 		this.imagem = PERSONAGENS[id][3];

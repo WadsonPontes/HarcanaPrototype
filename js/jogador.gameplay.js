@@ -4,10 +4,11 @@ class Jogador {
     this.posicao = posicao;
 		this.nome_jogador = JOGADORES[id][1];
     this.tipo = JOGADORES[id][2];
-		this.personagem = new Personagem(JOGADORES[id][3], JOGADORES[id][4], this);
-    this.baralho = new Baralho(JOGADORES[id][5], this);
+		this.personagem = new Personagem(JOGADORES[id][3], JOGADORES[id][4], this, partida);
+    this.baralho = new Baralho(JOGADORES[id][5], this, partida);
     this.mao = ['posicao', null, null, null, null];
     this.campo = ['posicao', null, null, null, null, null];
+    this.segurando = null;
     this.partida = partida;
     this.oponente = oponente;
     this.el = {};
@@ -63,7 +64,7 @@ class Jogador {
     carta.secundaria = {};
     carta.terciaria = {};
     
-    carta.el = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}`);
+    carta.pai = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}`);
     carta.imagem = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-img`);
     carta.nome = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-name`);
     carta.nivel = document.querySelector(`#${tipo}-${posicao_jogador}${tipo == 'draw' ? '' : `-card-${posicao_carta}`}-level`);

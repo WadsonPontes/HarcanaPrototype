@@ -39,28 +39,30 @@ class Partida {
       altura: this.el.main.offsetHeight
     };
     let mao = {
-      x: this.jogador.el.mao[0].offsetLeft,
-      y: this.jogador.el.mao[0].offsetTop
+      x: this.humano.el.mao[0].offsetLeft,
+      y: this.humano.el.mao[0].offsetTop,
+      largura: this.humano.el.mao[0].offsetWidth,
+      altura: this.humano.el.mao[0].offsetHeight
     };
     let carta = {
-      largura: this.jogador.el.compra.offsetWidth,
-      altura: this.jogador.el.compra.offsetHeight
+      largura: this.humano.el.compra.pai.offsetWidth,
+      altura: this.humano.el.compra.pai.offsetHeight
     };
-    let x = event.clientX - main.x - mao.x - (carta.largura/2);
-    let y = event.clientY - main.y - mao.y - (carta.altura/2);
+    let posicao = {x: 0, y: 0};
+
+    if (this.estado == 'segurando-carta') {
+      posicao.x = (this.humano.segurando.posicao * mao.largura/4) - mao.largura/8;
+      posicao.y = mao.altura/2;
+    }
+
+    let x = event.clientX - main.x - mao.x - posicao.x;
+    let y = event.clientY - main.y - mao.y - posicao.y;
     
     this.el.root.style.setProperty('--mouse-x', `${x}px`);
     this.el.root.style.setProperty('--mouse-y', `${y}px`);
 
     if (this.estado == 'segurando-carta') {
-      if (event.clientX < (main.x + main.largura * 0.17)) // Esquerda
-        this.soltar(true);
-      else if (event.clientY < (main.y + main.altura * 0.1)) // Cima
-        this.soltar(true);
-      else if (event.clientX > (main.x + main.largura - main.largura * 0.05)) // Direita
-        this.soltar(true);
-      else if (event.clientY > (main.y + main.altura)) // Baixo
-        this.soltar(true);
+      this.humano.segurando.atualizarSegurando(event.clientX, event.clientY, main);
     }
   }
 

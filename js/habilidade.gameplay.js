@@ -1,8 +1,9 @@
 class Habilidade {
-	constructor(id, tipo, valor, nivel, jogador) {
+	constructor(id, tipo, valor, nivel, jogador, partida) {
 		this.id = id;
     this.tipo = tipo;
     this.jogador = jogador;
+    this.partida = partida;
 		this.nome_habilidade = HABILIDADES[id][1];
 		this.descricao = HABILIDADES[id][2];
 		this.imagem = HABILIDADES[id][3];

@@ -1,8 +1,9 @@
 class Especial {
-	constructor(id, tipo, jogador) {
+	constructor(id, tipo, jogador, partida) {
 		this.id = id;
     this.tipo = tipo;
     this.jogador = jogador;
+    this.partida = partida;
 		this.nome_especial = ESPECIAIS[id][1];
 		this.descricao = ESPECIAIS[id][2];
 		this.imagem = ESPECIAIS[id][3];

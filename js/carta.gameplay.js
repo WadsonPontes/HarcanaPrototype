@@ -21,14 +21,26 @@ class Carta {
     this.el = null;
 	}
 
-  atualizarSegurando(x, y, main, mao) {
+  atualizarSegurando(x, y) {
+    let main = {
+      x: this.partida.el.main.offsetLeft,
+      y: this.partida.el.main.offsetTop,
+      largura: this.partida.el.main.offsetWidth,
+      altura: this.partida.el.main.offsetHeight,
+    };
+    let mao = {
+      x: this.jogador.el.mao[0].offsetLeft,
+      y: this.jogador.el.mao[0].offsetTop,
+      largura: this.jogador.el.mao[0].offsetWidth,
+      altura: this.jogador.el.mao[0].offsetHeight
+    };
     let yfinal = y - main.y;
 
     if (x < (main.x + main.largura * 0.17)) // Esquerda
       this.soltar(true);
     else if (y < (main.y + main.altura * 0.1)) // Cima
       this.soltar(true);
-    else if (x > (main.x + main.largura - main.largura * 0.05)) // Direita
+    else if (x > (main.x + 0.95 * main.largura)) // Direita
       this.soltar(true);
     else if (y > (main.y + main.altura)) // Baixo
       this.soltar(true);
@@ -99,11 +111,11 @@ class Carta {
   }
 
   async moverCompra(i) {
-    this.jogador.el.compra.pai.classList.add(`hand-${this.jogador.posicao}-card-${i}`);
+    this.jogador.el.compra.pai.classList.add(`hand-${this.jogador.posicao}-card-${i}-compra`);
   }
 
   async voltarCompra(i) {
-    this.jogador.el.compra.pai.classList.remove(`hand-${this.jogador.posicao}-card-${i}`);
+    this.jogador.el.compra.pai.classList.remove(`hand-${this.jogador.posicao}-card-${i}-compra`);
   }
 
   mostrarCarta(local, i) {

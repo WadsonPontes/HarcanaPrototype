@@ -31,39 +31,19 @@ class Partida {
   }
 
   // REFERENCIA: https://codepen.io/bramus/pen/eBZgPB
-  movendoMouse(naoAtualizarSegurando) {
-    let main = {
-      x: this.el.main.offsetLeft,
-      y: this.el.main.offsetTop,
-      largura: this.el.main.offsetWidth,
-      altura: this.el.main.offsetHeight
-    };
-    let mao = {
-      x: this.humano.el.mao[0].offsetLeft,
-      y: this.humano.el.mao[0].offsetTop,
-      largura: this.humano.el.mao[0].offsetWidth,
-      altura: this.humano.el.mao[0].offsetHeight
-    };
+  movendoMouse() {
     let carta = {
       largura: this.humano.el.compra.pai.offsetWidth,
       altura: this.humano.el.compra.pai.offsetHeight
     };
-    let posicao = {x: 0, y: 0};
-
-    if (this.estado == 'segurando-carta') {
-      posicao.x = (this.humano.segurando.posicao * mao.largura/4) - mao.largura/8;
-      posicao.y = mao.altura/2;
-    }
-
-    let x = event.clientX - main.x - mao.x - posicao.x;
-    let y = event.clientY - main.y - mao.y - posicao.y;
+    let x = event.clientX - carta.largura/2;
+    let y = event.clientY - carta.altura/2;
     
     this.el.root.style.setProperty('--mouse-x', `${x}px`);
     this.el.root.style.setProperty('--mouse-y', `${y}px`);
 
-    if (this.estado == 'segurando-carta' && !naoAtualizarSegurando) {
-      this.humano.segurando.atualizarSegurando(event.clientX, event.clientY, main, mao);
-    }
+    if (this.estado == 'segurando-carta')
+      this.humano.segurando.atualizarSegurando(event.clientX, event.clientY);
   }
 
   async mostrarMao() {
@@ -90,15 +70,11 @@ class Partida {
   async mostrarMaoSegurandoCarta() {
     this.humano.el.mao[0].style.transition = 'all 0.2s linear';
     this.humano.el.mao[0].classList.remove(`hand-down-${this.humano.posicao}`);
-    await this.dormir(200);
-    document.body.dispatchEvent(new Event('mousemove'));
   }
 
   async esconderMaoSegurandoCarta() {
     this.humano.el.mao[0].style.transition = 'all 0.2s linear';
     this.humano.el.mao[0].classList.add(`hand-down-${this.humano.posicao}`);
-    await this.dormir(200);
-    document.body.dispatchEvent(new Event('mousemove'));
   }
 
   getEl() {

@@ -681,24 +681,48 @@ footer {
   left: 75.5% !important;
 }
 
-.hand-2-card-1 {
+.hand-2-card-1-compra {
   top: 62% !important;
   left: 26.3% !important;
 }
 
-.hand-2-card-2 {
+.hand-2-card-2-compra {
   top: 62% !important;
   left: 42.7% !important;
 }
 
-.hand-2-card-3 {
+.hand-2-card-3-compra {
   top: 62% !important;
   left: 59.2% !important;
 }
 
-.hand-2-card-4 {
+.hand-2-card-4-compra {
   top: 62% !important;
   left: 75.5% !important;
+}
+
+.hand-2-card-1 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.hand-2-card-2 {
+  position: absolute;
+  top: 0%;
+  left: 25%;
+}
+
+.hand-2-card-3 {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+}
+
+.hand-2-card-4 {
+  position: absolute;
+  top: 0%;
+  left: 75%;
 }
 
 /* ===================== ANIMAÇÃO DE ABAIXAR MÃO ========================================================== */
@@ -714,7 +738,10 @@ footer {
 /* ===================== ANIMAÇÃO SEGURANDO CARTA NO MOUSE ========================================================== */
 
 .segurando {
+  position: fixed;
   top: var(--mouse-y) !important;
   left: var(--mouse-x) !important;
+  width: 15rem;
+  height: 20.8rem;
   z-index: 100 !important;
 }

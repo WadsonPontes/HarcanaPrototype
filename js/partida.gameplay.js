@@ -46,7 +46,7 @@ class Partida {
       this.humano.segurando.atualizarSegurando(event.clientX, event.clientY);
   }
 
-  mouseFora() {console.log('mouse fora');
+  mouseFora() {
     if (this.estado == 'segurando-carta')
       this.humano.segurando.soltar(true);
   }

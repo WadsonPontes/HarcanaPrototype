@@ -10,6 +10,7 @@ class Personagem {
 		this.nivel = nivel;
 		this.saude_base = Math.round(PERSONAGENS[id][5] * (0.9 + nivel / 10));
 		this.saude = this.saude_base;
+		this.el = null;
 	}
 
 	monstrar() {

@@ -111,11 +111,11 @@ class Carta {
   }
 
   async moverCompra(i) {
-    this.jogador.el.compra.pai.classList.add(`hand-${this.jogador.posicao}-card-${i}-compra`);
+    this.jogador.el.compra.pai.classList.add(`hand-${this.jogador.posicao}-card-${i}`);
   }
 
   async voltarCompra(i) {
-    this.jogador.el.compra.pai.classList.remove(`hand-${this.jogador.posicao}-card-${i}-compra`);
+    this.jogador.el.compra.pai.classList.remove(`hand-${this.jogador.posicao}-card-${i}`);
   }
 
   mostrarCarta(local, i) {

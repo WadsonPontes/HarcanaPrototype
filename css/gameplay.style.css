@@ -213,11 +213,50 @@ main {
 
 .hand-card {
   display: inline-block;
-  position: relative;
+  position: absolute;
   width: 22.5%;
   height: 97.5%;
-  margin: 0 0.5%;
   z-index: 51;
+}
+
+#hand-1-card-1 {
+  top: 0%;
+  left: 0%;
+}
+
+#hand-1-card-2 {
+  top: 0%;
+  left: 25%;
+}
+
+#hand-1-card-3 {
+  top: 0%;
+  left: 50%;
+}
+
+#hand-1-card-4 {
+  top: 0%;
+  left: 75%;
+}
+
+#hand-2-card-1 {
+  top: 0%;
+  left: 0%;
+}
+
+#hand-2-card-2 {
+  top: 0%;
+  left: 25%;
+}
+
+#hand-2-card-3 {
+  top: 0%;
+  left: 50%;
+}
+
+#hand-2-card-4 {
+  top: 0%;
+  left: 75%;
 }
 
 /* ===================== DRAW CARD ========================================================== */
@@ -372,18 +411,18 @@ main {
 
 .char-health {
   position: absolute;
-  left: 74%;
-  width: 23%;
-  height: 14%;
+  left: 70%;
+  width: 25%;
+  height: 12%;
   z-index: 86;
 }
 
 #char-1-health {
-  top: 0%;
+  top: 1%;
 }
 
 #char-2-health {
-  bottom: 0%;
+  bottom: 1%;
 }
 
 .char-health-icon {
@@ -405,12 +444,10 @@ main {
   padding-right: 2%;
   width: 93%;
   height: 75%;
-  color: #000;
+  color: #fff;
   font-size: 2.5rem;
-  line-height: 2.9rem;
+  line-height: 2.7rem;
   border-radius: 100%;
-  text-shadow: 0.2rem 0 #fff, -0.2rem 0 #fff, 0 0.2rem #fff, 0 -0.2rem #fff, 0.15rem 0.15rem #fff,
-    -0.15rem -0.15rem #fff, 0.15rem -0.15rem #fff, -0.15rem 0.15rem #fff;
   z-index: 88;
 }
 
@@ -612,6 +649,69 @@ footer {
 
 /* ===================== ANIMAÇÃO DE PUXAR ========================================================== */
 
+.hand-1-card-1 {
+  top: -38% !important;
+  left: 26.3% !important;
+}
+
+.hand-1-card-2 {
+  top: -38% !important;
+  left: 42.7% !important;
+}
+
+.hand-1-card-3 {
+  top: -38% !important;
+  left: 59.2% !important;
+}
+
+.hand-1-card-4 {
+  top: -38% !important;
+  left: 75.5% !important;
+}
+
+.hand-2-card-1 {
+  top: 62% !important;
+  left: 26.3% !important;
+}
+
+.hand-2-card-2 {
+  top: 62% !important;
+  left: 42.7% !important;
+}
+
+.hand-2-card-3 {
+  top: 62% !important;
+  left: 59.2% !important;
+}
+
+.hand-2-card-4 {
+  top: 62% !important;
+  left: 75.5% !important;
+}
+
+/* ===================== ANIMAÇÃO DE ABAIXAR MÃO ========================================================== */
+
+.hand-down-1 {
+  top: -30% !important;
+}
+
+.hand-down-2 {
+  bottom: -30% !important;
+}
+
+/* ===================== ANIMAÇÃO SEGURANDO CARTA NO MOUSE ========================================================== */
+
+.segurando {
+  position: fixed;
+  top: var(--mouse-y) !important;
+  left: var(--mouse-x) !important;
+  width: 15rem;
+  height: 20.8rem;
+  z-index: 100 !important;
+}
+
+/* ===================== ANIMAÇÃO DE COLOCAR CARTA EM CAMPO ========================================================== */
+
 .field-1-card-1 {
   top: 11% !important;
   left: 17.8% !important;
@@ -660,89 +760,4 @@ footer {
 .field-2-card-5 {
   top: 52% !important;
   left: 84.1% !important;
-}
-
-.hand-1-card-1 {
-  top: -38% !important;
-  left: 26.3% !important;
-}
-
-.hand-1-card-2 {
-  top: -38% !important;
-  left: 42.7% !important;
-}
-
-.hand-1-card-3 {
-  top: -38% !important;
-  left: 59.2% !important;
-}
-
-.hand-1-card-4 {
-  top: -38% !important;
-  left: 75.5% !important;
-}
-
-.hand-2-card-1-compra {
-  top: 62% !important;
-  left: 26.3% !important;
-}
-
-.hand-2-card-2-compra {
-  top: 62% !important;
-  left: 42.7% !important;
-}
-
-.hand-2-card-3-compra {
-  top: 62% !important;
-  left: 59.2% !important;
-}
-
-.hand-2-card-4-compra {
-  top: 62% !important;
-  left: 75.5% !important;
-}
-
-.hand-2-card-1 {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-}
-
-.hand-2-card-2 {
-  position: absolute;
-  top: 0%;
-  left: 25%;
-}
-
-.hand-2-card-3 {
-  position: absolute;
-  top: 0%;
-  left: 50%;
-}
-
-.hand-2-card-4 {
-  position: absolute;
-  top: 0%;
-  left: 75%;
-}
-
-/* ===================== ANIMAÇÃO DE ABAIXAR MÃO ========================================================== */
-
-.hand-down-1 {
-  top: -30% !important;
-}
-
-.hand-down-2 {
-  bottom: -30% !important;
-}
-
-/* ===================== ANIMAÇÃO SEGURANDO CARTA NO MOUSE ========================================================== */
-
-.segurando {
-  position: fixed;
-  top: var(--mouse-y) !important;
-  left: var(--mouse-x) !important;
-  width: 15rem;
-  height: 20.8rem;
-  z-index: 100 !important;
 }

@@ -46,6 +46,11 @@ class Partida {
       this.humano.segurando.atualizarSegurando(event.clientX, event.clientY);
   }
 
+  mouseFora() {console.log('mouse fora');
+    if (this.estado == 'segurando-carta')
+      this.humano.segurando.soltar(true);
+  }
+
   async mostrarMao() {
     if (this.estado != 'jogando' && this.estado != 'abaixando-mao')
       return;

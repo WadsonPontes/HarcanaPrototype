@@ -12,7 +12,7 @@
 </head>
 
 <body onmousemove="(function(){ if (typeof partida !== 'undefined') partida.movendoMouse(); })();">
-	<main onmousedown="partida.esconderMao()" onmouseup="partida.mostrarMao()">
+	<main onmousedown="(function(){ if (typeof partida !== 'undefined') partida.esconderMao(); })();" onmouseup="(function(){ if (typeof partida !== 'undefined') partida.mostrarMao(); })();" onmouseleave="(function(){ if (typeof partida !== 'undefined') partida.mouseFora(); })();">
 		<header id="gui">
 			<h2 id="game-time">99</h2>
 			<button id="fullscreen" onclick="partida.alternarFullscreen()" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()"><img id="fullscreen-icon"

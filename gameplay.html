@@ -4,21 +4,22 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="google" content="notranslate">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="img/icon/logo/favicon.png">
 	<link rel="stylesheet" type="text/css" href="css/gameplay.style.css">
 	<title>Harcana</title>
 </head>
 
-<body onmousemove="partida.movendoMouse()">
-	<main onmousedown="partida.esconderMao()" onmouseup="partida.mostrarMao()">
+<body onmousemove="(function(){ if (typeof partida !== 'undefined') partida.movendoMouse(); })();">
+	<main onmousedown="(function(){ if (typeof partida !== 'undefined') partida.esconderMao(); })();" onmouseup="(function(){ if (typeof partida !== 'undefined') partida.mostrarMao(); })();" onmouseleave="(function(){ if (typeof partida !== 'undefined') partida.mouseFora(); })();">
 		<header id="gui">
 			<h2 id="game-time">99</h2>
-			<button id="fullscreen" onclick="partida.alternarFullscreen()"><img id="fullscreen-icon"
+			<button id="fullscreen" onclick="partida.alternarFullscreen()" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()"><img id="fullscreen-icon"
 					src="img/icon/gui/fullscreen.png" draggable="false"></button>
-			<button id="surrender" onclick="partida.desistir()"><img id="surrender-icon" src="img/icon/gui/surrender.png"
+			<button id="surrender" onclick="partida.desistir()" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()"><img id="surrender-icon" src="img/icon/gui/surrender.png"
 					draggable="false"></button>
-			<button id="sound" onclick="partida.alternarSom()"><img id="sound-icon" src="img/icon/gui/sound.png"
+			<button id="sound" onclick="partida.alternarSom()" class="hand" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()"><img id="sound-icon" src="img/icon/gui/sound.png"
 					draggable="false"></button>
 		</header>
 
@@ -437,7 +438,8 @@
 		</section>
 
 		<section id="hand-1" class="hand" onmousedown="event.stopPropagation()" onmouseup="event.stopPropagation()">
-			<figure id="hand-1-card-1" class="hand-card card">
+			<figure id="hand-1-card-1" class="hand-card card off" onmousedown="partida.jogadores[1].mao[1].segurar()"
+			onmouseup="partida.jogadores[1].mao[1].soltar()">
 				<img id="hand-1-card-1-img" class="card-img" src="img/card/29.jpg">
 				<figure id="hand-1-card-1-layout" class="card-layout">
 					<img id="hand-1-card-1-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
@@ -478,7 +480,8 @@
 				</figure>
 			</figure>
 
-			<figure id="hand-1-card-2" class="hand-card card">
+			<figure id="hand-1-card-2" class="hand-card card off" onmousedown="partida.jogadores[1].mao[2].segurar()"
+			onmouseup="partida.jogadores[1].mao[2].soltar()">
 				<img id="hand-1-card-2-img" class="card-img" src="img/card/32.jpg">
 				<figure id="hand-1-card-2-layout" class="card-layout">
 					<img id="hand-1-card-2-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
@@ -519,7 +522,8 @@
 				</figure>
 			</figure>
 
-			<figure id="hand-1-card-3" class="hand-card card">
+			<figure id="hand-1-card-3" class="hand-card card off" onmousedown="partida.jogadores[1].mao[3].segurar()"
+			onmouseup="partida.jogadores[1].mao[3].soltar()">
 				<img id="hand-1-card-3-img" class="card-img" src="img/card/31.jpg">
 				<figure id="hand-1-card-3-layout" class="card-layout">
 					<img id="hand-1-card-3-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
@@ -560,7 +564,8 @@
 				</figure>
 			</figure>
 
-			<figure id="hand-1-card-4" class="hand-card card">
+			<figure id="hand-1-card-4" class="hand-card card off" onmousedown="partida.jogadores[1].mao[4].segurar()"
+			onmouseup="partida.jogadores[1].mao[4].soltar()">
 				<img id="hand-1-card-4-img" class="card-img" src="img/card/30.jpg">
 				<figure id="hand-1-card-4-layout" class="card-layout">
 					<img id="hand-1-card-4-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
@@ -645,7 +650,8 @@
 				</figure>
 			</figure>
 
-			<figure id="hand-2-card-2" class="hand-card card off">
+			<figure id="hand-2-card-2" class="hand-card card off" onmousedown="partida.jogadores[2].mao[2].segurar()"
+			onmouseup="partida.jogadores[2].mao[2].soltar()">
 				<img id="hand-2-card-2-img" class="card-img" src="img/card/50.jpg">
 				<figure id="hand-2-card-2-layout" class="card-layout">
 					<img id="hand-2-card-2-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
@@ -686,7 +692,8 @@
 				</figure>
 			</figure>
 
-			<figure id="hand-2-card-3" class="hand-card card off">
+			<figure id="hand-2-card-3" class="hand-card card off" onmousedown="partida.jogadores[2].mao[3].segurar()"
+			onmouseup="partida.jogadores[2].mao[3].soltar()">
 				<img id="hand-2-card-3-img" class="card-img" src="img/card/14.jpg">
 				<figure id="hand-2-card-3-layout" class="card-layout">
 					<img id="hand-2-card-3-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
@@ -727,7 +734,8 @@
 				</figure>
 			</figure>
 
-			<figure id="hand-2-card-4" class="hand-card card off">
+			<figure id="hand-2-card-4" class="hand-card card off" onmousedown="partida.jogadores[2].mao[4].segurar()"
+			onmouseup="partida.jogadores[2].mao[4].soltar()">
 				<img id="hand-2-card-4-img" class="card-img" src="img/card/21.jpg">
 				<figure id="hand-2-card-4-layout" class="card-layout">
 					<img id="hand-2-card-4-layout-img" class="card-layout-img" src="img/layout/card.png" draggable="false">
@@ -869,7 +877,7 @@
 			<h3 id="char-1-subtitle" class="char-subtitle title">BARBARIAN</h3>
 			<figure id="char-1-health" class="char-health">
 				<h4 id="char-1-health-number" class="char-health-number number">50</h4>
-				<img id="char-1-health-icon" class="char-health-icon" src="img/icon/attribute/saude.png" draggable="false">
+				<img id="char-1-health-icon" class="char-health-icon" src="img/icon/attribute/personagem-saude.png" draggable="false">
 			</figure>
 		</figure>
 
@@ -885,11 +893,11 @@
 			<h3 id="char-2-subtitle" class="char-subtitle title">APPRENTICE</h3>
 			<figure id="char-2-health" class="char-health">
 				<h4 id="char-2-health-number" class="char-health-number number">50</h4>
-				<img id="char-2-health-icon" class="char-health-icon" src="img/icon/attribute/saude.png" draggable="false">
+				<img id="char-2-health-icon" class="char-health-icon" src="img/icon/attribute/personagem-saude.png" draggable="false">
 			</figure>
 		</figure>
 
-		<footer>VERSION: 1.8.3 DATE: 2022/12/06</footer>
+		<footer>VERSION: 1.9.4 Alpha DATE: 2022/12/12</footer>
 	</main>
 
 	<script src="js/constantes.gameplay.js"></script>

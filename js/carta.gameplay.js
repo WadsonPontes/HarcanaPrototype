@@ -1,9 +1,11 @@
 class Carta {
-	constructor(id, posicao, local, nivel, jogador) {
+	constructor(id, posicao, local, nivel, jogador, baralho, partida) {
 		this.id = id;
     this.posicao = posicao;
     this.local = local;
     this.jogador = jogador;
+    this.baralho = baralho;
+    this.partida = partida;
 		this.nome_carta = CARTAS[id][1];
 		this.descricao = CARTAS[id][2];
 		this.imagem = CARTAS[id][3];
@@ -13,16 +15,50 @@ class Carta {
 		this.saude_base = Math.floor(CARTAS[id][6] * (0.9 + nivel / 10));
 		this.dano = this.dano_base;
 		this.saude = this.saude_base;
-		this.primaria = new Habilidade(CARTAS[id][7], 'primaria', CARTAS[id][8], nivel, jogador);
-		this.secundaria = new Habilidade(CARTAS[id][9], 'secundaria', CARTAS[id][10], nivel, jogador);
-		this.terciaria = new Habilidade(CARTAS[id][11], 'terciaria', CARTAS[id][12], nivel, jogador);
-		this.especial = new Especial(CARTAS[id][13], 'especial', jogador);
+		this.primaria = new Habilidade(CARTAS[id][7], 'primaria', CARTAS[id][8], nivel, jogador, baralho, partida);
+		this.secundaria = new Habilidade(CARTAS[id][9], 'secundaria', CARTAS[id][10], nivel, jogador, baralho, partida);
+		this.terciaria = new Habilidade(CARTAS[id][11], 'terciaria', CARTAS[id][12], nivel, jogador, baralho, partida);
+		this.especial = new Especial(CARTAS[id][13], 'especial', jogador, baralho, partida);
+    this.el = null;
 	}
+
+  atualizarSegurando(x, y) {
+    let main = {
+      x: this.partida.el.main.offsetLeft,
+      y: this.partida.el.main.offsetTop,
+      largura: this.partida.el.main.offsetWidth,
+      altura: this.partida.el.main.offsetHeight,
+    };
+    let mao = {
+      x: this.jogador.el.mao[0].offsetLeft,
+      y: this.jogador.el.mao[0].offsetTop,
+      largura: this.jogador.el.mao[0].offsetWidth,
+      altura: this.jogador.el.mao[0].offsetHeight
+    };
+    let yfinal = y - main.y;
+
+    if (x < (main.x + main.largura * 0.17)) // Esquerda
+      this.soltar(true);
+    else if (y < (main.y + main.altura * 0.1)) // Cima
+      this.soltar(true);
+    else if (x > (main.x + 0.95 * main.largura)) // Direita
+      this.soltar(true);
+    else if (y > (main.y + main.altura)) // Baixo
+      this.soltar(true);
+    else if (yfinal < main.altura - mao.altura)
+      this.partida.esconderMaoSegurandoCarta();
+    else
+      this.partida.mostrarMaoSegurandoCarta();
+  }
 
   // REFERNCIA: https://codepen.io/tjramage/details/yOEbyw
   segurar() {
-    this.jogador.partida.estado = 'segurando-carta';
-    this.jogador.el.mao[this.posicao].el.classList.add('segurando');
+    if (this.partida.estado == 'jogando' && this.partida.humano.id == this.jogador.id) {
+      this.partida.estado = 'segurando-carta';
+      this.jogador.segurando = this;
+      this.partida.movendoMouse();
+      this.el.pai.classList.add('segurando');
+    }
   }
 
   irParaCampo() {
@@ -31,26 +67,30 @@ class Carta {
 
   soltar(forcado) {
     let main = {
-      x: this.jogador.partida.el.main.offsetLeft,
-      y: this.jogador.partida.el.main.offsetTop,
-      largura: this.jogador.partida.el.main.offsetWidth,
-      altura: this.jogador.partida.el.main.offsetHeight,
+      x: this.partida.el.main.offsetLeft,
+      y: this.partida.el.main.offsetTop,
+      largura: this.partida.el.main.offsetWidth,
+      altura: this.partida.el.main.offsetHeight,
     };
     let mao = {
       x: this.jogador.el.mao[0].offsetLeft,
       y: this.jogador.el.mao[0].offsetTop,
+      largura: this.jogador.el.mao[0].offsetWidth,
+      altura: this.jogador.el.mao[0].offsetHeight
     };
     let carta = {
-      largura: this.jogador.el[this.local][this.posicao].el.offsetWidth,
-      altura: this.jogador.el[this.local][this.posicao].el.offsetHeight,
+      largura: this.baralho.el.compra.pai.offsetWidth,
+      altura: this.baralho.el.compra.pai.offsetHeight
     };
-    let y = event.clientY - main.y - mao.y - (carta.altura/2);
+    let y = event.clientY - main.y;
 
-    this.jogador.partida.estado = 'jogando';
-    this.jogador.el.mao[this.posicao].el.classList.remove('segurando');
+    if (this.partida.estado == 'segurando-carta') {
+      this.partida.mostrarMaoSegurandoCarta();
+      this.partida.estado = 'jogando';
+      this.el.pai.classList.remove('segurando');
 
-    if (this.jogador.partida.noataque.id == this.jogador.id && !forcado && y < main.y + main.altura * 0.62) {
-      this.irParaCampo();
+      if (this.partida.noataque.id == this.jogador.id && !forcado && y < main.altura - mao.altura)
+        this.irParaCampo();
     }
   }
 
@@ -58,6 +98,7 @@ class Carta {
     this.posicao = i;
     this.local = 'mao';
     this.jogador.mao[i] = this;
+    this.el = this.jogador.el.mao[i];
   }
 
   async animPuxar(i) {
@@ -71,11 +112,11 @@ class Carta {
   }
 
   async moverCompra(i) {
-    this.jogador.el.compra.el.classList.add(`hand-${this.jogador.posicao}-card-${i}`);
+    this.baralho.el.compra.pai.classList.add(`hand-${this.jogador.posicao}-card-${i}`);
   }
 
   async voltarCompra(i) {
-    this.jogador.el.compra.el.classList.remove(`hand-${this.jogador.posicao}-card-${i}`);
+    this.baralho.el.compra.pai.classList.remove(`hand-${this.jogador.posicao}-card-${i}`);
   }
 
   mostrarCarta(local, i) {
@@ -89,28 +130,28 @@ class Carta {
     this.secundaria.mostrarHabilidade(local, i);
     this.terciaria.mostrarHabilidade(local, i);
     this.especial.mostrarEspecial(local, i);
-    this.jogador.el[local][i].el.style.visibility = 'visible';
-    this.jogador.el[local][i].el.style.transition = '';
+    this.jogador.el[local][i].pai.style.visibility = 'visible';
+    this.jogador.el[local][i].pai.style.transition = '';
 	}
 
 	mostrarCompra() {
-    this.jogador.el.compra.imagem.src = this.imagem;
-    this.jogador.el.compra.nome.textContent = this.nome_carta;
-    this.jogador.el.compra.nivel.textContent = this.getEstrelas();
-    this.jogador.el.compra.tipo.src = this.tipo.imagem;
-    this.jogador.el.compra.dano.textContent = this.dano;
-    this.jogador.el.compra.saude.textContent = this.saude;
+    this.baralho.el.compra.imagem.src = this.imagem;
+    this.baralho.el.compra.nome.textContent = this.nome_carta;
+    this.baralho.el.compra.nivel.textContent = this.getEstrelas();
+    this.baralho.el.compra.tipo.src = this.tipo.imagem;
+    this.baralho.el.compra.dano.textContent = this.dano;
+    this.baralho.el.compra.saude.textContent = this.saude;
     this.primaria.mostrarCompra();
     this.secundaria.mostrarCompra();
     this.terciaria.mostrarCompra();
     this.especial.mostrarCompra();
-    this.jogador.el.compra.el.style.visibility = 'visible';
-    this.jogador.el.compra.el.style.transition = 'all 0.5s linear';
+    this.baralho.el.compra.pai.style.visibility = 'visible';
+    this.baralho.el.compra.pai.style.transition = 'all 0.5s linear';
 	}
 
   esconderCompra() {
-    this.jogador.el.compra.el.style.visibility = 'hidden';
-    this.jogador.el.compra.el.style.transition = '';
+    this.baralho.el.compra.pai.style.visibility = 'hidden';
+    this.baralho.el.compra.pai.style.transition = '';
   }
 
   getEstrelas() {

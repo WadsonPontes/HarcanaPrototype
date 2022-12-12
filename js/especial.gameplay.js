@@ -1,8 +1,9 @@
 class Especial {
-	constructor(id, tipo, jogador, partida) {
+	constructor(id, tipo, jogador, baralho, partida) {
 		this.id = id;
     this.tipo = tipo;
     this.jogador = jogador;
+    this.baralho = baralho;
     this.partida = partida;
 		this.nome_especial = ESPECIAIS[id][1];
 		this.descricao = ESPECIAIS[id][2];
@@ -11,11 +12,11 @@ class Especial {
 
   mostrarCompra() {
 		if (this.id) {
-			this.jogador.el.compra[this.tipo].style.display = 'block';
-			this.jogador.el.compra[this.tipo].src = this.imagem;
+			this.baralho.el.compra[this.tipo].style.display = 'block';
+			this.baralho.el.compra[this.tipo].src = this.imagem;
 		}
 		else {
-		  this.jogador.el.compra[this.tipo].style.display = 'none';
+		  this.baralho.el.compra[this.tipo].style.display = 'none';
 		}
 	}
 

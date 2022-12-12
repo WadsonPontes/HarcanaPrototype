@@ -1,9 +1,10 @@
 class Carta {
-	constructor(id, posicao, local, nivel, jogador, partida) {
+	constructor(id, posicao, local, nivel, jogador, baralho, partida) {
 		this.id = id;
     this.posicao = posicao;
     this.local = local;
     this.jogador = jogador;
+    this.baralho = baralho;
     this.partida = partida;
 		this.nome_carta = CARTAS[id][1];
 		this.descricao = CARTAS[id][2];
@@ -14,10 +15,10 @@ class Carta {
 		this.saude_base = Math.floor(CARTAS[id][6] * (0.9 + nivel / 10));
 		this.dano = this.dano_base;
 		this.saude = this.saude_base;
-		this.primaria = new Habilidade(CARTAS[id][7], 'primaria', CARTAS[id][8], nivel, jogador, partida);
-		this.secundaria = new Habilidade(CARTAS[id][9], 'secundaria', CARTAS[id][10], nivel, jogador, partida);
-		this.terciaria = new Habilidade(CARTAS[id][11], 'terciaria', CARTAS[id][12], nivel, jogador, partida);
-		this.especial = new Especial(CARTAS[id][13], 'especial', jogador, partida);
+		this.primaria = new Habilidade(CARTAS[id][7], 'primaria', CARTAS[id][8], nivel, jogador, baralho, partida);
+		this.secundaria = new Habilidade(CARTAS[id][9], 'secundaria', CARTAS[id][10], nivel, jogador, baralho, partida);
+		this.terciaria = new Habilidade(CARTAS[id][11], 'terciaria', CARTAS[id][12], nivel, jogador, baralho, partida);
+		this.especial = new Especial(CARTAS[id][13], 'especial', jogador, baralho, partida);
     this.el = null;
 	}
 
@@ -78,8 +79,8 @@ class Carta {
       altura: this.jogador.el.mao[0].offsetHeight
     };
     let carta = {
-      largura: this.jogador.el.compra.pai.offsetWidth,
-      altura: this.jogador.el.compra.pai.offsetHeight
+      largura: this.baralho.el.compra.pai.offsetWidth,
+      altura: this.baralho.el.compra.pai.offsetHeight
     };
     let y = event.clientY - main.y;
 
@@ -111,11 +112,11 @@ class Carta {
   }
 
   async moverCompra(i) {
-    this.jogador.el.compra.pai.classList.add(`hand-${this.jogador.posicao}-card-${i}`);
+    this.baralho.el.compra.pai.classList.add(`hand-${this.jogador.posicao}-card-${i}`);
   }
 
   async voltarCompra(i) {
-    this.jogador.el.compra.pai.classList.remove(`hand-${this.jogador.posicao}-card-${i}`);
+    this.baralho.el.compra.pai.classList.remove(`hand-${this.jogador.posicao}-card-${i}`);
   }
 
   mostrarCarta(local, i) {
@@ -134,23 +135,23 @@ class Carta {
 	}
 
 	mostrarCompra() {
-    this.jogador.el.compra.imagem.src = this.imagem;
-    this.jogador.el.compra.nome.textContent = this.nome_carta;
-    this.jogador.el.compra.nivel.textContent = this.getEstrelas();
-    this.jogador.el.compra.tipo.src = this.tipo.imagem;
-    this.jogador.el.compra.dano.textContent = this.dano;
-    this.jogador.el.compra.saude.textContent = this.saude;
+    this.baralho.el.compra.imagem.src = this.imagem;
+    this.baralho.el.compra.nome.textContent = this.nome_carta;
+    this.baralho.el.compra.nivel.textContent = this.getEstrelas();
+    this.baralho.el.compra.tipo.src = this.tipo.imagem;
+    this.baralho.el.compra.dano.textContent = this.dano;
+    this.baralho.el.compra.saude.textContent = this.saude;
     this.primaria.mostrarCompra();
     this.secundaria.mostrarCompra();
     this.terciaria.mostrarCompra();
     this.especial.mostrarCompra();
-    this.jogador.el.compra.pai.style.visibility = 'visible';
-    this.jogador.el.compra.pai.style.transition = 'all 0.5s linear';
+    this.baralho.el.compra.pai.style.visibility = 'visible';
+    this.baralho.el.compra.pai.style.transition = 'all 0.5s linear';
 	}
 
   esconderCompra() {
-    this.jogador.el.compra.pai.style.visibility = 'hidden';
-    this.jogador.el.compra.pai.style.transition = '';
+    this.baralho.el.compra.pai.style.visibility = 'hidden';
+    this.baralho.el.compra.pai.style.transition = '';
   }
 
   getEstrelas() {

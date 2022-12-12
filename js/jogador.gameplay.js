@@ -15,9 +15,9 @@ class Jogador {
     this.getEl();
 	}
 
-  jogar() {
-    this.puxar();
-
+  async jogar() {
+    await this.puxar();
+    
     if (this.tipo == 'computador')
       this.inteligencia();
   }
@@ -29,7 +29,7 @@ class Jogador {
       if (this.mao[i])
         continue;
 
-      let carta = this.baralho.cartas.pop();
+      let carta = this.baralho.puxar();
       await carta.animPuxar(i);
       carta.puxar(i);
     }
@@ -42,8 +42,6 @@ class Jogador {
   }
 
   getEl() {
-    this.el.compra = this.getElCarta('draw', this.posicao);
-    this.el.personagem = this.personagem.getEl();
     this.el.mao = [document.querySelector(`#hand-${this.posicao}`)]; // Container, ou seja, o pai fica no indice 0
     this.el.campo = [document.querySelector(`#field-${this.posicao}`)]; // Container, ou seja, o pai fica no indice 0
     

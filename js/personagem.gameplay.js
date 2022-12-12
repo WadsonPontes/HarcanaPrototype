@@ -10,24 +10,21 @@ class Personagem {
 		this.nivel = nivel;
 		this.saude_base = Math.round(PERSONAGENS[id][5] * (0.9 + nivel / 10));
 		this.saude = this.saude_base;
-		this.el = null;
+		this.el = {};
+    this.getEl();
 	}
 
 	monstrar() {
-		this.jogador.el.personagem.imagem.src = this.imagem;
-		this.jogador.el.personagem.titulo.textContent = this.jogador.nome_jogador;
-		this.jogador.el.personagem.subtitulo.textContent = this.classe;
-		this.jogador.el.personagem.saude.textContent = this.saude;
+		this.el.imagem.src = this.imagem;
+		this.el.titulo.textContent = this.jogador.nome_jogador;
+		this.el.subtitulo.textContent = this.classe;
+		this.el.saude.textContent = this.saude;
 	}
 
 	getEl() {
-		let personagem = {};
-	
-		personagem.imagem = document.querySelector(`#char-${this.jogador.posicao}-img`);
-		personagem.titulo = document.querySelector(`#char-${this.jogador.posicao}-title`);
-		personagem.subtitulo = document.querySelector(`#char-${this.jogador.posicao}-subtitle`);
-		personagem.saude = document.querySelector(`#char-${this.jogador.posicao}-health-number`);
-	
-		return personagem;
-	  }
+		this.el.imagem = document.querySelector(`#char-${this.jogador.posicao}-img`);
+		this.el.titulo = document.querySelector(`#char-${this.jogador.posicao}-title`);
+		this.el.subtitulo = document.querySelector(`#char-${this.jogador.posicao}-subtitle`);
+		this.el.saude = document.querySelector(`#char-${this.jogador.posicao}-health-number`);
+	}
 }

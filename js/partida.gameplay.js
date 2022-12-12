@@ -33,8 +33,8 @@ class Partida {
   // REFERENCIA: https://codepen.io/bramus/pen/eBZgPB
   movendoMouse() {
     let carta = {
-      largura: this.humano.el.compra.pai.offsetWidth,
-      altura: this.humano.el.compra.pai.offsetHeight
+      largura: this.humano.baralho.el.compra.pai.offsetWidth,
+      altura: this.humano.baralho.el.compra.pai.offsetHeight
     };
     let x = event.clientX - carta.largura/2;
     let y = event.clientY - carta.altura/2;

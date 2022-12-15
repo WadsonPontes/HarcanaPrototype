@@ -61,8 +61,18 @@ class Carta {
     }
   }
 
-  irParaCampo() {
-    console.log('vai para campo!');
+  async irParaCampo() {
+    let i = 1;
+    this.partida.estado = 'entrando-em-campo';
+
+    while (this.jogador.campo[i] != null);
+
+    await this.animIrParaCampo(i);
+    // this.entrarEmCampo();
+
+    this.partida.estado = 'fase-de-batalha';
+    // this.jogador.batalhar();
+    // this.partida.mostrarMaoSegurandoCarta();
   }
 
   soltar(forcado) {
@@ -85,12 +95,15 @@ class Carta {
     let y = event.clientY - main.y;
 
     if (this.partida.estado == 'segurando-carta') {
-      this.partida.mostrarMaoSegurandoCarta();
-      this.partida.estado = 'jogando';
       this.el.pai.classList.remove('segurando');
 
-      if (this.partida.noataque.id == this.jogador.id && !forcado && y < main.altura - mao.altura)
+      if (this.partida.noataque.id == this.jogador.id && !forcado && y < main.altura - mao.altura) {
         this.irParaCampo();
+      }
+      else {
+        this.partida.mostrarMaoSegurandoCarta();
+        this.partida.estado = 'jogando';
+      }
     }
   }
 
@@ -99,6 +112,30 @@ class Carta {
     this.local = 'mao';
     this.jogador.mao[i] = this;
     this.el = this.jogador.el.mao[i];
+  }
+
+  async animIrParaCampo(i) {
+    await this.prepararEntradaEmCampo();
+    await this.dormir(500);
+    await this.entrarEmCampo(i);
+    await this.dormir(200);
+    await this.voltarMao(i);
+    this.mostrarCarta('campo', i);
+  }
+
+  async prepararEntradaEmCampo() {
+    this.el.pai.classList.add('preparar-entrada');
+  }
+
+  async entrarEmCampo(i) {
+    this.el.pai.style.transition = 'all 0.2s linear';
+    this.el.pai.classList.add(`field-${this.jogador.posicao}-card-${i}`);
+  }
+
+  async voltarMao(i) {
+    this.el.pai.style.transition = '';
+    this.el.pai.style.visibility = 'hidden';
+    this.el.pai.classList.remove(`field-${this.jogador.posicao}-card-${i}`);
   }
 
   async animPuxar(i) {
@@ -130,8 +167,8 @@ class Carta {
     this.secundaria.mostrarHabilidade(local, i);
     this.terciaria.mostrarHabilidade(local, i);
     this.especial.mostrarEspecial(local, i);
-    this.jogador.el[local][i].pai.style.visibility = 'visible';
     this.jogador.el[local][i].pai.style.transition = '';
+    this.jogador.el[local][i].pai.style.visibility = 'visible';
 	}
 
 	mostrarCompra() {
@@ -150,8 +187,8 @@ class Carta {
 	}
 
   esconderCompra() {
-    this.baralho.el.compra.pai.style.visibility = 'hidden';
     this.baralho.el.compra.pai.style.transition = '';
+    this.baralho.el.compra.pai.style.visibility = 'hidden';
   }
 
   getEstrelas() {

@@ -41,7 +41,7 @@ const CARTAS = [
   [ 7,   'Ultimate Elf',   '',          'img/card/elfo-6.jpg',       3,         40,     70,      1,             15,               4,               15,                 0,              0,                 3           ],
   [ 8,   'Senior Elf',     '',          'img/card/elfo-2.jpg',       3,         32,     64,      1,             5,                4,               5,                  7,              2,                 5           ],
   [ 9,   'Elf Princess',   '',          'img/card/elfo-1.jpg',       3,         35,     68,      3,             10,               4,               10,                 1,              10,                3           ],
-  [ 10,  'Red Dinosaurn',  '',          'img/card/dinossauro-6.jpg', 4,         39,     69,      5,             10,               0,               0,                  0,              0,                 0           ],
+  [ 10,  'Red Dinosaur',   '',          'img/card/dinossauro-6.jpg', 4,         39,     69,      5,             10,               0,               0,                  0,              0,                 0           ],
   [ 11,  'Electric Golem', '',          'img/card/18.jpg',           5,         38,     67,      8,             7,                6,               7,                  9,              7,                 3           ],
   [ 12,  'Lava Golem',     '',          'img/card/13.jpg',           5,         23,     61,      10,            6,                2,               5,                  8,              5,                 5           ],
   [ 13,  'Unicorn Dragon', '',          'img/card/1.jpg',            1,         16,     25,      1,             5,                0,               0,                  0,              0,                 0           ],

@@ -713,10 +713,9 @@ footer {
 
 .preparar-entrada {
   position: fixed;
-  top: 0 !important;
+  top: calc(50vh - 10.4em) !important;
   left: 45vw !important;
   bottom: 0 !important;
-  margin: auto 0;
   width: 15em;
   height: 20.8em;
   font-size: 3.56vh;
@@ -732,70 +731,60 @@ footer {
 .field-1-card-1 {
   top: 11% !important;
   left: 17.8% !important;
-  margin: 0 !important;
   font-size: 1.78vh !important;
 }
 
 .field-1-card-2 {
   top: 11% !important;
   left: 34.4% !important;
-  margin: 0 !important;
   font-size: 1.78vh !important;
 }
 
 .field-1-card-3 {
   top: 11% !important;
   left: 51% !important;
-  margin: 0 !important;
   font-size: 1.78vh !important;
 }
 
 .field-1-card-4 {
   top: 11% !important;
   left: 67.5% !important;
-  margin: 0 !important;
   font-size: 1.78vh !important;
 }
 
 .field-1-card-5 {
   top: 11% !important;
   left: 84.1% !important;
-  margin: 0 !important;
   font-size: 1.78vh !important;
 }
 
 .field-2-card-1 {
   top: 52% !important;
   left: 17.8% !important;
-  margin: 0 !important;
   font-size: 1.78vh !important;
 }
 
 .field-2-card-2 {
   top: 52% !important;
   left: 34.4% !important;
-  margin: 0 !important;
   font-size: 1.78vh !important;
 }
 
 .field-2-card-3 {
   top: 52% !important;
   left: 51% !important;
-  margin: 0 !important;
   font-size: 1.78vh !important;
 }
 
 .field-2-card-4 {
   top: 52% !important;
   left: 67.5% !important;
-  margin: 0 !important;
   font-size: 1.78vh !important;
 }
 
 .field-2-card-5 {
   top: 52% !important;
   left: 84.1% !important;
-  margin: 0 !important;
   font-size: 1.78vh !important;
 }
 

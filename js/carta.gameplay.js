@@ -135,6 +135,7 @@ class Carta {
   async voltarMao(i) {
     this.el.pai.style.transition = '';
     this.el.pai.style.visibility = 'hidden';
+    this.el.pai.classList.remove('preparar-entrada');
     this.el.pai.classList.remove(`field-${this.jogador.posicao}-card-${i}`);
   }
 

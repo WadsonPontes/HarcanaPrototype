@@ -61,6 +61,51 @@ class Carta {
     }
   }
 
+  async atacar() {
+    if (this.partida.nadefesa.campo[this.posicao] == null)
+      await this.animAtaqueDireto();
+    else
+      await this.animAtaque();
+    
+    this.calculoDeDano();
+  }
+
+  calculoDeDano() {
+
+  }
+
+  async animAtaqueDireto() {
+    await this.acaoPrepararAtaque();
+    await this.dormir(100);
+    await this.acaoBater();
+    await this.dormir(300);
+    await this.acaoExplosao();
+    await this.dormir(200);
+    await this.acaoRecuo();
+    await this.dormir(100);
+  }
+
+  async animAtaque() {
+
+  }
+
+  async acaoPrepararAtaque() {
+    this.el.pai.style.transition = 'all 0.1s linear';
+    this.el.pai.style.transform = `translate(0em, ${this.jogador.posicao == 1 ? '-3' : '3'}em) rotate(-30deg)`;
+  }
+
+  async acaoBater() {
+
+  }
+
+  async acaoExplosao() {
+
+  }
+
+  async acaoRecuo() {
+
+  }
+
   async irParaCampo() {
     let i = 1;
     this.partida.estado = 'entrando-em-campo';
@@ -68,11 +113,16 @@ class Carta {
     while (this.jogador.campo[i] != null);
 
     await this.animIrParaCampo(i);
-    // this.entrarEmCampo();
+    this.entrarEmCampo(i);
+    await this.jogador.batalhar();
+  }
 
-    this.partida.estado = 'fase-de-batalha';
-    // this.jogador.batalhar();
-    // this.partida.mostrarMaoSegurandoCarta();
+  entrarEmCampo(i) {
+    this.posicao = i;
+    this.local = 'campo';
+    this.jogador.mao[i] = null;
+    this.jogador.campo[i] = this;
+    this.el = this.jogador.el.campo[i];
   }
 
   soltar(forcado) {
@@ -115,24 +165,24 @@ class Carta {
   }
 
   async animIrParaCampo(i) {
-    await this.prepararEntradaEmCampo();
+    await this.acaoPrepararEntradaEmCampo();
     await this.dormir(500);
-    await this.entrarEmCampo(i);
+    await this.acaoEntrarEmCampo(i);
     await this.dormir(200);
-    await this.voltarMao(i);
-    this.mostrarCarta('campo', i);
+    await this.acaoVoltarMao(i);
+    this.acaoMostrarCarta('campo', i);
   }
 
-  async prepararEntradaEmCampo() {
+  async acaoPrepararEntradaEmCampo() {
     this.el.pai.classList.add('preparar-entrada');
   }
 
-  async entrarEmCampo(i) {
+  async acaoEntrarEmCampo(i) {
     this.el.pai.style.transition = 'all 0.2s linear';
     this.el.pai.classList.add(`field-${this.jogador.posicao}-card-${i}`);
   }
 
-  async voltarMao(i) {
+  async acaoVoltarMao(i) {
     this.el.pai.style.transition = '';
     this.el.pai.style.visibility = 'hidden';
     this.el.pai.classList.remove('preparar-entrada');
@@ -141,23 +191,23 @@ class Carta {
 
   async animPuxar(i) {
     await this.dormir(100);
-    this.mostrarCompra(i);
-    await this.moverCompra(i);
+    this.acaoMostrarCompra(i);
+    await this.acaoMoverCompra(i);
     await this.dormir(500);
-    this.esconderCompra();
-    await this.voltarCompra(i);
-    this.mostrarCarta('mao', i);
+    await this.acaoEsconderCompra();
+    await this.acaoVoltarCompra(i);
+    this.acaoMostrarCarta('mao', i);
   }
 
-  async moverCompra(i) {
+  async acaoMoverCompra(i) {
     this.baralho.el.compra.pai.classList.add(`hand-${this.jogador.posicao}-card-${i}`);
   }
 
-  async voltarCompra(i) {
+  async acaoVoltarCompra(i) {
     this.baralho.el.compra.pai.classList.remove(`hand-${this.jogador.posicao}-card-${i}`);
   }
 
-  mostrarCarta(local, i) {
+  acaoMostrarCarta(local, i) {
     this.jogador.el[local][i].imagem.src = this.imagem;
     this.jogador.el[local][i].nome.textContent = this.nome_carta;
     this.jogador.el[local][i].nivel.textContent = this.getEstrelas();
@@ -172,7 +222,7 @@ class Carta {
     this.jogador.el[local][i].pai.style.visibility = 'visible';
 	}
 
-	mostrarCompra() {
+	acaoMostrarCompra() {
     this.baralho.el.compra.imagem.src = this.imagem;
     this.baralho.el.compra.nome.textContent = this.nome_carta;
     this.baralho.el.compra.nivel.textContent = this.getEstrelas();
@@ -187,7 +237,7 @@ class Carta {
     this.baralho.el.compra.pai.style.transition = 'all 0.5s linear';
 	}
 
-  esconderCompra() {
+  async acaoEsconderCompra() {
     this.baralho.el.compra.pai.style.transition = '';
     this.baralho.el.compra.pai.style.visibility = 'hidden';
   }

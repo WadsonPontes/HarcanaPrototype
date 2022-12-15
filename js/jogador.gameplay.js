@@ -22,6 +22,26 @@ class Jogador {
       this.inteligencia();
   }
 
+  async batalhar() {console.log(this.campo);
+    this.partida.estado = 'fase-de-batalha';
+
+    if (false && this.partida.turno == 1) {
+      this.partida.estado = 'jogando';
+      return;
+    }
+
+    for (let i = 1; i <= 5; ++i) {
+      if (!this.campo[i])
+        continue;
+
+      await this.campo[i].atacar();
+    }
+
+    this.partida.estado = 'jogando';
+
+    // this.partida.mostrarMaoSegurandoCarta();
+  }
+
   async puxar() {
     this.partida.estado = 'puxando';
 

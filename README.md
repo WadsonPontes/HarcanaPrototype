@@ -15,19 +15,20 @@ Jogo de cartas com objetivo de colecionar cartas e vencer desafios. Cada missão
 ## Carta
 
 Cartas tem nome, estrelas, tipo, dano, saúde, de 0 a 3 habilidades e 0 ou 1 especial.
+
 ![Carta](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/item/card-exemple-2.png)
 
 ## TIpos
 Os tipos de carta atualmente no jogo são:
-- ![Dragão](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/dragao.png) Dragão: Inclui Wyvern, Amphiptere, Wrym, Lindwrum, Drake entre outros.
-- ![Golem](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/golem.png) Golem: Inclui monstros de pedra e similares.
-- ![Elfo](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/elfo.png) Elfo: Inclui duendes entre outros.
-- ![Animal](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/animal.png) Animal: Inclui insetos e não inclui aves.
-- ![Pássaro](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/passaro.png) Pássaro: Inclui todos os animais que tem pena.
-- ![Dinossauro](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/dinossauro.png) Dinossauro: Inclui animais pré-históricos.
-- ![Máquina](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/maquina.png) Máquina: Inclui droids, cyborgs entre outros.
-- ![Alienígena](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/alienigena.png) Alienígena: Inclui animais de outros planetas.
-- ![Orc](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/orc.png) Orc: Inclui monstros fora de outras categorias.
+- ![Dragão](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/dragao.png) Dragão: Inclui Wyvern, Amphiptere, Wrym, Lindwrum, Drake entre outros.
+- ![Golem](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/golem.png) Golem: Inclui monstros de pedra e similares.
+- ![Elfo](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/elfo.png) Elfo: Inclui duendes entre outros.
+- ![Animal](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/animal.png) Animal: Inclui insetos e não inclui aves.
+- ![Pássaro](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/passaro.png) Pássaro: Inclui todos os animais que tem pena.
+- ![Dinossauro](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/dinossauro.png) Dinossauro: Inclui animais pré-históricos.
+- ![Máquina](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/maquina.png) Máquina: Inclui droids, cyborgs entre outros.
+- ![Alienígena](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/alienigena.png) Alienígena: Inclui animais de outros planetas.
+- ![Orc](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/orc.png) Orc: Inclui monstros fora de outras categorias.
 
 ## Habilidades
 

@@ -20,42 +20,42 @@ Cartas tem nome, estrelas, tipo, dano, saúde, de 0 a 3 habilidades e 0 ou 1 esp
 
 ## TIpos
 Os tipos de carta atualmente no jogo são:
-- ![Dragão](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/dragao.png | width=50px) Dragão: Inclui Wyvern, Amphiptere, Wrym, Lindwrum, Drake entre outros.
-- ![Golem](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/golem.png | width=50px) Golem: Inclui monstros de pedra e similares.
-- ![Elfo](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/elfo.png | width=50px) Elfo: Inclui duendes entre outros.
-- ![Animal](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/animal.png | width=50px) Animal: Inclui insetos e não inclui aves.
-- ![Pássaro](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/passaro.png | width=50px) Pássaro: Inclui todos os animais que tem pena.
-- ![Dinossauro](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/dinossauro.png | width=50px) Dinossauro: Inclui animais pré-históricos.
-- ![Máquina](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/maquina.png | width=50px) Máquina: Inclui droids, cyborgs entre outros.
-- ![Alienígena](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/alienigena.png | width=50px) Alienígena: Inclui animais de outros planetas.
-- ![Orc](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/orc.png | width=50px) Orc: Inclui monstros fora de outras categorias.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/dragao.png" width="50" height="50"> Dragão: Inclui Wyvern, Amphiptere, Wrym, Lindwrum, Drake entre outros.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/golem.png" width="50" height="50"> Golem: Inclui monstros de pedra e similares.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/elfo.png" width="50" height="50"> Elfo: Inclui duendes entre outros.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/animal.png" width="50" height="50"> Animal: Inclui insetos e não inclui aves.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/passaro.png" width="50" height="50"> Pássaro: Inclui todos os animais que tem pena.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/dinossauro.png" width="50" height="50"> Dinossauro: Inclui animais pré-históricos.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/maquina.png" width="50" height="50"> Máquina: Inclui droids, cyborgs entre outros.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/alienigena.png" width="50" height="50"> Alienígena: Inclui animais de outros planetas.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/orc.png" width="50" height="50"> Orc: Inclui monstros fora de outras categorias.
 
 ## Habilidades
 
 Algumas das habilidades do jogo são:
 
-- ![Cura](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/cura.png | width=50px) Cura: Ao entrar em campo, cartas aliadas adjacentes recebem um incremento de x em sua saúde.
-- ![Golpe](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/golpe.png | width=50px) Golpe: Ao entrar em campo, decrementa em x a saúde do adversário a frente.
-- ![Bênção](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/bencao.png | width=50px) Bênção: Ao entrar em campo, concede um incremento de x de dano e saúde a uma outra carta aliada aleatoriamente.
-- ![Maldição](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/maldicao.png | width=50px) Maldição: Ao entrar em campo, decrementa em x a saúde e dano a uma carta adversária aleatoriamente.
-- ![Explosão](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/explosao.png | width=50px) Explosão: Ao entrar em campo, decrementa em x a saúde de todas as cartas em campo.
-- ![Aleatório](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/aleatorio.png | width=50px) Aleatório: Ao entrar em campo, habilidade é trocada por outra aleatoriamente.
-- ![Confusão](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/confusao.png | width=50px) Confusão: Ao atacar, decrementa em x a saúde de outra carta em campo aleatoriamente.
-- ![Escudo](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/escudo.png | width=50px) Escudo: Habilidades de decremento de saúde reduzem o Escudo no lugar. O Escudo é removido a chegar a zero e reduções seguintes voltam a afetar a saúde.
-- ![Contra-Ataque](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/contra-ataque.png | width=50px) Contra-Ataque: Ao ser atacado, decrementa a saúde a carta atacante em x.
-- ![Brutalidade](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/brutalidade.png | width=50px) Brutalidade: Ao atacar, decrementa a saúde em x das cartas adjacentes a atacada.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/cura.png" width="50" height="50"> Cura: Ao entrar em campo, cartas aliadas adjacentes recebem um incremento de x em sua saúde.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/golpe.png" width="50" height="50"> Golpe: Ao entrar em campo, decrementa em x a saúde do adversário a frente.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/bencao.png" width="50" height="50"> Bênção: Ao entrar em campo, concede um incremento de x de dano e saúde a uma outra carta aliada aleatoriamente.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/maldicao.png" width="50" height="50"> Maldição: Ao entrar em campo, decrementa em x a saúde e dano a uma carta adversária aleatoriamente.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/explosao.png" width="50" height="50"> Explosão: Ao entrar em campo, decrementa em x a saúde de todas as cartas em campo.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/aleatorio.png" width="50" height="50"> Aleatório: Ao entrar em campo, habilidade é trocada por outra aleatoriamente.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/confusao.png" width="50" height="50"> Confusão: Ao atacar, decrementa em x a saúde de outra carta em campo aleatoriamente.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/escudo.png" width="50" height="50"> Escudo: Habilidades de decremento de saúde reduzem o Escudo no lugar. O Escudo é removido a chegar a zero e reduções seguintes voltam a afetar a saúde.
+- <img src="://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/contra-ataque.png" width="50" height="50"> Contra-Ataque: Ao ser atacado, decrementa a saúde a carta atacante em x.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/brutalidade.png" width="50" height="50"> Brutalidade: Ao atacar, decrementa a saúde em x das cartas adjacentes a atacada.
 
 ## Especiais
 
 Alguns dos especiais do jogo são:
 
-- ![Aproximação](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/aproximacao.png | width=50px) Aproximação: Ao entrar em campo, se posiciona entra cartas aliadas.
-- ![Distanciamento](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/distanciamento.png | width=50px) Distanciamento: Ao entrar em campo, se posiciona a uma casa de distância de cartas aliadas.
-- ![Furtividade](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/furtividade.png | width=50px) Furtividade: Ao entrar em campo, se posiciona na casa mais a direita.
-- ![Paralisia](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/paralisia.png | width=50px) Paralisia: Ao entrar em campo, paralisa adversário a frente o impedindo de atacar no próximo turno.
-- ![Vidente](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/vidente.png | width=50px) Vidente: Enquanto em campo, jogador consegue vizualizar cartas da mão do adversário.
-- ![Sorte](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/sorte.png | width=50px) Sorte: Enquanto em campo, aliados adjacentes com Confusão afetam apenas adversários.
-- ![Antídoto](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/antidoto.png | width=50px) Antídoto: Torna-se imune a Veneno, Hemorragia e Sanguessuga.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/aproximacao.png" width="50" height="50"> Aproximação: Ao entrar em campo, se posiciona entra cartas aliadas.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/distanciamento.png" width="50" height="50"> Distanciamento: Ao entrar em campo, se posiciona a uma casa de distância de cartas aliadas.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/furtividade.png" width="50" height="50"> Furtividade: Ao entrar em campo, se posiciona na casa mais a direita.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/paralisia.png" width="50" height="50"> Paralisia: Ao entrar em campo, paralisa adversário a frente o impedindo de atacar no próximo turno.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/vidente.png" width="50" height="50"> Vidente: Enquanto em campo, jogador consegue vizualizar cartas da mão do adversário.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/sorte.png" width="50" height="50"> Sorte: Enquanto em campo, aliados adjacentes com Confusão afetam apenas adversários.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/antidoto.png" width="50" height="50"> Antídoto: Torna-se imune a Veneno, Hemorragia e Sanguessuga.
 
 ## Telas
 

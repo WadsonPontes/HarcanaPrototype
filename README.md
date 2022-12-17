@@ -5,11 +5,11 @@ Jogo de cartas com objetivo de colecionar cartas e vencer desafios. Cada missão
 ## Regras
 
 - Cada jogador começa com 4 cartas na mão.
-- Todo início de turno o jogador puxa 1 carta de modo a ficar sempre com 4.
+- No início do turno o jogador puxa 1 carta de modo a ficar sempre com 4.
 - Uma carta é jogada por turno.
-- Ao entrar em campo suas habilidades são ativadas.
-- Em seguida, é passado automaticamente para a fase e batalha.
-- Na fase de batalha todas as cartas do jogador, uma por vez, atacam, caso exista, a carta a frente ou o personagem do adversário no caso campo a frente livre.
+- Ao entrar em campo as habilidades da carta são ativadas.
+- Em seguida, é passado automaticamente para a fase de batalha.
+- Na fase de batalha todas as cartas do jogador, uma por vez, atacam, caso exista, a carta a frente ou o personagem do adversário se a casa a frente estiver livre.
 - O jogador vence ao zerar a saúde do personagem do adversário.
 
 ## Carta

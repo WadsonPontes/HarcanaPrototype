@@ -1,4 +1,4 @@
-## H A R C A N A: The Card Game
+## HARCANA: The Card Game
 
 Jogo de cartas com objetivo de colecionar cartas e vencer desafios. Cada missão cumprida habilita um novo desafio e concede moedas que podem ser gasto na loja para comprar pacotes de cartas e jóias para aumentar o número de estrelas das cartas e deixá-las mais fortes.
 
@@ -18,7 +18,7 @@ Cartas tem nome, estrelas, tipo, dano, saúde, de 0 a 3 habilidades e 0 ou 1 esp
 
 ![Carta](https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/item/card-exemple-2.png)
 
-## TIpos
+## Tipos
 Os tipos de carta atualmente no jogo são:
 - <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/dragao.png" width="50" height="50"> Dragão: Inclui Wyvern, Amphiptere, Wrym, Lindwrum, Drake entre outros.
 - <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/type/golem.png" width="50" height="50"> Golem: Inclui monstros de pedra e similares.
@@ -42,7 +42,7 @@ Algumas das habilidades do jogo são:
 - <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/aleatorio.png" width="50" height="50"> Aleatório: Ao entrar em campo, habilidade é trocada por outra aleatoriamente.
 - <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/confusao.png" width="50" height="50"> Confusão: Ao atacar, decrementa em x a saúde de outra carta em campo aleatoriamente.
 - <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/escudo.png" width="50" height="50"> Escudo: Habilidades de decremento de saúde reduzem o Escudo no lugar. O Escudo é removido a chegar a zero e reduções seguintes voltam a afetar a saúde.
-- <img src="://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/contra-ataque.png" width="50" height="50"> Contra-Ataque: Ao ser atacado, decrementa a saúde a carta atacante em x.
+- <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/contra-ataque.png" width="50" height="50"> Contra-Ataque: Ao ser atacado, decrementa a saúde a carta atacante em x.
 - <img src="https://github.com/WadsonPontes/HarcanaPrototype/blob/master/img/icon/skill/brutalidade.png" width="50" height="50"> Brutalidade: Ao atacar, decrementa a saúde em x das cartas adjacentes a atacada.
 
 ## Especiais

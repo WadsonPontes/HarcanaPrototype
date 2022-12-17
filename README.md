@@ -93,7 +93,7 @@ Alguns dos especiais do jogo são:
 
 ## Autores
 
-- **Wadson Pontes** - [@WadsonPontes](https://github.com/WadsonPontes)
-- **Jason Willyan** - [@jasonwillyan](https://github.com/jasonwillyan)
-- **Rodrigo Saads** - [@Rsaads](https://github.com/Rsaads)
-- **Robert Matheus** - [@rbert1n](https://github.com/rbert1n)
+- Wadson Pontes - [@WadsonPontes](https://github.com/WadsonPontes)
+- Jason Willyan - [@jasonwillyan](https://github.com/jasonwillyan)
+- Rodrigo Saads - [@Rsaads](https://github.com/Rsaads)
+- Robert Matheus - [@rbert1n](https://github.com/rbert1n)

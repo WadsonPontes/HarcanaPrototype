@@ -1,6 +1,6 @@
 ## HARCANA: The Card Game
 
-Jogo de cartas com objetivo de colecionar cartas e vencer desafios. Cada missão cumprida habilita um novo desafio e concede moedas que podem ser gasto na loja para comprar pacotes de cartas e jóias para aumentar o número de estrelas das cartas e deixá-las mais fortes.
+Jogo de cartas com objetivo de colecionar cartas e vencer desafios. Cada missão cumprida habilita um novo desafio e concede moedas que podem ser gasta na loja para comprar pacotes de cartas e jóias para aumentar o número de estrelas das cartas e deixá-las mais fortes.
 
 ## Regras
 

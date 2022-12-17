@@ -63,43 +63,43 @@ Alguns dos especiais do jogo são:
 
 ![Página Inicial](img/other/screenshot-pagina-inicial.png)
 
-
+<br>
 
 - **Tela de Cadastro**: Página para criar uma conta.
 
 ![Tela de Cadastro](img/other/screenshot-tela-cadastro.png)
 
-
+<br>
 
 - **Tela de Login**: Página para entrar no jogo.
 
 ![Tela de Login](img/other/screenshot-tela-login.png)
 
-
+<br>
 
 - **Tela de Missões**: Jogador pode escolher uma missão habilitada para fazer e ganhar uma quantidade de moedas como recompensa.
 
 ![Tela de Missões](img/other/screenshot-tela-missoes.png)
 
-
+<br>
 
 - **Tela de Perfil**: É possível alterar a senhar e outras informações pessoais.
 
 ![Tela de Perfil](img/other/screenshot-tela-perfil.png)
 
-
+<br>
 
 - **Tela de Loja**: Usando moedas, é possível comprar pacotes de cartas, jóias ou uma carta disponível para venda por uma semana.
 
 ![Tela de Loja](img/other/screenshot-tela-loja.png)
 
-
+<br>
 
 - **Tela de Inventário**: Onde se edita o baralho e também melhora os atributos das cartas com jóias.
 
 ![Tela de Inventário](img/other/screenshot-tela-inventario.png)
 
-
+<br>
 
 - **Tela de Jogo**: Ao selecionar uma missão o jogador vai direto para Tela de Jogo enfrentar um desafio.
 

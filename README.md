@@ -53,13 +53,13 @@ Alguns dos especiais do jogo são:
 - <img src="img/icon/skill/distanciamento.png" width="32" height="32"> **Distanciamento**: Ao entrar em campo, se posiciona a uma casa de distância de cartas aliadas.
 - <img src="img/icon/skill/furtividade.png" width="32" height="32"> **Furtividade**: Ao entrar em campo, se posiciona na casa mais a direita.
 - <img src="img/icon/skill/paralisia.png" width="32" height="32"> **Paralisia**: Ao entrar em campo, paralisa adversário a frente o impedindo de atacar no próximo turno.
-- <img src="img/icon/skill/vidente.png" width="32" height="32"> **Vidente**: Enquanto em campo, jogador consegue vizualizar cartas da mão do adversário.
+- <img src="img/icon/skill/vidente.png" width="32" height="32"> **Vidente**: Enquanto em campo, jogador consegue visualizar cartas da mão do adversário.
 - <img src="img/icon/skill/sorte.png" width="32" height="32"> **Sorte**: Enquanto em campo, aliados adjacentes com Confusão afetam apenas adversários.
 - <img src="img/icon/skill/antidoto.png" width="32" height="32"> **Antídoto**: Torna-se imune a Veneno, Hemorragia e Sanguessuga.
 
 ## Telas
 
-- **Página Inicial**: Primeira página vizualizada ao abrir o jogo.
+- **Página Inicial**: Primeira página visualizada ao abrir o jogo.
 
 ![Página Inicial](img/other/screenshot-pagina-inicial.png)
 
